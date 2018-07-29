@@ -1,37 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kesa</title>
-    <link>/</link>
-    <description>Recent content on Kesa</description>
+    <title>Comic on Kesa</title>
+    <link>/tags/comic/</link>
+    <description>Recent content in Comic on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jul 2018 21:48:51 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/comic/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About Kesa</title>
-      <link>/about/</link>
-      <pubDate>Sat, 28 Jul 2018 21:48:51 -0700</pubDate>
-      
-      <guid>/about/</guid>
-      <description>一个有很多问题的成年人
-一个有点套路的孩子
-一个没什么坚持的玩家
-一个有一点思考的宅</description>
-    </item>
-    
-    <item>
-      <title>最近有感|灵光乍现</title>
-      <link>/recents/</link>
-      <pubDate>Sat, 28 Jul 2018 21:48:51 -0700</pubDate>
-      
-      <guid>/recents/</guid>
-      <description> 不定期更新  丘比特的恶作剧 重评 战神 分析  重构神话 父子关系 阴谋论  崔永元的二三事 李健和杰伦 - 我的少年和青年时代 重新认识&amp;rdquo;中国新说唱&amp;rdquo;和吴亦凡 回到梦中 - 有些人旅行 不是去旅行,而是归途,是回到梦中 成为更好程序员的办法:
-https://wanqu.co/a/6745/2018-07-20-my-approach-to-getting-dramatically-better-as-a-programmer-malisper-me.html?s=rss 每周做四件事： 1，读学术论文； 2，学一个新工具； 3，读几个章节的书； 4，编程的时候屏幕录像，然后回放录像，找出自己写程序过程中做得不好的地方，以后加以改进 运动员、游戏玩家等会去看比赛录像，研究自己、研究对手。   </description>
-    </item>
     
     <item>
       <title>漫感|初探回味&lt;&lt;丘比特的恶作剧&gt;&gt;</title>
@@ -86,29 +64,6 @@ https://wanqu.co/a/6745/2018-07-20-my-approach-to-getting-dramatically-better-as
 很多很多三部曲
 像是&amp;lt;教父&amp;gt;&amp;lt;蝙蝠侠:黑暗骑士&amp;gt;(对于教父我是这么认为的)
 (我认为教父第一部强在原著第二部才是正真超越原作的经典)</description>
-    </item>
-    
-    <item>
-      <title>新存档\新气象\新觉悟</title>
-      <link>/post/2018/07/28/newaccount/</link>
-      <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/07/28/newaccount/</guid>
-      <description>熟悉的操作 又是一个新的Blog不是么
-熟悉的操作熟悉的套路
-每次都是抱着重新开始的态度
-燃气了几分钟的热度
-然后烧着烧着就不知道去哪里了.
-新的誓言 又到了这个环节
-总是要说些什么
-为这次的新建Blog正个名
-才好再随便写写什么 那么这次
-从头开始 从新开始
-&amp;ldquo;从新&amp;rdquo;并不是错字,并不是&amp;rdquo;重新打错了&amp;rdquo;
-而是对我而言,没有重来
-可以设置一个起点
-但不能全盘推翻之前的积累
-从新不重新 大概之后还会再改掉的吧</description>
     </item>
     
   </channel>
