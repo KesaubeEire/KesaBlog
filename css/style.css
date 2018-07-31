@@ -7,7 +7,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -16,7 +18,11 @@ body {
   padding: 0;
 }
 
-button, input, select, textarea, label {
+button,
+input,
+select,
+textarea,
+label {
   margin: 0;
   padding: 0;
   font-family: inherit;
@@ -33,7 +39,12 @@ body {
   line-height: 1.75;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 60px 0 30px;
   line-height: 1.25;
@@ -50,7 +61,10 @@ h2 {
   font-weight: bold;
 }
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
   font-size: 19px;
   font-weight: bold;
   text-align: left;
@@ -64,7 +78,8 @@ blockquote {
 
 /* Code */
 
-pre, code {
+pre,
+code {
   font-size: .9em;
 }
 
@@ -87,7 +102,8 @@ pre code {
 
 /* Lists */
 
-ul, ol {
+ul,
+ol {
   padding: 0 0 0 20px;
 }
 
@@ -106,6 +122,40 @@ a {
 }
 
 a:hover {
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  animation: linkAnimation 0.7s;
+  -webkit-animation: animation linkAnimation 0.7s;
+}
+
+@keyframes linkAnimation {
+  0% {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  50% {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes linkAnimation {
+  0% {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  50% {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
 }
 
 sup a {
@@ -170,6 +220,7 @@ body {
 }
 
 /* Logo的CSS */
+
 .nav-logo {
   float: right;
   transition: transform 150ms ease-out;
@@ -262,11 +313,14 @@ table thead th {
   border-bottom: 1px solid #666;
 }
 
-th, td {
+th,
+td {
   padding: 5px;
 }
 
-thead, tfoot, tr:nth-child(even) {
+thead,
+tfoot,
+tr:nth-child(even) {
   background: #f8f8f8;
 }
 
@@ -306,12 +360,10 @@ thead, tfoot, tr:nth-child(even) {
 /* Tablet screens and smaller */
 
 @media screen and (max-width: 960px) {
-
   body {
     width: auto;
     max-width: 700px;
   }
-
   .masthead {
     width: auto;
     float: none;
@@ -321,7 +373,6 @@ thead, tfoot, tr:nth-child(even) {
     margin-right: 10px;
     border-bottom: 3px solid black;
   }
-
   .main {
     width: auto;
     padding: 40px 10px;
@@ -329,65 +380,52 @@ thead, tfoot, tr:nth-child(even) {
     border-left: none;
     min-height: auto;
   }
-
   .masthead h1 {
     text-align: center;
   }
-
   .masthead .tagline {
     text-align: center;
   }
-
   .masthead .menu {
     direction: ltr;
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-
   .masthead .menu ul {
     text-align: left;
     margin: 0;
     padding: 0;
   }
-
   .masthead .menu ul ul {
     margin: 0;
   }
-
   .masthead .menu li {
     border-bottom: 1px solid;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-
   .masthead .menu li:first-child {
     border-top: 1px solid;
   }
-
   .masthead .menu li li:last-child {
     border-bottom: none;
   }
-
   .masthead .menu a {
     display: block;
     padding: 15px 20px;
     border-bottom: none;
   }
-
   .masthead .menu li li a {
     padding-left: 30px;
   }
-
   .masthead .menu li li::before {
     content: none;
   }
-
   .masthead .menu li li a::before {
     content: "•\00a0\00a0\00a0";
   }
-
   #menu-label {
     display: inline-block;
     padding: 0 20px;
@@ -399,37 +437,30 @@ thead, tfoot, tr:nth-child(even) {
     font-size: 20px;
     margin-top: 10px;
   }
-
-  #menu-label:hover, #menu-label:focus {
+  #menu-label:hover,
+  #menu-label:focus {
     border: 1px solid #888;
   }
-
   #menu-label .icon {
     padding-right: 8px;
     width: 30px;
   }
-
-  #menu-check ~ label .close-icon {
+  #menu-check~label .close-icon {
     display: none;
   }
-
-  #menu-check ~ label .open-icon {
+  #menu-check~label .open-icon {
     display: inline-block;
   }
-
-  #menu-check:checked ~ label .close-icon {
+  #menu-check:checked~label .close-icon {
     display: inline-block;
   }
-
-  #menu-check:checked ~ label .open-icon {
+  #menu-check:checked~label .open-icon {
     display: none;
   }
-
-  #menu-check ~ ul {
+  #menu-check~ul {
     display: none;
   }
-
-  #menu-check:checked ~ ul {
+  #menu-check:checked~ul {
     display: block;
     margin-top: 50px;
     margin-bottom: 0;
@@ -438,35 +469,31 @@ thead, tfoot, tr:nth-child(even) {
 
 /* Landscape phone screens and smaller */
 
-@media screen and (max-width: 720px) {
-}
+@media screen and (max-width: 720px) {}
 
 /* Portrait phone screens */
 
 @media screen and (max-width: 480px) {
-
   body {
     font-size: 16px;
   }
-
   h1 {
     font-size: 28px;
   }
-
   h2 {
     font-size: 18px;
   }
-
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 16px;
   }
-
-  pre, code {
+  pre,
+  code {
     font-size: 12px;
   }
-
   .masthead {
     padding-top: 0;
   }
-
 }
