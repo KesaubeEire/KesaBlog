@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2018-07-28T21:48:51-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/recents/</loc>
     <lastmod>2018-07-28T21:48:51-07:00</lastmod>
   </url>
@@ -30,6 +25,11 @@
   <url>
     <loc>/post/2018/07/28/newaccount/</loc>
     <lastmod>2018-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>1995-08-28T21:48:51-07:00</lastmod>
   </url>
   
   <url>
