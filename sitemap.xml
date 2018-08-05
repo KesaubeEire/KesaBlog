@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/2018/08/05/change-self-is-hard/</loc>
+    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/08/04/back-of-the-god-of-war/</loc>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018/07/31/talk/</loc>
     <lastmod>2018-07-31T00:00:00+00:00</lastmod>
   </url>
@@ -34,13 +44,13 @@
   
   <url>
     <loc>/categories/artsdome/</loc>
-    <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -51,20 +61,32 @@
   </url>
   
   <url>
+    <loc>/tags/game/</loc>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2018-07-31T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mood/</loc>
+    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-07-31T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/reflection/</loc>
-    <lastmod>2018-07-31T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -82,7 +104,13 @@
   
   <url>
     <loc>/categories/uselesstalks/</loc>
-    <lastmod>2018-07-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E6%88%98%E7%A5%9E/</loc>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -95,6 +123,12 @@
   <url>
     <loc>/tags/%E7%94%9F%E7%89%A9/</loc>
     <lastmod>2018-07-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E7%A5%9E%E8%AF%9D/</loc>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

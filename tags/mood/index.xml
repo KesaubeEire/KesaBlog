@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mood on Kesa</title>
+    <link>/tags/mood/</link>
+    <description>Recent content in Mood on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/mood/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>心情|江山易改</title>
+      <link>/post/2018/08/05/change-self-is-hard/</link>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/05/change-self-is-hard/</guid>
+      <description>本性难易 高了两天效率非常高的日子
+立马就回到了这种很颓废的样子
+没办法 是这样的
+江山易改 本性难易
+好了 继续之前未竟之事了
+拖延症晚期患者 该死一死了</description>
+    </item>
+    
+  </channel>
+</rss>
