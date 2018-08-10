@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oath on Kesa</title>
+    <link>/tags/oath/</link>
+    <description>Recent content in Oath on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/oath/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>心情|New Start</title>
+      <link>/post/2018/08/11/new-start/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/11/new-start/</guid>
+      <description>Oath Sign 还记得这首歌么
+当时Fate Zero的OP1
+久久不能忘怀(记得给链接)
+现在终于进入了编码时刻
+啊哈 我终于可以搞一搞Unity了
+同时还想学会那个什么MVC
+任重而道远吖
+噶油!!!
+老子现在立下誓言!
+搞不定这个tm的程序不过生日!!!
+(🍑基本就没有过过生日</description>
+    </item>
+    
+  </channel>
+</rss>
