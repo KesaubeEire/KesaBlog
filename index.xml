@@ -6,10 +6,35 @@
     <description>Recent content on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Unity|简易对象池(一)</title>
+      <link>/post/2018/08/19/unity/</link>
+      <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/19/unity/</guid>
+      <description>代码主要来源  https://blog.csdn.net/testiness_wind/article/details/81118772
+ 对象池的意义 这个博客开头把对象池(或者说池技术)描述的很到位了
+ 如果一种类型的对象需要经常被创建、销毁，为了提高性能，我们通常需要使用“池”技术，就如线程池、TCP连接池等一样。那么需要使用池技术的对象一般有哪些特征了？
+（1）创建过程耗时
+（2）不需要保存客户状态
+（3）对象体积较大
+（4）频繁创建/销毁
+ P.S.P.S.这是个2005年的博文,功力可见一斑,用C#但是是拿接口做的,功能非常齐全丰富,但是也有那个时代技术文档解释少\难看懂的特征,不是以传播而主要是以记录为目的的
+小坑 这个东西有些部分是不完善的
+它达到了一个对象池的主要需求:用内存换时间(其实是换机器的CPU GPU性能1)
+但是我也看到了很多地方对对象池的不同要求
+  很多类型的对象被重新使用前，在某些情况下，需要被reset。至少，所有的成员变量都要设置成初始值。这可以在池中实现而不需要用户处理。何时和如何重置需要考虑以下两个方面：  重置是立即的（例如，在存储对象时即重置）还是延迟的（例如，在对象被重新使用后重置）。 重置是被池管理（例如，对于被放入池中的对象来说是透明的）还是声明池对象的类。   在上面的例子中，poolofMyClass池对象需要显示申明在类级别作用域。显然，当我们需要一个其它类型的对象池时就需要重新申明一个。或许我们可以实现一个对用户透明。 创建管理所有类型池的ObjectPool。 一些对象池类库管理了太多种类的可怕的资源（如内存，数据库连接，游戏对象，外部资产等）。这无疑增加了对象池的代码复杂度。 某些类型的资源是很珍贵的（如数据库连接），池需要显示上限并提供一个针对分配对象失败的安全措施； 当池中对象很多却很少使用时，或许需要收缩的功能（不管是自动的还是强制的）。 最后，池可以被多个线程共享，因此需要实现为线程安全的。   不得不说这个大佬把我所有遇到的问题都说了出来
+还说了很多我完全没有注意到和完全没有认识到的问题
+目前我遇到的问题就是&amp;rdquo;重置&amp;rdquo;和&amp;rdquo;类型&amp;rdquo; 还有一个比较局限于Unity的是一个Resources.Load的路径自定义问题2
+路径的问题不解决的话那没针对一个路径就等再搞一个对象池
+或者把路径也搞一个List放进去 倒是可以实现 我有空应该去试试 牛逼就是牛逼
+上代码 using System.Collections.Generic; using UnityEngine; /*本脚本是一个对象池的学习脚本 *原地址: * https://blog.csdn.net/testiness_wind/article/details/81118772 * 思路: * 1.单例 * 2.获取对象池中的对象 * 3.回收游戏对象 * * 个人总结: * 优点: 够小巧 * 缺点: 不灵活,作为单例只能实现将读取路径定死这种傻事,但是Resources文件夹下经常是有很多分类文件夹的(像我这种强迫症),所以需要一个可以定制路径的部分 */ public class GameObjectPool { #region #endregion #region //------------------------1.</description>
+    </item>
     
     <item>
       <title>心情|UML大法不一定好:但一定要做</title>

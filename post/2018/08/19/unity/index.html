@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Unity|简易对象池(一) - Kesa</title>
+    <meta property="og:title" content="Unity|简易对象池(一) - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="https://blog.csdn.net/testiness_wind/article/details/81118772
+[&amp;hellip;] 这个博客开头把对象池(或者说池技术)描述的很到位了
+[&amp;hellip;] 如果一种类型的对象需要经常被创建、销毁，为了提高性能，我们通常需要使用“池”技术，就如线程池、TCP连接池等一样。那么需要使用池技术的对象一般有哪些特征了？
+（1） &amp;hellip;">
+      <meta property="og:description" content="https://blog.csdn.net/testiness_wind/article/details/81118772
+[&amp;hellip;] 这个博客开头把对象池(或者说池技术)描述的很到位了
+[&amp;hellip;] 如果一种类型的对象需要经常被创建、销毁，为了提高性能，我们通常需要使用“池”技术，就如线程池、TCP连接池等一样。那么需要使用池技术的对象一般有哪些特征了？
+（1） &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/recents/">Recents</a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Unity|简易对象池(一)</h1>
+
+<h3>Kesa
+  /  2018-08-19</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<h3 id="代码主要来源">代码主要来源</h3>
+
+<blockquote>
+<p><a href="https://blog.csdn.net/testiness_wind/article/details/81118772">https://blog.csdn.net/testiness_wind/article/details/81118772</a></p>
+</blockquote>
+
+<h3 id="对象池的意义">对象池的意义</h3>
+
+<p><strong>这个<a href="https://blog.csdn.net/zhuweisky/article/details/429278">博客</a>开头把对象池(或者说池技术)描述的很到位了</strong></p>
+
+<blockquote>
+<p>如果一种类型的对象需要经常被创建、销毁，为了提高性能，我们通常需要使用“池”技术，就如线程池、TCP连接池等一样。那么需要使用池技术的对象一般有哪些特征了？<br />
+（1）创建过程耗时<br />
+（2）不需要保存客户状态<br />
+（3）对象体积较大<br />
+（4）频繁创建/销毁</p>
+</blockquote>
+
+<p>P.S.P.S.这是个2005年的博文,功力可见一斑,用C#但是是拿接口做的,功能非常齐全丰富,但是也有那个时代技术文档解释少\难看懂的特征,不是以传播而主要是以记录为目的的</p>
+
+<h3 id="小坑">小坑</h3>
+
+<p>这个东西有些部分是不完善的<br />
+它达到了一个对象池的主要需求:用内存换时间(其实是换机器的CPU GPU性能<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>)<br />
+但是我也看到了很多地方对对象池的<a href="http://www.cnblogs.com/mezero/p/3955130.html">不同要求</a></p>
+
+<blockquote>
+<ul>
+<li>很多类型的对象被重新使用前，在某些情况下，需要被reset。至少，所有的成员变量都要设置成初始值。这可以在池中实现而不需要用户处理。何时和如何重置需要考虑以下两个方面：
+<ul>
+<li>重置是立即的（例如，在存储对象时即重置）还是延迟的（例如，在对象被重新使用后重置）。</li>
+<li>重置是被池管理（例如，对于被放入池中的对象来说是透明的）还是声明池对象的类。</li>
+</ul>
+</li>
+<li>在上面的例子中，poolofMyClass池对象需要显示申明在类级别作用域。显然，当我们需要一个其它类型的对象池时就需要重新申明一个。或许我们可以实现一个对用户透明。</li>
+<li>创建管理所有类型池的ObjectPool。</li>
+<li>一些对象池类库管理了太多种类的可怕的资源（如内存，数据库连接，游戏对象，外部资产等）。这无疑增加了对象池的代码复杂度。</li>
+<li>某些类型的资源是很珍贵的（如数据库连接），池需要显示上限并提供一个针对分配对象失败的安全措施；</li>
+<li>当池中对象很多却很少使用时，或许需要收缩的功能（不管是自动的还是强制的）。</li>
+<li>最后，池可以被多个线程共享，因此需要实现为线程安全的。</li>
+</ul>
+</blockquote>
+
+<p>不得不说这个大佬把我所有遇到的问题都说了出来<br />
+还说了很多我完全没有注意到和完全没有认识到的问题<br />
+目前我遇到的问题就是&rdquo;重置&rdquo;和&rdquo;类型&rdquo;
+还有一个比较局限于Unity的是一个Resources.Load的路径自定义问题<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup><br />
+路径的问题不解决的话那没针对一个路径就等再搞一个对象池<br />
+<strong>或者把路径也搞一个List放进去 倒是可以实现 我有空应该去试试</strong>
+牛逼就是牛逼</p>
+
+<h3 id="上代码">上代码</h3>
+
+<pre><code class="language-C#">using System.Collections.Generic;
+using UnityEngine;
+
+/*本脚本是一个对象池的学习脚本
+ *原地址:
+ * https://blog.csdn.net/testiness_wind/article/details/81118772
+ * 思路:
+ * 1.单例
+ * 2.获取对象池中的对象
+ * 3.回收游戏对象
+ *
+ * 个人总结:
+ * 优点: 够小巧
+ * 缺点: 不灵活,作为单例只能实现将读取路径定死这种傻事,但是Resources文件夹下经常是有很多分类文件夹的(像我这种强迫症),所以需要一个可以定制路径的部分
+ */
+public class GameObjectPool
+{
+    #region
+
+    #endregion
+
+    #region //------------------------1.单例
+
+    /// 对象池词典
+    private Dictionary&lt;string, List&lt;GameObject&gt;&gt; pool;
+
+    /// 预制体词典
+    private Dictionary&lt;string, GameObject&gt; prefabs;
+
+    private GameObjectPool()
+    {
+        pool = new Dictionary&lt;string, List&lt;GameObject&gt;&gt;();
+        prefabs = new Dictionary&lt;string, GameObject&gt;();
+    }
+
+    private static GameObjectPool instance;
+
+    public static GameObjectPool GetInstance() //外部入口
+    {
+        if (instance == null)
+        {
+            instance = new GameObjectPool();
+        }
+
+        return instance;
+    }
+
+    #endregion
+
+    #region //------------------------2.获取对象池中的对象
+
+    /*  当我们需要使用某个对象比如子弹时
+     *  从池中检查是否存在
+     *  如果不存在就Resources.Load()
+     */
+    /// &lt;summary&gt;
+    /// 从对象池中获取对象
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;objName&quot;&gt;试图获取的对象名&lt;/param&gt;
+    /// &lt;returns&gt;返回对象&lt;/returns&gt;
+    public GameObject GetObj(string objName)
+    {
+        GameObject result = null; //最终返回的结果
+        GameObject prefab = null; //预制体加载
+
+        //情况1: 池中已存在objName且池中存在待使用的GameObject
+        if (pool.ContainsKey(objName))
+        {
+            if (pool[objName].Count &gt; 0) //如果池中存在GameObject
+            {
+                result = pool[objName][0]; //取出GameObject
+                pool[objName].Remove(result); //删除池中的记录
+                result.SetActive(true); //激活GameObject
+                Debug.Log(&quot;情况1再利用:\t&quot; + objName);
+
+                return result; //返回结果
+            }
+        }
+
+        //情况2: 池中不存在待使用的GameObject
+        if (prefabs.ContainsKey(objName)) //已加载过对应的预制体
+        {
+            prefab = prefabs[objName];
+        }
+        //情况3: 池中不存在objName,未加载过该预设体
+        else
+        {
+            //加载预设体
+            prefab = Resources.Load&lt;GameObject&gt;(&quot;Elements/&quot; + objName);
+            //更新字典
+            prefabs.Add(objName, prefab);
+        }
+
+        result = Object.Instantiate(prefab); //生成新的预制体克隆
+        result.name = objName; //改名（去除 Clone）
+
+        result.SetActive(true); //激活GameObject
+        Debug.Log(&quot;情况2创建:\t&quot; + objName);
+
+        return result; //返回
+    }
+
+    #endregion
+
+    #region //------------------------3.回收游戏对象
+
+    /// &lt;summary&gt;
+    /// 回收对象到对象池
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;obj&quot;&gt;对象名(ObjName)&lt;/param&gt;
+    public void RecycleObj(GameObject obj)
+    {
+        //设置为非激活
+        obj.SetActive(false);
+        //判断是否有该对象的对象池
+        if (pool.ContainsKey(obj.name))
+        {
+            //放置到该对象池
+            pool[obj.name].Add(obj);
+        }
+        else
+        {
+            //创建该类型的池子，并将对象放入
+            pool.Add(obj.name, new List&lt;GameObject&gt;() {obj});
+        }
+    }
+
+    #endregion
+
+    #region 还需要一段附着在预制体上的代码，用以自动激活回收这一行为。
+
+//    还需要一段附着在预制体上的代码，用以自动激活回收这一行为。
+//    原文是写在Start里面的,但是经过我的实践和思考发现这样是不对的
+    // Unity的声明周期里Start也只执行一次,所以采用SetActive = false之后在true回来是不执行的
+    // 没有起到重置的效果 所以我修改了这里
+//    void OnEnable()
+//    {
+//        // 自动回收
+//        StartCoroutine(AutoRecycle());
+//        
+//        // todo:这里应该写各种重置对象属性的函数  当然也可以留给操作层去完成
+//        reset();
+//    }
+//
+//    /// &lt;summary&gt;
+//    /// 3秒后自动回收到对象池
+//    /// &lt;/summary&gt;
+//    IEnumerator AutoRecycle()
+//    {
+//        yield return new WaitForSeconds(3f);
+//
+//        GameObjectPool.GetInstance().RecycleObj(gameObject);
+//    }
+
+    #endregion
+}
+</code></pre>
+
+<h3 id="最后">最后</h3>
+
+<p>不知道&rdquo;简易对象池(二)&ldquo;是几年后的事情了😀希望是个玩笑</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">这个我再找找资料佐证一下
+ <a class="footnote-return" href="#fnref:1">↩</a></li>
+<li id="fn:2">没有解决,是我的之后的一个目标,目前只能把需要用到对象池的对象放在一个文件夹内
+ <a class="footnote-return" href="#fnref:2">↩</a></li>
+</ol>
+</div>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
