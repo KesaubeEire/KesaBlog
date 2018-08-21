@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>故事 on Kesa</title>
+    <link>/tags/%E6%95%85%E4%BA%8B/</link>
+    <description>Recent content in 故事 on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/%E6%95%85%E4%BA%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>想法|想了一个老少咸宜的点子</title>
+      <link>/post/2018/08/21/a-story-idea/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/21/a-story-idea/</guid>
+      <description>想到了一个比较常见的叙事手法:
+童话中穿插隐喻：表故事和里故事
+童话是包装和形式 里故事是拔高和深刻
+这是一个非常&amp;rdquo;姜文&amp;rdquo;的做法</description>
+    </item>
+    
+  </channel>
+</rss>

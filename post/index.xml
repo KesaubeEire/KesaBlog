@@ -6,10 +6,41 @@
     <description>Recent content in Posts on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>心情|如果你只是得过且过 那和只打代码不写文档有什么区别</title>
+      <link>/post/2018/08/21/always-records/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/21/always-records/</guid>
+      <description>今后玩游戏一定要 玩有价值
+玩好评高
+玩拿得出欣赏的点
+并且一定要写感悟体会
+不浪费这些游戏自媒体的苦心
+才不浪费这些游戏制作者的心血
+继续丰富一下昨晚的感受: 还有这句发条张的话,让我对那个什么谁先来的有了新的理解: 之后的游戏旅程我一定会朝着有价值有意义的游戏去玩
+玩完记录 感受 心得
+可以从产品上 文学上 故事上 哲学上
+各个层面去总结 这是一个丰富自己的时期
+当然不忘填坑就是了</description>
+    </item>
+    
+    <item>
+      <title>想法|想了一个老少咸宜的点子</title>
+      <link>/post/2018/08/21/a-story-idea/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/21/a-story-idea/</guid>
+      <description>想到了一个比较常见的叙事手法:
+童话中穿插隐喻：表故事和里故事
+童话是包装和形式 里故事是拔高和深刻
+这是一个非常&amp;rdquo;姜文&amp;rdquo;的做法</description>
+    </item>
     
     <item>
       <title>Unity|简易对象池(一)</title>
