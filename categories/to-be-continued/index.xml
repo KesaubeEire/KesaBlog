@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Artsdome on Kesa</title>
-    <link>/categories/artsdome/</link>
-    <description>Recent content in Artsdome on Kesa</description>
+    <title>To be continued on Kesa</title>
+    <link>/categories/to-be-continued/</link>
+    <description>Recent content in To be continued on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/artsdome/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/to-be-continued/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,6 +18,19 @@
       
       <guid>/post/2018/08/24/about-xuanyuan-sword/</guid>
       <description>  本文提纲(不做跳转引导) 先搞定音乐的插入问题 再写内容 ---------上面的记得清理掉 为什么叫思忆 从音乐给我的回忆入手:叙事性的音乐 | 健身的音乐 从故事给我的影响入手 从木鱼的事情入手:谈谈今日中午看到的命运 - 再结合天之痕人物的命运   </description>
+    </item>
+    
+    <item>
+      <title>未完待续_UnitySkill|RegularExpression(一)</title>
+      <link>/post/2018/08/23/unityskill-regularexpression/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/23/unityskill-regularexpression/</guid>
+      <description>又到了正则表达式困扰我的时候 这次怎么也要搞定这个玩意儿了
+很早的时候这个东西就一直在我的计划内
+但是我始终没有把它安排上
+今天实在是不能逃过去了
+干他妈的</description>
     </item>
     
     <item>
