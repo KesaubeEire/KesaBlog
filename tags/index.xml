@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Attribute Tag</title>
+      <link>/tags/attribute-tag/</link>
+      <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/attribute-tag/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Comic</title>
@@ -68,7 +77,7 @@
     <item>
       <title>Works</title>
       <link>/tags/works/</link>
-      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/works/</guid>
       <description></description>
