@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GeneralSkill on Kesa</title>
+    <link>/categories/generalskill/</link>
+    <description>Recent content in GeneralSkill on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/generalskill/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python|Udacity_Python基础</title>
+      <link>/post/2018/08/29/python-udacity-python/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/29/python-udacity-python/</guid>
+      <description>Day1 Mathematics Operators算术运算符 + 加 addition - 减 subtraction * 乘 multiplication / 除 division % 取模 modulo（返回相除后的余数 -&amp;gt; (remainder)） // 相除后向下取整到最接近的整数 integer division ** 取幂 exponentiation （python中^不是取幂 是bitwise XOR : 位运算异或） 3的2次方 3 to the power of 2  Variable &amp;amp; Assign Operators 变量和赋值运算符 变量命名
+1. 只能在变量名称中使用常规字母、数字和下划线。不能包含空格，并且需要以字母或下划线开头。 2. 不能使用保留字(preserved words)或内置标识符(build-in identifier) 3. 在 python 中，变量名称的命名方式是全部使用小写字母，并用下划线区分单词。 4. 我们命名变量的方式称之为 snake case，因为我们用下划线连接单词 my_variable  -保留字介绍 Reserved Words
+You may not name your variables any of the following words as they mean special things in Python: and	assert	break	class	continue def	del	elif	else	except exec	finally	for	from	global if	import	in	is	lambda not	or	pass	print	raise return	try	while	----------------- Do NOT use any of the following words either (although they are not strictly Python reserved words, they conflict with the names of commonly-used Python functions): Data	Float	Int	Numeric	Oxphys array	close	float	int	input open	range	type	write	zeros ----------------- You should also avoid all the names defined in the math library (you must avoid them if you import the library): acos	asin	atan	cos	e exp	fabs	floor	log	log10 pi	sin	sqrt	tan	 -科学计数法</description>
+    </item>
+    
+  </channel>
+</rss>

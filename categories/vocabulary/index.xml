@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vocabulary on Kesa</title>
+    <link>/categories/vocabulary/</link>
+    <description>Recent content in Vocabulary on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/vocabulary/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vocabulary</title>
+      <link>/vocabulary/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/vocabulary/</guid>
+      <description>- CS101 - Ambiguity:歧义 (n. 含糊；不明确；暧昧；模棱两可的话) - biweekly:一周两次或者两周一次(这他妈也行) - Verbosity:繁琐 (n. 冗长；赘言；唠叨) - derivation (n. 引出；来历；词源；派生词) - 所有类型括号的英文 - recursive (adj. [数] 递归的；循环的) - assingnment (赋值) - # : hash symbol (居然不是Sharp厉害了) - concatenation (n. 串联，连结) - exclamation point 感叹号 - audacity (n. 大胆；厚颜无耻) 这个词和Udacity的关联很奇妙哟 - python可气的等于值 a , x = x , a - palindrome (n.回文) - formidable (adj. 强大的；可怕的；令人敬畏的；艰难的) - Vendetta (n. （尤指族间或血亲间的）仇杀；深仇) - wondrous (adj. 奇妙的；令人惊奇的；非常的) - - Python试学班 - alphanumeric (adj.</description>
+    </item>
+    
+  </channel>
+</rss>

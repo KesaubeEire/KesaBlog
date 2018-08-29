@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DoTween on Kesa</title>
+    <link>/tags/dotween/</link>
+    <description>Recent content in DoTween on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/dotween/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>未完待续_Unity|Dotween的高级玩法</title>
+      <link>/post/2018/08/27/unity-dotween/</link>
+      <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/27/unity-dotween/</guid>
+      <description>简单常用方法 DoMove DoScale DoRotate
+DoFade .SetDelay .SetEase
+又是该死的DoTween 我不知道这是第几个记录DoTween用法的博文
+甚至我怀疑我之前所有的博客都有过DoTween的回顾
+还是菜的抠脚
+这次一定学穿这玩意儿!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,24 @@
     <description>Recent content in Game on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/game/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>未完待续_Unity|Dotween的高级玩法</title>
+      <link>/post/2018/08/27/unity-dotween/</link>
+      <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/27/unity-dotween/</guid>
+      <description>简单常用方法 DoMove DoScale DoRotate
+DoFade .SetDelay .SetEase
+又是该死的DoTween 我不知道这是第几个记录DoTween用法的博文
+甚至我怀疑我之前所有的博客都有过DoTween的回顾
+还是菜的抠脚
+这次一定学穿这玩意儿!</description>
+    </item>
     
     <item>
       <title>想法|节奏天国&#43;故事的火花</title>

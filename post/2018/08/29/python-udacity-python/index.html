@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Python|Udacity_Python基础 - Kesa</title>
+    <meta property="og:title" content="Python|Udacity_Python基础 - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="&#43; 加 addition - 减 subtraction * 乘 multiplication / 除 division % 取模 modulo（返回相除后的余数 -&amp;gt; (remainder)） // 相除后向下取整到最接近的整数 integer division ** 取幂 exponentiation （python中^不是取幂 是bitwise XOR : 位运算异或） 3的2次方 3 &amp;hellip;">
+      <meta property="og:description" content="&#43; 加 addition - 减 subtraction * 乘 multiplication / 除 division % 取模 modulo（返回相除后的余数 -&amp;gt; (remainder)） // 相除后向下取整到最接近的整数 integer division ** 取幂 exponentiation （python中^不是取幂 是bitwise XOR : 位运算异或） 3的2次方 3 &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/vocabulary/">Vocabulary</a></li>
+  
+  <li><a href="/recents/">Recents</a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Python|Udacity_Python基础</h1>
+
+<h3>Kesa
+  /  2018-08-29</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<h2 id="day1">Day1</h2>
+
+<h4 id="mathematics-operators算术运算符">Mathematics Operators算术运算符</h4>
+
+<pre><code>+  加   addition
+-  减   subtraction
+*  乘   multiplication
+/  除   division
+%  取模 modulo（返回相除后的余数 -&gt;  (remainder)）
+// 相除后向下取整到最接近的整数 integer division
+** 取幂 exponentiation
+（python中^不是取幂 是bitwise XOR : 位运算异或）
+3的2次方 3 to the power of 2
+</code></pre>
+
+<h4 id="variable-assign-operators-变量和赋值运算符">Variable &amp; Assign Operators 变量和赋值运算符</h4>
+
+<p>变量命名</p>
+
+<pre><code>1. 只能在变量名称中使用常规字母、数字和下划线。不能包含空格，并且需要以字母或下划线开头。
+2. 不能使用保留字(preserved words)或内置标识符(build-in identifier)
+3. 在 python 中，变量名称的命名方式是全部使用小写字母，并用下划线区分单词。
+4. 我们命名变量的方式称之为 snake case，因为我们用下划线连接单词 my_variable
+</code></pre>
+
+<p>-保留字介绍  Reserved Words</p>
+
+<pre><code>You may not name your variables any of the following words as they mean special things in Python:
+
+and	assert	break	class	continue
+def	del	elif	else	except
+exec	finally	for	from	global
+if	import	in	is	lambda
+not	or	pass	print	raise
+return	try	while		
+-----------------
+Do NOT use any of the following words either (although they are not strictly Python reserved words, they conflict with the names of commonly-used Python functions):
+
+Data	Float	Int	Numeric	Oxphys
+array	close	float	int	input
+open	range	type	write	zeros
+-----------------
+You should also avoid all the names defined in the math library (you must avoid them if you import the library):
+
+acos	asin	atan	cos	e
+exp	fabs	floor	log	log10
+pi	sin	sqrt	tan	
+</code></pre>
+
+<p>-科学计数法</p>
+
+<pre><code># 2.78e3 = 2780
+</code></pre>
+
+<p>赋值运算符</p>
+
+<pre><code>#逗号分隔赋值
+x, y, z = 3, 4, 5
+#等价于
+x = 3 \n y = 4 \n z = 5
+# 其他运算符
++= =+ *= 之类的
+</code></pre>
+
+<p>&hellip;中间隔过去很多我觉得没有什么意义的</p>
+
+<p>类型 &amp; 类型转化</p>
+
+<pre><code>type() 括号里放你的变量可以得到变量的 数据类型
+类型转换: str() int() float() ...之类的
+</code></pre>
+
+<p>函数和方法</p>
+
+<pre><code># 方法是属于一个对象的函数
+</code></pre>
+
+<p>字符串方法</p>
+
+<pre><code>#真tm挺多的,但是我觉得能用到的也没有多少
+
+capitalize () encode ()     format ()      isalpha ()      islower ()     istitle ()
+casefold ()   endswith ()   format_ map () isdecimal ()    isnumeric ()   isupper ()
+center ()     expandtabs () index ()       isdigit ()      isprintable () join ()
+count ()      find ()       isalnum ()     isidentifier () isspace ()     ljust ()
+</code></pre>
+
+<p>数据类型的两个维度: 可变? 有序?</p>
+
+<p>列表|集合|字典</p>
+
+<pre><code>### 列表 : 
+#✅ 列表的获取
+#✅ 列表的切片
+
+#列表是否包含某元素(某元素存不存在于列表中):
+&gt;&gt;&gt; 'this' in 'this is a string'
+True
+&gt;&gt;&gt; 'in' in 'this is a string'
+True
+&gt;&gt;&gt; 'isa' in 'this is a string'
+False
+&gt;&gt;&gt; 5 not in [1, 2, 3, 4, 6]
+True
+&gt;&gt;&gt; 5 in [1, 2, 3, 4, 6]
+False
+
+#列表的一些实用函数:
+len() :   返回列表中的元素数量。
+max() :
+  返回列表中的最大元素。最大元素的判断依据是列表中的对象类型。
+  数字列表中的最大元素是最大的数字。字符串列表中的最大元素是按照字母顺序排序时排在最后一位的元素。
+  因为 max() 函数的定义依据是大于比较运算符。如果列表包含不同的无法比较类型的元素，则 max() 的结果是 undefined。
+min() :   返回列表中的最小元素。它是 max() 函数的对立面，返回列表中的最小元素。
+sorted(): 返回一个从最小到最大排序的列表副本，并使原始列表保持不变。
+
+#列表的连接:
+  是一个字符串方法，将字符串列表作为参数
+  并返回一个由列表元素组成并由分隔符字符串分隔的字符串。
+
+#列表的加入:append添加到末尾(还有各种首尾的增删我就懒得搞出来了)
+new_str = &quot;\n&quot;.join([&quot;fore&quot;, &quot;aft&quot;, &quot;starboard&quot;, &quot;port&quot;])
+print(new_str)
+</code></pre>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

@@ -8,7 +8,47 @@
   </url>
   
   <url>
+    <loc>/post/2018/08/29/python-udacity-python/</loc>
+    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vocabulary/</loc>
+    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/08/28/mood-lonely-birthday/</loc>
+    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/08/27/wealth-and-pain/</loc>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/08/27/unity-dotween/</loc>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/08/27/to-be-a-more-valuable-man/</loc>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/08/26/have-a-public-break/</loc>
+    <lastmod>2018-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018/08/25/from-yihui-xie/</loc>
+    <lastmod>2018-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/08/25/all-day-long/</loc>
     <lastmod>2018-08-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -145,6 +185,10 @@
   </url>
   
   <url>
+    <loc>/booklist/</loc>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <lastmod>2018-08-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -157,8 +201,20 @@
   </url>
   
   <url>
+    <loc>/tags/dotween/</loc>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/game/</loc>
-    <lastmod>2018-08-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/generalskill/</loc>
+    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -171,6 +227,16 @@
   <url>
     <loc>/tags/mood/</loc>
     <lastmod>2018-08-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/movielist/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/note/</loc>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -193,8 +259,14 @@
   </url>
   
   <url>
+    <loc>/tags/python/</loc>
+    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/reflection/</loc>
-    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -224,13 +296,19 @@
   
   <url>
     <loc>/categories/unityskill/</loc>
-    <lastmod>2018-08-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/uselesstalks/</loc>
-    <lastmod>2018-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/vocabulary/</loc>
+    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -260,7 +338,7 @@
   
   <url>
     <loc>/tags/%E5%BF%83%E5%BE%97/</loc>
-    <lastmod>2018-08-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -297,6 +375,12 @@
   <url>
     <loc>/tags/%E7%A5%9E%E8%AF%9D/</loc>
     <lastmod>2018-08-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
