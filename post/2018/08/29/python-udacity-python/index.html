@@ -22,8 +22,8 @@
 
     
       
-      <meta property="description" content="&#43; 加 addition - 减 subtraction * 乘 multiplication / 除 division % 取模 modulo（返回相除后的余数 -&amp;gt; (remainder)） // 相除后向下取整到最接近的整数 integer division ** 取幂 exponentiation （python中^不是取幂 是bitwise XOR : 位运算异或） 3的2次方 3 &amp;hellip;">
-      <meta property="og:description" content="&#43; 加 addition - 减 subtraction * 乘 multiplication / 除 division % 取模 modulo（返回相除后的余数 -&amp;gt; (remainder)） // 相除后向下取整到最接近的整数 integer division ** 取幂 exponentiation （python中^不是取幂 是bitwise XOR : 位运算异或） 3的2次方 3 &amp;hellip;">
+      <meta property="description" content="#基本语法：[expr for iter_var in iterable] #原型: &amp;gt;&amp;gt;&amp;gt; L= [] &amp;gt;&amp;gt;&amp;gt; for x in range(1 , 10): ... L.append(x*x) ... &amp;gt;&amp;gt;&amp;gt; L [1, 4, 9, 16, 25, 36, 49, 64, 81] #简化: &amp;gt;&amp;gt;&amp;gt; print [x*x &amp;hellip;">
+      <meta property="og:description" content="#基本语法：[expr for iter_var in iterable] #原型: &amp;gt;&amp;gt;&amp;gt; L= [] &amp;gt;&amp;gt;&amp;gt; for x in range(1 , 10): ... L.append(x*x) ... &amp;gt;&amp;gt;&amp;gt; L [1, 4, 9, 16, 25, 36, 49, 64, 81] #简化: &amp;gt;&amp;gt;&amp;gt; print [x*x &amp;hellip;">
       
     
 
@@ -108,6 +108,142 @@
 
 
 
+
+<h2 id="day2">Day2</h2>
+
+<h4 id="列表表达式">列表表达式</h4>
+
+<pre><code class="language-python">#基本语法：[expr for iter_var in iterable]
+
+#原型:
+&gt;&gt;&gt; L= []
+&gt;&gt;&gt; for x in range(1 , 10):
+...     L.append(x*x)
+... 
+&gt;&gt;&gt; L
+[1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+#简化:
+&gt;&gt;&gt; print [x*x for x in range(1 , 11)]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+&gt;&gt;&gt;
+</code></pre>
+
+<p>总结:<br />
+相当于把要 append的元素条件放在了[ ] 后的第一个位置<br />
+输出的仍然是一个列表</p>
+
+<p>高级玩法</p>
+
+<pre><code class="language-py">#加if:
+squares = [x**2 for x in range(9) if x % 2 == 0]
+#加if else:
+squares = [x**2 if x % 2 == 0 else x + 3 for x in range(9)]
+</code></pre>
+
+<p>总结:只有if for在前 if else for 在后</p>
+
+<h4 id="enumerate">Enumerate:</h4>
+
+<p>enumerate 是一个会返回元组迭代器的内置函数，<br />
+这些元组包含列表的索引和值。<br />
+当你需要在循环中获取可迭代对象的每个元素及其索引时，<br />
+将经常用到该函数。</p>
+
+<pre><code class="language-python">letters = ['a', 'b', 'c', 'd', 'e']
+# 这里for之后 第一个 是索引 第二个是 集合里的值    
+for i, letter in enumerate(letters):
+    print(i, letter)
+&gt;&gt;&gt; 0 a
+    1 b
+    2 c
+    3 d
+    4 e
+</code></pre>
+
+<p>这个是Udacity的题 我还没有把握住enumerate的精髓<br />
+只是按照习惯瞎写<br />
+我才应该是这样可以省一个</p>
+
+<pre><code class="language-python">#使用 enumerate 修改列表 cast，
+#使每个元素都包含姓名，然后是角色的对应身高。
+#例如，cast 的第一个元素应该从 &quot;Barney Stinson&quot; 更改为 &quot;Barney Stinson 72”。
+
+cast = [&quot;Barney Stinson&quot;, &quot;Robin Scherbatsky&quot;, &quot;Ted Mosby&quot;, &quot;Lily Aldrin&quot;, &quot;Marshall Eriksen&quot;]
+heights = [72, 68, 72, 66, 76]
+
+#两种都对
+/---------------
+#这样: 但是这个cas一点用的没有
+for i, cas in enumerate(cast):
+    cast[i] += &quot; &quot; + heights[i].__str__()
+/---------------
+#或者: 但是有了上面的觉得不如一个for i in x 直接
+for i, he in enumerate(heights):
+    cast[i] += &quot; &quot; + he.__str__()
+/---------------
+
+print(cast)
+</code></pre>
+
+<p>感觉是针对对没有什么顺序的数据结构处理的<br />
+但是好像python大部分有意义的数据结构都带有索引的<br />
+当然应该可能是我也不太清楚吧<br />
+它给的答案和我的第一个方法一样:没什么意义</p>
+
+<h4 id="zip">Zip:</h4>
+
+<p>zip 返回一个将多个可迭代对象组合成一个元组序列的迭代器。<br />
+每个元组都包含所有可迭代对象中该位置的元素。<br />
+zip封装:</p>
+
+<pre><code class="language-python">list = zip(['a', 'b', 'c'], [1, 2, 3])
+&gt;&gt;&gt;list = [('a', 1), ('b', 2), ('c', 3)]
+</code></pre>
+
+<pre><code class="language-python">另一种玩法
+x_coord = [23, 53, 2, -12, 95, 103, 14, -5]
+y_coord = [677, 233, 405, 433, 905, 376, 432, 445]
+z_coord = [4, 16, -6, -42, 3, -6, 23, -1]
+labels = [&quot;F&quot;, &quot;J&quot;, &quot;A&quot;, &quot;Q&quot;, &quot;Y&quot;, &quot;B&quot;, &quot;W&quot;, &quot;X&quot;]
+
+points = []
+### 注意这里的玩法
+for label, x, y, z in zip(labels, x_coord, y_coord, z_coord):
+    points.append(&quot;{}: {}, {}, {}&quot;.format(label,x,y,z))
+
+for point in points:
+    print(point)
+
+</code></pre>
+
+<p>zip拆封:(使用*号进行)</p>
+
+<pre><code>some_list = [('a', 1), ('b', 2), ('c', 3)]
+letters, nums = zip(*some_list)
+#本质上是矩阵的转置
+#把相应每个小元组的第 i 个对象放进一个新的小元组
+</code></pre>
+
+<p><strong>zip转置矩阵(利用拆分:这个挺难的)</strong></p>
+
+<pre><code class="language-py">data = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (9, 10, 11))
+
+data_transpose = tuple(zip(*data))
+print(data_transpose)
+</code></pre>
+
+<h4 id="jupyter的用法">Jupyter的用法:</h4>
+
+<p>略</p>
+
+<h4 id="pycharm和jupyter-notebook的联动">Pycharm和Jupyter Notebook的联动:</h4>
+
+<p>略</p>
+
+<h4 id="plt的用法">plt的用法:</h4>
+
+<p>待总结</p>
 
 <h2 id="day1">Day1</h2>
 
@@ -198,9 +334,11 @@ count ()      find ()       isalnum ()     isidentifier () isspace ()     ljust 
 
 <p>数据类型的两个维度: 可变? 有序?</p>
 
-<p>列表|集合|字典</p>
+<h3 id="列表-集合-字典">列表|集合|字典</h3>
 
-<pre><code>### 列表 : 
+<p>列表</p>
+
+<pre><code class="language-python">### 列表 : 
 #✅ 列表的获取
 #✅ 列表的切片
 
@@ -224,6 +362,7 @@ max() :
   因为 max() 函数的定义依据是大于比较运算符。如果列表包含不同的无法比较类型的元素，则 max() 的结果是 undefined。
 min() :   返回列表中的最小元素。它是 max() 函数的对立面，返回列表中的最小元素。
 sorted(): 返回一个从最小到最大排序的列表副本，并使原始列表保持不变。
+replace():替换旧的换成新的 
 
 #列表的连接:
   是一个字符串方法，将字符串列表作为参数
@@ -232,6 +371,86 @@ sorted(): 返回一个从最小到最大排序的列表副本，并使原始列�
 #列表的加入:append添加到末尾(还有各种首尾的增删我就懒得搞出来了)
 new_str = &quot;\n&quot;.join([&quot;fore&quot;, &quot;aft&quot;, &quot;starboard&quot;, &quot;port&quot;])
 print(new_str)
+</code></pre>
+
+<p>字典</p>
+
+<pre><code class="language-python">#键值对示例:
+elements = {&quot;hydrogen&quot;: 1, &quot;helium&quot;: 2, &quot;carbon&quot;: 6}
+#访问字典的值:
+elements[&quot;helium&quot;]
+elements.get(&quot;dilithium&quot;) 
+#get 会在字典中查询值，但是和方括号不同，如果没有找到键，get 会返回 None（或者你所选的默认值）
+#如果你预计查询有时候会失败，get 可能比普通的方括号查询更合适，因为错误可能会使程序崩溃。
+
+#字典添加键值对
+dict.setdefault(key,value)
+
+#访问字典:
+scores = {
+    &quot;Rick Sanchez&quot;: 70,
+    &quot;Morty Smith&quot;: 35,
+    &quot;Summer Smith&quot;: 82,
+    &quot;Jerry Smith&quot;: 23,
+    &quot;Beth Smith&quot;: 98
+}
+
+#这里的问题是想把字典转化为列表
+#必须使用dict.items才能分成[[],[],[]]的感觉
+#这里很重要
+#这里的items类似于
+for i,j in scores.items():
+    print(i)
+    print(j)
+
+
+&gt;&gt;&gt; Rick Sanchez
+    70
+    Morty Smith
+    35
+    Summer Smith
+    82
+    Jerry Smith
+    23
+    Beth Smith
+    98
+
+
+#恒等运算符 is看是不是同一个对象 ==看是不是value相等
+x = y = [4, 5, 6]
+z = [4, 5, 6]
+print(x is z)
+print(x == z)
+&gt;&gt;&gt; False 
+&gt;&gt;&gt; True
+</code></pre>
+
+<p>集合</p>
+
+<pre><code></code></pre>
+
+<h3 id="控制流">控制流</h3>
+
+<p>条件</p>
+
+<pre><code></code></pre>
+
+<p>循环</p>
+
+<pre><code class="language-python"># 循环基本方法:
+for x in 集合\字典\列表:
+  x.操作()
+
+# Range使用方法
+range(start=0, stop, step=1)
+# Start是该序列的第一个数字，stop比该序列的最后一个数字大 1，
+# step是该序列中每个数字之间的差。
+# 如果未指定的话，start默认为 0，step 默认为 1（即上述 =0和 =1）。
+
+for i in range(3):
+    print(i)
+&gt;&gt;&gt; 0 1 2
+    
 </code></pre>
 
 
