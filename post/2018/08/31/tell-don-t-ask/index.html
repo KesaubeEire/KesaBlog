@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>心得|Tell Don’t Ask - Kesa</title>
+    <meta property="og:title" content="心得|Tell Don’t Ask - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="今天突然看设计模式看到一个没有听说过的:
+命令，不要去询问(Tell, Don’t Ask)”原则
+我很好奇 于是去搜了一下详细的意思:
+[&amp;hellip;] 这个原则讲的是，一个对象应该命令其它对象该做什么，而不是去查询其它对象的状态来决定做什么(查询其它对象的状态来决定做什么也被称作‘功能嫉妒（Feature Envy）’)。 这篇文章里有个很生动的例子，我至今记忆犹新：
+if &amp;hellip;">
+      <meta property="og:description" content="今天突然看设计模式看到一个没有听说过的:
+命令，不要去询问(Tell, Don’t Ask)”原则
+我很好奇 于是去搜了一下详细的意思:
+[&amp;hellip;] 这个原则讲的是，一个对象应该命令其它对象该做什么，而不是去查询其它对象的状态来决定做什么(查询其它对象的状态来决定做什么也被称作‘功能嫉妒（Feature Envy）’)。 这篇文章里有个很生动的例子，我至今记忆犹新：
+if &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/vocabulary/">Vocabulary</a></li>
+  
+  <li><a href="/recents/">Recents</a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>心得|Tell Don’t Ask</h1>
+
+<h3>Kesa
+  /  2018-08-31</h3>
+<hr>
+
+
+      </header>
+
+
+
+<p>今天突然看设计模式看到一个没有听说过的:<br />
+<strong>命令，不要去询问(Tell, Don’t Ask)”原则</strong><br />
+我很好奇 于是去搜了一下<a href="https://blog.csdn.net/zhongweijian/article/details/7825147">详细的意思</a>:</p>
+
+<blockquote>
+<p>这个原则讲的是，一个对象应该命令其它对象该做什么，而不是去查询其它对象的状态来决定做什么(查询其它对象的状态来决定做什么也被称作‘功能嫉妒（Feature Envy）’)。
+这篇文章里有个很生动的例子，我至今记忆犹新：</p>
+
+<pre><code>if (person.getAddress().getCountry() == “Australia”) 
+</code></pre>
+
+<p>这违反了<a href="https://en.wikipedia.org/wiki/Law_of_Demeter">Demeter定律</a><sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>，因为这个调用者跟Person过于亲密。它知道Person里有一个Address，而Address里还有一个country。它实际上应该写成这样：</p>
+
+<pre><code>if (person.livesIn(“Australia”)) 
+</code></pre>
+
+<p>好的面向对象编程是告诉对象你要做什么，而不是询问对象的状态后根据状态做行动。数据和依赖这些数据的操作都应该属于同一个对象。</p>
+</blockquote>
+
+<p>我更好奇了,于是尽可能去搜<a href="https://pragprog.com/articles/tell-dont-ask#SHARP">英文原文</a>,去看作者的本意和原生的例子:</p>
+
+<blockquote>
+<p>Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.<br />
+<strong>— Alec Sharp</strong></p>
+</blockquote>
+
+<p>但是等等看着英文很难受,总是没有动力去读完,于是我找到了CSDN另一位翻译了这个文章的大神的<a href="https://blog.csdn.net/nethibernate/article/details/6161425">译文</a>:</p>
+
+<blockquote>
+<p>迪米特法则强调一个问题：如果我们在实现某个方法时调用的对象越多，那么我们的程序耦合度就越高。一旦某个地方需要修改，都会带来麻烦。所以根据迪米特法则，我们在实现对象O的方法M时，M能够调用的对象应该只有：<br />
+- 对象O自己<br />
+- M的参数<br />
+- M内部创建的对象<br />
+- O的直接组件对象<br />
+举个之前写代码的例子:</p>
+
+<pre><code>BookList bookList = bookStore.getAllBooks();  
+if(!bookList.has(book.getID()){  
+    bookList.addBook(book.getID(), book);  
+} 
+</code></pre>
+
+<p>代码很简单，我只是单纯的想往我们的商店中增加一本新的书。但是上面的这段简单的代码，依赖了bookStore、BookList甚至book对象，其实我们只是想单纯的在书店中加一本新书而已，我什么不能这么用呢？</p>
+
+<pre><code>bookStore.addNewBook(book);
+</code></pre>
+
+<p>这样,我们调用的代码仅仅依赖bookStore一个对象了</p>
+</blockquote>
+
+<p>深以为然,好文章</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">迪米特法则也称为最小知识原则（Least Knowledge Principle, LKP），简单说，如果两个对象不必直接通信，那么这两个对象就不应当发生直接的相互作用。如果一个对象需要调用另外一个对象的某个方法的话，那么应该通过第三个对象来转发调用。迪米特法则可以简单的说成：Talk only to your immediate friends。
+ <a class="footnote-return" href="#fnref:1">↩</a></li>
+</ol>
+</div>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
