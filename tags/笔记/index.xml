@@ -6,10 +6,59 @@
     <description>Recent content in 笔记 on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>笔记|罗振宇3则</title>
+      <link>/post/2018/09/03/3/</link>
+      <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/09/03/3/</guid>
+      <description>怎样找到一份合适的工作  把大事拆成小事
+ 六度空间理论:想联系到世界上任何一个人最多通过5个人 想认识世界上的任何一个人都不难 难的是让人家帮助你 找人要从校友\老乡等门槛低的资源开始  把自己做成产品
+ 不骚扰 不敢动 不迎合 : 提供稳定服务 不去&amp;rdquo;推销&amp;rdquo;自己 做好自己 : 能稳定的输出价值 迟早能被看见  稳定的输出价值:这里大有学问 (但是这里也需要有一个绕开前三个不且能推销自己的手段)  把自己的价值变成一个确定的产品,然后让第一个陌生用户使用它,并在整个社会释放价值  先上车再换座位  进公司先进去再说 有上火箭的机会 - 先别挑仓位 客服的三点好处  了解一线客户需求 利用客户意见反馈去敲各部门的门提意见 肯干客服的人少 更有利脱颖而出   孙子兵法:
+ 不可胜在己 可胜在敌 做好自己不输 就不在乎当下的输赢 最后也不会输的嘛
+个人感受 大事拆小事这里挺不错
+把自己产品化也很有意思: 靠实力 和 时间 的积淀出线 -&amp;gt; 稳定的输出价值
+先上车再换座位:没有直接回答 &amp;ldquo;合适&amp;rdquo; 的工作 当然这有一个殊途同归的理念 但是不那么直接 有点牵强
+   夸出一个好孩子 夸孩子要夸方向 不要夸现状</description>
+    </item>
+    
+    <item>
+      <title>未完待续_CSharp|&lt;&lt;编写高质量C#代码建议&gt;&gt;提炼</title>
+      <link>/post/2018/09/01/c-c/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/09/01/c-c/</guid>
+      <description>总结:  StopWatch 和 Time.DeltaTime 的比较  了解StopWatch这个数据类型也是用来做时长判断的 Stopwatch 和 DateTime 对比 : 具体用法见下面的详情  StopWatch就是个计时器 DateTime是了解从年月日时分秒毫秒的    StopWatch 和 Time.DeltaTime 的比较 在看到几次作者尝试调试代码比较速度的时候
+我好多次看到了
+Stopwatch watch1 = Stopwatch.StartNew();  这句话
+我想到和我日常中用的Time.DeltaTime应该是一类东西
+只不过这个可能更便捷更规范?
+我自己想看看原码
+然而我发现在Console下编程根本没有Time这个Unity中常用到的类
+难道这个也是UnityEngine里面的东西?
+没错 Time这个类的确是UnityEngine NameSpace下的
+然而又是只读所以不能很清楚的知道到底是不是和StopWatch是Api同源
+就没办法知道到底自己在Unity中是不是应该继续用Time.DeltaTime
+不过总之还是很好地启发了我应该试试StopWatch
+至少搜一搜它们之间的区别(🚄上没网有点小难受)
+&amp;mdash;&amp;mdash;&amp;ndash;上网收获&amp;mdash;&amp;mdash;&amp;ndash;
+查了一下发现没什么这两个东西有联系的网页
+但是再次提醒了我 Time.DeltaTime指的是每帧的运行时长
+Unity中之所以可以通过这种方法实现时间计算
+是因为通过把运行的每帧的时间加起来得到的
+和真实的时间是有区别的
+计算可能完成但是渲染等其他计算耽误画面呈现从而让得到的时间往往比真实时间长一些
+&amp;mdash;&amp;mdash;&amp;ndash;折了个腾&amp;mdash;&amp;mdash;&amp;ndash;
+后来又看到了DateTime和StopWatch的争辩
+发现这个事情大有可言
+便搞了一阵儿
+using System; using System.Diagnostics; using System.Threading; namespace TestInBook { internal class Program { public static void Main(string[] args) { // StopTimeTest(); // DateTimeTest(); Thread thread1 = new Thread(DateTimeTest); //线程1管DT Thread thread2 = new Thread(StopTimeTest); //线程1管SW Thread thread3 = new Thread(Cal2MethodDiff); //线程3管DT-SW thread1.</description>
+    </item>
     
     <item>
       <title>Vocabulary</title>

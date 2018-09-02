@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>未完待续_CSharp|&lt;&lt;编写高质量C#代码建议&gt;&gt;提炼 - Kesa</title>
+    <meta property="og:title" content="未完待续_CSharp|&lt;&lt;编写高质量C#代码建议&gt;&gt;提炼 - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="在看到几次作者尝试调试代码比较速度的时候
+我好多次看到了
+Stopwatch watch1 = Stopwatch.StartNew();  这句话
+我想到和我日常中用的Time.DeltaTime应该是一类东西
+只不过这个可能更便捷更规范?
+我自己想看看原码
+然而我发现在Console下编程根本没有Time这个Unity中常用到的类
+难道这个也是UnityEngine里面的东西?
+没错 Time &amp;hellip;">
+      <meta property="og:description" content="在看到几次作者尝试调试代码比较速度的时候
+我好多次看到了
+Stopwatch watch1 = Stopwatch.StartNew();  这句话
+我想到和我日常中用的Time.DeltaTime应该是一类东西
+只不过这个可能更便捷更规范?
+我自己想看看原码
+然而我发现在Console下编程根本没有Time这个Unity中常用到的类
+难道这个也是UnityEngine里面的东西?
+没错 Time &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/vocabulary/">Vocabulary</a></li>
+  
+  <li><a href="/recents/">Recents</a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>未完待续_CSharp|&lt;&lt;编写高质量C#代码建议&gt;&gt;提炼</h1>
+
+<h3>Kesa
+  /  2018-09-01</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<h2 id="总结">总结:</h2>
+
+<ol>
+<li>StopWatch 和 Time.DeltaTime 的比较
+
+<ol>
+<li>了解StopWatch这个数据类型也是用来做时长判断的</li>
+<li>Stopwatch 和 DateTime 对比 : 具体用法见下面的详情
+
+<ol>
+<li>StopWatch就是个计时器</li>
+<li>DateTime是了解从年月日时分秒毫秒的</li>
+</ol></li>
+</ol></li>
+</ol>
+
+<h3 id="stopwatch-和-time-deltatime-的比较">StopWatch 和 Time.DeltaTime 的比较</h3>
+
+<p>在看到几次作者尝试调试代码比较速度的时候<br />
+我好多次看到了</p>
+
+<pre><code class="language-c">Stopwatch watch1 = Stopwatch.StartNew();
+</code></pre>
+
+<p>这句话<br />
+我想到和我日常中用的Time.DeltaTime应该是一类东西<br />
+只不过这个可能更便捷更规范?<br />
+我自己想看看原码<br />
+然而我发现在Console下编程根本没有Time这个Unity中常用到的类<br />
+难道这个也是UnityEngine里面的东西?<br />
+没错 Time这个类的确是UnityEngine NameSpace下的<br />
+然而又是只读所以不能很清楚的知道到底是不是和StopWatch是Api同源<br />
+就没办法知道到底自己在Unity中是不是应该继续用Time.DeltaTime</p>
+
+<p>不过总之还是很好地启发了我应该试试StopWatch<br />
+至少搜一搜它们之间的区别(🚄上没网有点小难受)</p>
+
+<p><strong>&mdash;&mdash;&ndash;上网收获&mdash;&mdash;&ndash;</strong><br />
+查了一下发现没什么这两个东西有联系的网页<br />
+但是再次提醒了我 Time.DeltaTime指的是每帧的运行时长<br />
+Unity中之所以可以通过这种方法实现时间计算<br />
+是因为通过把运行的每帧的时间加起来得到的<br />
+和真实的时间是有区别的<br />
+计算可能完成但是渲染等其他计算耽误画面呈现从而让得到的时间往往比真实时间长一些</p>
+
+<p><strong>&mdash;&mdash;&ndash;折了个腾&mdash;&mdash;&ndash;</strong><br />
+后来又看到了DateTime和StopWatch的争辩<br />
+发现这个事情大有可言<br />
+便搞了一阵儿</p>
+
+<pre><code class="language-C#">using System;
+using System.Diagnostics;
+using System.Threading;
+
+namespace TestInBook
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+//            StopTimeTest();
+//            DateTimeTest();
+            Thread thread1 = new Thread(DateTimeTest); //线程1管DT
+            Thread thread2 = new Thread(StopTimeTest); //线程1管SW
+            Thread thread3 = new Thread(Cal2MethodDiff); //线程3管DT-SW
+            thread1.Start();
+            thread2.Start();
+            thread3.Start();
+        }
+
+
+        private static int _perTimeSw; //循环次数
+        private static float _timeSw; //总时长
+        private static float _aveTimeSw; //平均时长
+
+        private static int _perTimeDt; //循环次数
+        private static float _timeDt; //总时长
+        private static float _aveTimeDt; //平均时长
+
+        //StopWatch方法计时
+        static void StopTimeTest()
+        {
+            while (true)
+            {
+                _perTimeSw++;
+                Stopwatch sw = new Stopwatch();
+                //开始计时
+                sw.Start();
+                //100ms
+                Thread.Sleep(100);
+                //计时结束
+                sw.Stop();
+                _timeSw += sw.ElapsedMilliseconds;
+                _aveTimeSw = _timeSw / _perTimeSw;
+//                Console.WriteLine($&quot;SW平均计量时间:{_aveTimeSw}&quot;);
+//                Console.WriteLine(&quot;elpase time {0}, elapse ticks {1}&quot;, sw.ElapsedMilliseconds, sw.ElapsedTicks);
+            }
+
+            // ReSharper disable once FunctionNeverReturns
+        }
+
+        //DateTime方法计时
+        static void DateTimeTest()
+        {
+            while (true)
+            {
+                _perTimeDt++;
+                //打印时的时间格式
+//                string dateFormat = &quot;yyyy-MM-dd HH:mm:ss.ffff&quot;;
+
+                //开始的utc time
+                DateTime startTime = DateTime.UtcNow;
+                Thread.Sleep(100);
+
+                //结束的utc time
+                DateTime endTime = DateTime.UtcNow;
+//                Console.WriteLine(&quot;interval:{2},  start time:{0}, end time:{1}&quot;,
+//                    startTime.ToString(dateFormat, CultureInfo.InvariantCulture),
+//                    endTime.ToString(dateFormat, CultureInfo.InvariantCulture), (endTime - startTime).Milliseconds);
+                _timeDt += (endTime - startTime).Milliseconds;
+                _aveTimeDt = _timeDt / _perTimeDt;
+//                Console.WriteLine($&quot;DT平均计量时间:{_aveTimeDt}&quot;);
+            }
+
+            // ReSharper disable once FunctionNeverReturns
+        }
+
+        //比较二者平均时间
+        private static void Cal2MethodDiff()
+        {
+            while (true)
+            {
+                Console.WriteLine($&quot;Dt比Sw快{_aveTimeDt - _aveTimeSw}&quot;);
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>对比了一下二者的速度差异
+并且还第一次搞了搞C#有关线程的操作<br />
+(其实也是一个反射相关的感觉)<br />
+总之是搞出来了 差异不是很大
+平均就是个1毫秒左右的差异&hellip;<br />
+不过话说1毫秒是不是够大了&hellip;
+安啦 毕竟是不同线程级别的操作<br />
+控制上肯定还是有一些先后的 给电脑多一些时间咯&hellip;</p>
+
+<h2 id="命名-构架-的规范">命名|构架 的规范</h2>
+
+<p>根据本书的目录<br />
+我计划针对每一个议题进行针对的总结<br />
+但是毕竟我的道行太浅<br />
+很多问题要么没有见过要么没有意识到<br />
+甚至都没有听说过<br />
+当然做不到每一个都能有所领悟<br />
+只能说是根据自己的情况来</p>
+
+<h2 id="本书介绍">本书介绍</h2>
+
+<p>本书的作者是陆敏技<br />
+是一个没有听说过的C#开发者<br />
+但是看到他对C#开发问题涉猎的广度和深度<br />
+我就知道这绝对是一个OG<br />
+而且本书内容质量&amp;诚意之高<br />
+就连我一个新手都能看出来<br />
+非常感动 有机会我一定入手实体版供以观瞻</p>
+
+<h2 id="没有忍住我还是新开了坑">没有忍住我还是新开了坑</h2>
+
+<p>但是这次毕竟坑太多了这几天的小假期肯定是遭不住的<br />
+所以这个作为一个长期但是比较碎片化的途径<br />
+比如高铁上 就非常合适<br />
+毕竟这本书不是系统的介绍方式 而是也较为零碎的<br />
+坐在高铁上<br />
+依然没有了上高铁前对&rdquo;计划的很好很开心&rdquo;的惦记<br />
+反而是比较拘束 比较闷 生理心理上都有束缚感<br />
+一些零碎的东西更适合这种环境吧 对我来说</p>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

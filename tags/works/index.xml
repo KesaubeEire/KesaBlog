@@ -82,19 +82,12 @@ bookStore.addNewBook(book);  这样,我们调用的代码仅仅依赖bookStore�
     </item>
     
     <item>
-      <title>心情|Advantage of caps</title>
+      <title>心情|帽子的好处 &#43; 产品的属性</title>
       <link>/post/2018/08/13/advantage-of-caps/</link>
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/08/13/advantage-of-caps/</guid>
-      <description> 小小的对自己的不满  又忘了对佳敏同志的问候 又忘了对文杰同志的问候 又忘了对自己的问候
- 作息!!!  工具 社交 游戏 这是我总结的一个app
-或是一个产品的三大标签
-可能多少有一些偏差 但是我觉得还是挺中肯的
-工具性:生产力
-社交性:扩散性
-游戏性:吸引力
-戴帽子的好处 原来我从不戴帽子
+      <description> 戴帽子的好处 原来我从不戴帽子
 没有这个习惯是一方面
 另一方面是我一直是长一点的头发
 没有这个诉求
@@ -112,6 +105,12 @@ bookStore.addNewBook(book);  这样,我们调用的代码仅仅依赖bookStore�
 就会不自主的习惯于
 利用这个帽檐躲闪不愿直面的目光和氛围
 嗨工具
+工具 社交 游戏 这是我总结的一个app
+或是一个产品的三大标签
+可能多少有一些偏差 但是我觉得还是挺中肯的
+工具性:生产力
+社交性:扩散性
+游戏性:吸引力
  非常感谢隔壁404这个Bingo帽子的原主人 ↩   </description>
     </item>
     

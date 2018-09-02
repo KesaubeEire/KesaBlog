@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GeneralSkill on Kesa</title>
-    <link>/categories/generalskill/</link>
-    <description>Recent content in GeneralSkill on Kesa</description>
+    <title>C# on Kesa</title>
+    <link>/tags/c#/</link>
+    <description>Recent content in C# on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/generalskill/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/c#/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -51,19 +51,6 @@ using System; using System.Diagnostics; using System.Threading; namespace TestIn
       
       <guid>/post/2018/09/01/c-ref-out/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Python|Udacity_Python基础</title>
-      <link>/post/2018/08/29/python-udacity-python/</link>
-      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/08/29/python-udacity-python/</guid>
-      <description>Day2 列表表达式 #基本语法：[expr for iter_var in iterable] #原型: &amp;gt;&amp;gt;&amp;gt; L= [] &amp;gt;&amp;gt;&amp;gt; for x in range(1 , 10): ... L.append(x*x) ... &amp;gt;&amp;gt;&amp;gt; L [1, 4, 9, 16, 25, 36, 49, 64, 81] #简化: &amp;gt;&amp;gt;&amp;gt; print [x*x for x in range(1 , 11)] [1, 4, 9, 16, 25, 36, 49, 64, 81, 100] &amp;gt;&amp;gt;&amp;gt;  总结:
-相当于把要 append的元素条件放在了[ ] 后的第一个位置
-输出的仍然是一个列表
-高级玩法
-#加if: squares = [x**2 for x in range(9) if x % 2 == 0] #加if else: squares = [x**2 if x % 2 == 0 else x + 3 for x in range(9)]  总结:只有if for在前 if else for 在后</description>
     </item>
     
   </channel>
