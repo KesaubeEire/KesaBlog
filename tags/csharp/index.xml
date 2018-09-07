@@ -6,10 +6,25 @@
     <description>Recent content in CSharp on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>未完待续_Unity|CSharp的脚本优化</title>
+      <link>/post/2018/09/07/unity-csharp/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/09/07/unity-csharp/</guid>
+      <description>又开坑了 今天看了很多关于脚本优化的文章
+说是很多其实也就是3篇左右
+但是我觉得我领会的思想是比较足够的了
+就是C#是个乖孩子 很懂事 但是懂事就不灵光
+所以你得想法子让他少做系统内源的事情
+多用一些方法让他做辛苦活而不去做那些自己带着的东西
+这是个比喻 大家的博客主要优化的方向是减少DrawCall和GC</description>
+    </item>
     
     <item>
       <title>未完待续_CSharp|&lt;&lt;编写高质量C#代码建议&gt;&gt;提炼</title>

@@ -8,6 +8,26 @@
   </url>
   
   <url>
+    <loc>/post/2018/09/08/from/</loc>
+    <lastmod>2018-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/09/07/unity-csharp/</loc>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/09/06/high-way/</loc>
+    <lastmod>2018-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/09/03/7-swords/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018/09/03/3/</loc>
     <lastmod>2018-09-03T00:00:00+00:00</lastmod>
   </url>
@@ -103,12 +123,12 @@
   </url>
   
   <url>
-    <loc>/post/2018/08/21/always-records/</loc>
+    <loc>/post/2018/08/21/a-story-idea/</loc>
     <lastmod>2018-08-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2018/08/21/a-story-idea/</loc>
+    <loc>/post/2018/08/21/always-records/</loc>
     <lastmod>2018-08-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -220,7 +240,13 @@
   
   <url>
     <loc>/tags/csharp/</loc>
-    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cartoon/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -272,7 +298,7 @@
   
   <url>
     <loc>/categories/note/</loc>
-    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -302,7 +328,7 @@
   
   <url>
     <loc>/tags/reflection/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -326,13 +352,13 @@
   
   <url>
     <loc>/categories/unityskill/</loc>
-    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/uselesstalks/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -350,7 +376,13 @@
   
   <url>
     <loc>/tags/works/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E4%BA%A7%E5%93%81/</loc>
+    <lastmod>2018-09-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -410,7 +442,7 @@
   
   <url>
     <loc>/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

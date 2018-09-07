@@ -6,10 +6,25 @@
     <description>Recent content in Works on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/works/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>未完待续_Unity|CSharp的脚本优化</title>
+      <link>/post/2018/09/07/unity-csharp/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/09/07/unity-csharp/</guid>
+      <description>又开坑了 今天看了很多关于脚本优化的文章
+说是很多其实也就是3篇左右
+但是我觉得我领会的思想是比较足够的了
+就是C#是个乖孩子 很懂事 但是懂事就不灵光
+所以你得想法子让他少做系统内源的事情
+多用一些方法让他做辛苦活而不去做那些自己带着的东西
+这是个比喻 大家的博客主要优化的方向是减少DrawCall和GC</description>
+    </item>
     
     <item>
       <title>心得|Tell Don’t Ask</title>
@@ -45,10 +60,32 @@ bookStore.addNewBook(book);  这样,我们调用的代码仅仅依赖bookStore�
       <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/08/25/unity-unity-attribute/</guid>
-      <description>看都不看就给To Be Continued的标签 相比我也知道我是有多能拖哈哈哈😁(寒酸的笑容十分僵硬)
-我想我应该是可以在回家期间搞定这么写一点都,,,吖那啥的东西的
-但是想到我现在手机毫无流量 在火车上要怎么活下来呢&amp;hellip;
-怎么活下来&amp;hellip;怎么活&amp;hellip;</description>
+      <description>一开始我真的是想全部总结一下的
+但是我慢慢发现这个Attribute是没完没了的
+既然它开放了自定义的方式
+那么各种插件(例如Hierarchy2)和各种库都可以自定义一大堆
+没有什么固定的
+所以这里中途只打算记一些常用且重要的
+很多没什么普遍价值的Attribute我就Pass了
+前言  Attributes are markers that can be placed above a class, property or function in a script to indicate special behaviour.
+ 我在Unity Manual里怎么找也只有这一个页面,并没有详细的Attribute的使用说明,经过我反复在网上找到另一些文档才有了着落:
+ References
+Attribute是C#的语言特性1
+Unity3d中的Attributes整理2
+Untiy Tutorial: Attributes3
+Unity ScriptAPI4
+Unity3D 的一些Attribute (一些是5.0新的API)5
+UnityEngine、UnityEditor中的所有 Attributes6
+ 据参考链接1内容和我自己的所见
+Attribute是可以自定义的
+即可以分为内置Attribute和自定义Attribute两部分
+本文操作:
+ 列一下我自己认为比较有意义的一些内置Attribute
+ 写一下自定义Attribute的做法  内置Attribute(主要来自参考链接) AddComponentMenu 这个应该是各个插件脚本经常使用的
+就是在Unity Editor的菜单里的Component选项卡里直接加选项
+一定程度上让你自定义一个路径 以分类脚本并且简化脚本的添加
+尝试时直接在已有脚本类下添加失败 不知道是不是只能在正确的第一个类下起作用
+[AddComponentMenu(&amp;quot;Transform/Follow Transform&amp;quot;)] public class XJB001 : MonoBehaviour {.</description>
     </item>
     
     <item>
