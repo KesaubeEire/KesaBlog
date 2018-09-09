@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>未完待续_Unity|Unity Attribute 标签</title>
+      <title>Unity|Unity Attribute 标签</title>
       <link>/post/2018/08/25/unity-unity-attribute/</link>
       <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
       
@@ -38,7 +38,7 @@ Attribute是可以自定义的
 即可以分为内置Attribute和自定义Attribute两部分
 本文操作:
  列一下我自己认为比较有意义的一些内置Attribute
- 写一下自定义Attribute的做法  内置Attribute(主要来自参考链接) AddComponentMenu 这个应该是各个插件脚本经常使用的
+ 写一下自定义Attribute的做法  内置Attribute UnityEngine Attribute AddComponentMenu 这个应该是各个插件脚本经常使用的
 就是在Unity Editor的菜单里的Component选项卡里直接加选项
 一定程度上让你自定义一个路径 以分类脚本并且简化脚本的添加
 尝试时直接在已有脚本类下添加失败 不知道是不是只能在正确的第一个类下起作用

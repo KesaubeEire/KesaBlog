@@ -362,6 +362,40 @@ Udacity是我现在觉得非常靠谱非常漂亮而且够实在的地方
     </item>
     
     <item>
+      <title>Unity|Unity Attribute 标签</title>
+      <link>/post/2018/08/25/unity-unity-attribute/</link>
+      <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/08/25/unity-unity-attribute/</guid>
+      <description>一开始我真的是想全部总结一下的
+但是我慢慢发现这个Attribute是没完没了的
+既然它开放了自定义的方式
+那么各种插件(例如Hierarchy2)和各种库都可以自定义一大堆
+没有什么固定的
+所以这里中途只打算记一些常用且重要的
+很多没什么普遍价值的Attribute我就Pass了
+前言  Attributes are markers that can be placed above a class, property or function in a script to indicate special behaviour.
+ 我在Unity Manual里怎么找也只有这一个页面,并没有详细的Attribute的使用说明,经过我反复在网上找到另一些文档才有了着落:
+ References
+Attribute是C#的语言特性1
+Unity3d中的Attributes整理2
+Untiy Tutorial: Attributes3
+Unity ScriptAPI4
+Unity3D 的一些Attribute (一些是5.0新的API)5
+UnityEngine、UnityEditor中的所有 Attributes6
+ 据参考链接1内容和我自己的所见
+Attribute是可以自定义的
+即可以分为内置Attribute和自定义Attribute两部分
+本文操作:
+ 列一下我自己认为比较有意义的一些内置Attribute
+ 写一下自定义Attribute的做法  内置Attribute UnityEngine Attribute AddComponentMenu 这个应该是各个插件脚本经常使用的
+就是在Unity Editor的菜单里的Component选项卡里直接加选项
+一定程度上让你自定义一个路径 以分类脚本并且简化脚本的添加
+尝试时直接在已有脚本类下添加失败 不知道是不是只能在正确的第一个类下起作用
+[AddComponentMenu(&amp;quot;Transform/Follow Transform&amp;quot;)] public class XJB001 : MonoBehaviour {.</description>
+    </item>
+    
+    <item>
       <title>心得|from YiHui Xie</title>
       <link>/post/2018/08/25/from-yihui-xie/</link>
       <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
@@ -432,40 +466,6 @@ WJM没有怎么搭理我
 节奏内容的创意 我觉得我还是应该积累一些创意
 抄袭和致敬并不是不可以
 但是如果可以自己有自己的创意那不是更好么</description>
-    </item>
-    
-    <item>
-      <title>未完待续_Unity|Unity Attribute 标签</title>
-      <link>/post/2018/08/25/unity-unity-attribute/</link>
-      <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/08/25/unity-unity-attribute/</guid>
-      <description>一开始我真的是想全部总结一下的
-但是我慢慢发现这个Attribute是没完没了的
-既然它开放了自定义的方式
-那么各种插件(例如Hierarchy2)和各种库都可以自定义一大堆
-没有什么固定的
-所以这里中途只打算记一些常用且重要的
-很多没什么普遍价值的Attribute我就Pass了
-前言  Attributes are markers that can be placed above a class, property or function in a script to indicate special behaviour.
- 我在Unity Manual里怎么找也只有这一个页面,并没有详细的Attribute的使用说明,经过我反复在网上找到另一些文档才有了着落:
- References
-Attribute是C#的语言特性1
-Unity3d中的Attributes整理2
-Untiy Tutorial: Attributes3
-Unity ScriptAPI4
-Unity3D 的一些Attribute (一些是5.0新的API)5
-UnityEngine、UnityEditor中的所有 Attributes6
- 据参考链接1内容和我自己的所见
-Attribute是可以自定义的
-即可以分为内置Attribute和自定义Attribute两部分
-本文操作:
- 列一下我自己认为比较有意义的一些内置Attribute
- 写一下自定义Attribute的做法  内置Attribute(主要来自参考链接) AddComponentMenu 这个应该是各个插件脚本经常使用的
-就是在Unity Editor的菜单里的Component选项卡里直接加选项
-一定程度上让你自定义一个路径 以分类脚本并且简化脚本的添加
-尝试时直接在已有脚本类下添加失败 不知道是不是只能在正确的第一个类下起作用
-[AddComponentMenu(&amp;quot;Transform/Follow Transform&amp;quot;)] public class XJB001 : MonoBehaviour {.</description>
     </item>
     
     <item>
