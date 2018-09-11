@@ -8,6 +8,16 @@
   </url>
   
   <url>
+    <loc>/post/2018/09/10/loss-of-school-opening/</loc>
+    <lastmod>2018-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/09/10/unity-shader-forge/</loc>
+    <lastmod>2018-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018/09/08/from/</loc>
     <lastmod>2018-09-08T00:00:00+00:00</lastmod>
   </url>
@@ -316,7 +326,7 @@
   
   <url>
     <loc>/tags/program/</loc>
-    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -329,6 +339,12 @@
   <url>
     <loc>/tags/reflection/</loc>
     <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/shader-forge/</loc>
+    <lastmod>2018-09-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -352,13 +368,13 @@
   
   <url>
     <loc>/categories/unityskill/</loc>
-    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/uselesstalks/</loc>
-    <lastmod>2018-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -442,7 +458,7 @@
   
   <url>
     <loc>/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
