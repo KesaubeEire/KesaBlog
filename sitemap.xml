@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/2018/09/16/with-big-liu/</loc>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018/09/15/talk-with-lizhi/</loc>
     <lastmod>2018-09-15T00:00:00+00:00</lastmod>
   </url>
@@ -370,7 +375,7 @@
   
   <url>
     <loc>/tags/reflection/</loc>
-    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -388,7 +393,7 @@
   
   <url>
     <loc>/categories/talkthought/</loc>
-    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -448,7 +453,7 @@
   
   <url>
     <loc>/tags/%E4%BA%BA%E7%94%9F/</loc>
-    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -509,6 +514,18 @@
   <url>
     <loc>/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E7%BB%8F%E6%B5%8E/</loc>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E9%87%91%E8%9E%8D/</loc>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
