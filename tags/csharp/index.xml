@@ -6,10 +6,25 @@
     <description>Recent content in CSharp on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>未完待续_Unity|Catch up with Unity&amp;CSharp</title>
+      <link>/post/2018/09/20/unity-catch-up-with-unity-csharp/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/09/20/unity-catch-up-with-unity-csharp/</guid>
+      <description>前言 技术日新月异
+Unity也渐渐地从一个被看不起的玩具引擎
+变得健壮变得完善变得高效
+我看到了Unity本身对Unity的简化追求
+也看到了M$对Unity语言和支持的努力
+M$_C#更新进展 在 Unity 中使用 .NET 4.x
+Unity 更新进展 Unity Blog</description>
+    </item>
     
     <item>
       <title>未完待续_Unity|CSharp的脚本优化</title>
