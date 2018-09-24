@@ -29,7 +29,8 @@
 没有什么固定的
 所以这里中途只打算记一些常用且重要的
 很多没什么普遍价值的Attribute我就Pass了
-[&amp;hellip;] Attributes are markers that can be placed above &amp;hellip;">
+修改记录:
+- 180922: - 调整整体Attribute顺序,整体合并,并且按照字母排序 - 加入新 &amp;hellip;">
       <meta property="og:description" content="一开始我真的是想全部总结一下的
 但是我慢慢发现这个Attribute是没完没了的
 既然它开放了自定义的方式
@@ -37,7 +38,8 @@
 没有什么固定的
 所以这里中途只打算记一些常用且重要的
 很多没什么普遍价值的Attribute我就Pass了
-[&amp;hellip;] Attributes are markers that can be placed above &amp;hellip;">
+修改记录:
+- 180922: - 调整整体Attribute顺序,整体合并,并且按照字母排序 - 加入新 &amp;hellip;">
       
     
 
@@ -85,6 +87,8 @@
   
   <li><a href="/vocabulary/">Vocabulary</a></li>
   
+  <li><a href="/idiomslist/">成语</a></li>
+  
   <li><a href="/recents/">Recents</a></li>
   
   <li><a href="/tags/">Tags</a></li>
@@ -123,52 +127,36 @@
 
 
 
+<h2 id="根据attribute首字母查看">根据Attribute首字母查看</h2>
+
 <p>一开始我真的是想全部总结一下的<br />
 但是我慢慢发现这个Attribute是没完没了的<br />
 既然它开放了自定义的方式<br />
 那么各种插件(例如Hierarchy2)和各种库都可以自定义一大堆<br />
 没有什么固定的<br />
 所以这里中途只打算记一些常用且重要的<br />
-很多没什么普遍价值的Attribute我就Pass了</p>
+很多没什么普遍价值的Attribute我就Pass了<br />
+修改记录:</p>
 
-<h1 id="前言">前言</h1>
-
-<blockquote>
-<p>Attributes are markers that can be placed above a class, property or function in a script to indicate special behaviour.</p>
-</blockquote>
-
-<p>我在Unity Manual里怎么找也只有这一个页面,并没有详细的Attribute的使用说明,经过我反复在网上找到另一些文档才有了着落:</p>
-
-<blockquote>
-<p>References<br />
-<a href="https://www.cnblogs.com/alan777/p/6139802.html">Attribute是C#的语言特性</a><sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup><br />
-<a href="http://blog.sina.com.cn/s/blog_5b6cb9500101857b.html">Unity3d中的Attributes整理</a><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup><br />
-<a href="https://unity3d.com/cn/learn/tutorials/topics/scripting/attributes">Untiy Tutorial: Attributes</a><sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup><br />
-<a href="https://docs.unity3d.com/ScriptReference/30_search.html?q=Attribute">Unity ScriptAPI</a><sup class="footnote-ref" id="fnref:4"><a rel="footnote" href="#fn:4">4</a></sup><br />
-<a href="https://blog.csdn.net/u013300329/article/details/45701193">Unity3D 的一些Attribute (一些是5.0新的API)</a><sup class="footnote-ref" id="fnref:5"><a rel="footnote" href="#fn:5">5</a></sup><br />
-<a href="https://blog.csdn.net/douniwan007009/article/details/79475976">UnityEngine、UnityEditor中的所有 Attributes</a><sup class="footnote-ref" id="fnref:6"><a rel="footnote" href="#fn:6">6</a></sup></p>
-</blockquote>
-
-<p>据<a href="https://www.cnblogs.com/alan777/p/6139802.html">参考链接1</a>内容和我自己的所见<br />
-Attribute是可以自定义的<br />
-即可以分为内置Attribute和自定义Attribute两部分<br />
-本文操作:</p>
-
-<ul>
-<li>列一下我自己认为比较有意义的一些内置Attribute<br /></li>
-<li>写一下自定义Attribute的做法</li>
-</ul>
+<pre><code>- 180922:
+    - 调整整体Attribute顺序,整体合并,并且按照字母排序
+    - 加入新的Attribute : Serialiable
+    - 将前言修改为参考声明并移到文后
+</code></pre>
 
 <h2 id="内置attribute">内置Attribute</h2>
 
 <h2 id="unityengine-attribute">UnityEngine Attribute</h2>
 
-<h4 id="addcomponentmenu">AddComponentMenu</h4>
+<p>注:截止到Unity Script2018.2版本的所有其他内置Attribute:</p>
+
+<h3 id="addcomponentmenu">AddComponentMenu:</h3>
 
 <p>这个应该是各个插件脚本经常使用的<br />
 就是在Unity Editor的菜单里的Component选项卡里直接加选项<br />
-一定程度上让你自定义一个路径 以分类脚本并且简化脚本的添加<br />
-尝试时直接在已有脚本类下添加失败 不知道是不是只能在正确的第一个类下起作用</p>
+一定程度上让你自定义一个路径<br />
+以分类脚本并且简化脚本的添加<br />
+尝试时直接在已有脚本类下添加失败   不知道是不是只能在正确的第一个类下起作用</p>
 
 <pre><code class="language-C#">[AddComponentMenu(&quot;Transform/Follow Transform&quot;)]
 public class XJB001 : MonoBehaviour
@@ -177,7 +165,36 @@ public class XJB001 : MonoBehaviour
 
 <p><img src="/post/2018-08-25-unity-unity-attribute_files/2831536100686_.pic.jpg" alt="" /></p>
 
-<h4 id="colorusage-bool-alpha-bool-hdr">ColorUsage(bool alpha,bool hdr)</h4>
+<h3 id="assemblyiseditorassembly">AssemblyIsEditorAssembly:</h3>
+
+<pre><code class="language-C#">没啥用:汇编级属性。任何类在组装这个属性将被认为是编辑器类
+</code></pre>
+
+<h3 id="beforerenderorder">BeforeRenderOrder:</h3>
+
+<pre><code>搞不懂
+</code></pre>
+
+<h4 id="createassetmenuattribute">CreateAssetMenuAttribute</h4>
+
+<p>这个在大神的链接里加了重点<br />
+应该是一个比较有意义的东西<br />
+但是很可惜这个需要比较Nb的内容作为玩法 目前我还把握不好</p>
+
+<pre><code class="language-C#">//用于创建自定义的ScriptableObject，具体为.asset 资源(是YAML)
+//支持在 Asset/Create/xx，也支持在 工程视图右键
+//同名的资源，会自动更改名称
+[CreateAssetMenu(fileName = &quot;skill&quot;, menuName = &quot;skill Data&quot;, order = 1)]
+public class MyAsset : ScriptableObject
+{
+   public float we0 = Single.MaxValue;
+   public float we1 = Single.MaxValue;
+   public float we2 = Single.MaxValue;
+   public float we3 = Single.MaxValue;
+}
+</code></pre>
+
+<h3 id="colorusage-bool-alpha-bool-hdr">ColorUsage(bool alpha,bool hdr)</h3>
 
 <p>颜色轮盘,专门给颜色用的<br />
 自己玩了玩,很简单就不上图了<br />
@@ -185,7 +202,7 @@ public class XJB001 : MonoBehaviour
 HDR不太懂感觉用不到,细节见<a href="https://blog.csdn.net/douniwan007009/article/details/79475976">参考链接6</a><br />
 大神说的HDR参数很详细</p>
 
-<h4 id="contextmenu">ContextMenu</h4>
+<h3 id="contextmenu">ContextMenu</h3>
 
 <p>看到<a href="https://blog.csdn.net/douniwan007009/article/details/79475976">参考链接6</a>大神写的就懂了一半,再看UnityScript就知道了<br />
 大神提醒://为组件 Inspector中的 Context menu 添加命令（函数），注意函数只能是“非静态函数”</p>
@@ -218,24 +235,27 @@ HDR不太懂感觉用不到,细节见<a href="https://blog.csdn.net/douniwan0070
 <p>意义是:在Inspector右键指定变量<br />
 可以看到</p>
 
-<h4 id="createassetmenuattribute">CreateAssetMenuAttribute</h4>
+<h3 id="customgridbrush">CustomGridBrush:</h3>
 
-<p>这个在大神的链接里加了重点<br />
-应该是一个比较有意义的东西<br />
-但是很可惜这个需要比较Nb的内容作为玩法 目前我还把握不好</p>
-
-<pre><code>//用于创建自定义的ScriptableObject，具体为.asset 资源(是YAML)
-//支持在 Asset/Create/xx，也支持在 工程视图右键
-//同名的资源，会自动更改名称
-    [CreateAssetMenu(fileName = &quot;skill&quot;, menuName = &quot;skill Data&quot;, order = 1)]
-    public class MyAsset : ScriptableObject
-    {
-        public float we0 = Single.MaxValue;
-        public float we1 = Single.MaxValue;
-        public float we2 = Single.MaxValue;
-        public float we3 = Single.MaxValue;
-    }
+<pre><code>搞不懂
 </code></pre>
+
+<h3 id="delayed">Delayed:</h3>
+
+<pre><code>大神说没用
+</code></pre>
+
+<h3 id="disallowmultiplecomponent">DisallowMultipleComponent:</h3>
+
+<pre><code>防止重复添加相同的类(或子类) - 在脚本类声明前面加 
+下面是再次添加相同脚本的Warning
+</code></pre>
+
+<p><img src="/post/2018-08-25-unity-unity-attribute_files/2861536146597_.pic.jpg" alt="" /></p>
+
+<h3 id="excludefromobjectfactoryattribute">ExcludeFromObjectFactoryAttribute:</h3>
+
+<h3 id="excludefrompresetattribute">ExcludeFromPresetAttribute:</h3>
 
 <h4 id="executeineditmode">ExecuteInEditMode</h4>
 
@@ -258,7 +278,7 @@ HDR不太懂感觉用不到,细节见<a href="https://blog.csdn.net/douniwan0070
 public class Test : MonoBehaviour { }
 </code></pre>
 
-<h4 id="formerlyserializedas-xxx">[FormerlySerializedAs(&ldquo;XXX&rdquo;)]</h4>
+<h4 id="formerlyserializedas-xxx">FormerlySerializedAs(&ldquo;XXX&rdquo;)</h4>
 
 <p>这个应该是一个新版的Attribute<br />
 以往在代码里把Public或者[Serialable]了的变量改名的话<br />
@@ -270,6 +290,80 @@ public class Test : MonoBehaviour { }
 对于一个看到Rider里飘黄就忍受不了的我来说太鸡儿有用了<br />
 使用方法就是吧&rdquo;xxx&rdquo;填成原来的旧的变量名<br />
 一般都是你改名字Rider自动给你搞出来的</p>
+
+<h3 id="guitarget">GUITarget:</h3>
+
+<pre><code>没什么用的Attribute
+大神没搞懂我搞懂了(看来大神也不是万能的)
+这个是控制GUI出现的display上
+没有图是没有意义的
+GUITarget(1)表示在第二个display上显示
+括号里用逗号隔开表示多选display 
+窗口里的数字 +1 才是 display 的编号(程序员常识)
+</code></pre>
+
+<p><img src="/post/2018-08-25-unity-unity-attribute_files/2911536281954_.pic.jpg" alt="" /><br />
+<img src="/post/2018-08-25-unity-unity-attribute_files/2901536281952_.pic.jpg" alt="" />
+<img src="/post/2018-08-25-unity-unity-attribute_files/2891536281950_.pic.jpg" alt="" /></p>
+
+<h3 id="header">Header:</h3>
+
+<pre><code class="language-C#">//给变量上方加一个黑体加粗的标题
+//作用相当于区分Inspector里面的区块
+//对于我这个代码强迫症来说还是十分有用的
+[Header(&quot;Health Settings&quot;)] 
+    public int health  = 0;
+    public int health2 = 0;
+    public int health4 = 0;
+</code></pre>
+
+<p><img src="/post/2018-08-25-unity-unity-attribute_files/2851536146503_.pic.jpg" alt="" /></p>
+
+<h3 id="helpurlattribute">HelpURLAttribute:</h3>
+
+<pre><code class="language-C#">放在类名前 设置类名(脚本类)旁边的小问号书本点击后的跳转URL  
+没卵用
+
+HelpURL(string url)
+</code></pre>
+
+<h3 id="hideininspector">HideInInspector:</h3>
+
+<pre><code>不在Inspector中显示变量
+</code></pre>
+
+<h3 id="imageeffectafterscale">ImageEffectAfterScale:</h3>
+
+<pre><code>Shader部分 目前没有能力做
+</code></pre>
+
+<h3 id="imageeffectallowedinsceneview">ImageEffectAllowedInSceneView:</h3>
+
+<pre><code>Shader部分 目前没有能力做
+</code></pre>
+
+<h3 id="imageeffectopaque">ImageEffectOpaque:</h3>
+
+<pre><code>Shader部分 目前没有能力做
+</code></pre>
+
+<h3 id="imageeffecttransformstoldr">ImageEffectTransformsToLDR:</h3>
+
+<pre><code>Shader部分 目前没有能力做
+</code></pre>
+
+<h3 id="multiline">Multiline:</h3>
+
+<pre><code>多行文本输入,类似于TestAera那个Attribute  
+但是它不能通过滚轮上下查看 只能用上下两个键移动不能系那是的行
+以后统一用TestAera比较好咯
+</code></pre>
+
+<p><img src="/post/2018-08-25-unity-unity-attribute_files/2871536147437_.pic.jpg" alt="" /></p>
+
+<h3 id="preferbinaryserialization">PreferBinarySerialization:</h3>
+
+<h3 id="propertyattribute">PropertyAttribute:</h3>
 
 <h4 id="range">Range</h4>
 
@@ -295,6 +389,11 @@ UnityScript里面说:
 当这个脚本已经挂载但是需要的Component丢失没了那就没招了
 </code></pre>
 
+<h3 id="rpc">RPC:</h3>
+
+<pre><code>过时不用
+</code></pre>
+
 <h4 id="runtimeinitializeonloadmethod">RuntimeInitializeOnLoadMethod:</h4>
 
 <p>from大神:</p>
@@ -306,7 +405,6 @@ UnityScript里面说:
 Awake、Start、Update之类的方法不能标记 [RuntimeInitializeOnLoadMethod]
 必须是静态方法才会调用
 这些静态方法，不一定要在继承MonoBehaviour的类中
-
 
 class MyClass
 {
@@ -324,117 +422,7 @@ class MyClass
 }
 </code></pre>
 
-<h4 id="注-截止到unity-script2018-2版本的所有其他内置attribute">注:截止到Unity Script2018.2版本的所有其他内置Attribute:</h4>
-
-<p>AssemblyIsEditorAssembly:</p>
-
-<pre><code class="language-C#">没啥用:汇编级属性。任何类在组装这个属性将被认为是编辑器类
-</code></pre>
-
-<p>BeforeRenderOrder:</p>
-
-<pre><code>搞不懂
-</code></pre>
-
-<p>CustomGridBrush:</p>
-
-<pre><code>搞不懂
-</code></pre>
-
-<p>Delayed:</p>
-
-<pre><code>大神说没用
-</code></pre>
-
-<p>DisallowMultipleComponent:</p>
-
-<pre><code>防止重复添加相同的类(或子类) - 在脚本类声明前面加 
-下面是再次添加相同脚本的Warning
-</code></pre>
-
-<p><img src="/post/2018-08-25-unity-unity-attribute_files/2861536146597_.pic.jpg" alt="" />
-ExcludeFromObjectFactoryAttribute:</p>
-
-<p>ExcludeFromPresetAttribute:</p>
-
-<p>GUITarget:</p>
-
-<pre><code>没什么用的Attribute
-大神没搞懂我搞懂了(看来大神也不是万能的)
-这个是控制GUI出现的display上
-没有图是没有意义的
-GUITarget(1)表示在第二个display上显示
-括号里用逗号隔开表示多选display 
-窗口里的数字 +1 才是 display 的编号(程序员常识)
-</code></pre>
-
-<p><img src="/post/2018-08-25-unity-unity-attribute_files/2911536281954_.pic.jpg" alt="" /><br />
-<img src="/post/2018-08-25-unity-unity-attribute_files/2901536281952_.pic.jpg" alt="" />
-<img src="/post/2018-08-25-unity-unity-attribute_files/2891536281950_.pic.jpg" alt="" /></p>
-
-<p>Header:</p>
-
-<pre><code>//给变量上方加一个黑体加粗的标题
-//作用相当于区分Inspector里面的区块
-//对于我这个代码强迫症来说还是十分有用的
-[Header(&quot;Health Settings&quot;)] 
-    public int health = 0;
-    public int health2 = 0;
-    public int health4 = 0;
-</code></pre>
-
-<p><img src="/post/2018-08-25-unity-unity-attribute_files/2851536146503_.pic.jpg" alt="" /></p>
-
-<p>HelpURLAttribute:</p>
-
-<pre><code>放在类名前 设置类名旁边的小问号书本点击后的跳转URL  
-没卵用
-</code></pre>
-
-<p>HideInInspector:</p>
-
-<pre><code>不在Inspector中显示变量
-</code></pre>
-
-<p>ImageEffectAfterScale:</p>
-
-<pre><code>Shader部分 目前没有能力做
-</code></pre>
-
-<p>ImageEffectAllowedInSceneView:</p>
-
-<pre><code>Shader部分 目前没有能力做
-</code></pre>
-
-<p>ImageEffectOpaque:</p>
-
-<pre><code>Shader部分 目前没有能力做
-</code></pre>
-
-<p>ImageEffectTransformsToLDR:</p>
-
-<pre><code>Shader部分 目前没有能力做
-</code></pre>
-
-<p>Multiline:</p>
-
-<pre><code>多行文本输入,类似于TestAera那个Attribute  
-但是它不能通过滚轮上下查看 只能用上下两个键移动不能系那是的行
-以后统一用TestAera比较好咯
-</code></pre>
-
-<p><img src="/post/2018-08-25-unity-unity-attribute_files/2871536147437_.pic.jpg" alt="" /></p>
-
-<p>PreferBinarySerialization:</p>
-
-<p>PropertyAttribute:</p>
-
-<p>RPC:</p>
-
-<pre><code>过时不用
-</code></pre>
-
-<p>SelectionBase:</p>
+<h3 id="selectionbase">SelectionBase:</h3>
 
 <pre><code>这个是直接看UnityScript里看出来的
 效果是在Scene中
@@ -448,12 +436,39 @@ GUITarget(1)表示在第二个display上显示
 不过这种冷知识并没有什么卵用
 </code></pre>
 
-<p>SerializeField:</p>
+<h3 id="serializable">Serializable</h3>
 
-<pre><code>天天用 不说了 序列化在Inspector中可视
+<pre><code class="language-C#">来自[链接2]
+针对类的Attribute
+可以让子类（继承类）的变量属性显示在检视面板中，也能序列化它。
+这个标签要加载要序列化对象的类上
+而不是像SerializeField那样放在对象声明处
+
+//1.希望显示在检视面板上的类
+[System.Serializable]
+public class SerializableTest
+{
+    public int p = 5;
+    public Color c = Color.white;
+}
+
+//2.控制其显示(Public)的逻辑
+public class SerializableTest2 : MonoBehaviour
+{
+    public SerializableTest test;
+}
+
+这玩意儿还有相应的NonSerializable
+就不写出来了
 </code></pre>
 
-<p>SharedBetweenAnimatorsAttribute:<sup class="footnote-ref" id="fnref:7"><a rel="footnote" href="#fn:7">7</a></sup></p>
+<h3 id="serializefield">SerializeField:</h3>
+
+<pre><code>天天用 不说了 序列化在Inspector中可视
+针对变量的Attribute
+</code></pre>
+
+<h3 id="sharedbetweenanimatorsattribute-7">SharedBetweenAnimatorsAttribute:<sup class="footnote-ref" id="fnref:7"><a rel="footnote" href="#fn:7">1</a></sup></h3>
 
 <pre><code>涉及到State Machine Behavior这个大块儿
 让我意识到Unity对于Scene中的物体的控制用的是MonoBehavior
@@ -466,31 +481,31 @@ GUITarget(1)表示在第二个display上显示
 之后我觉得可以交给某个人去做出来
 </code></pre>
 
-<p>Space:</p>
+<h3 id="space">Space:</h3>
 
-<pre><code>这个东西牛逼了
+<pre><code class="language-C#">这个东西牛逼了
 打上它[Space(int pixels)]是制造一个在Inspector上的间隔
 下面是[Space(232)]的威力
 </code></pre>
 
 <p><img src="/post/2018-08-25-unity-unity-attribute_files/2931536306657_.pic.jpg" alt="" /></p>
 
-<p>TextArea:</p>
+<h3 id="textarea">TextArea:</h3>
 
-<pre><code>//两个值,最小值是默认行数,最大值是最多展示行数,超过有Bar控制上下显示
+<pre><code class="language-C#">//两个值,最小值是默认行数,最大值是最多展示行数,超过有Bar控制上下显示
 [TextArea(2, 3)] //使用文本域 在 inspector里面  能自动换行
 public string a1 = &quot;sdf&quot;;
 </code></pre>
 
-<p>Tooltip:</p>
+<h3 id="tooltip">Tooltip:</h3>
 
-<pre><code>[Tooltip(&quot;这里应该是一个提示的样子&quot;)] //放在变量名处会有提示
+<pre><code class="language-C#">[Tooltip(&quot;这里应该是一个提示的样子&quot;)] //放在变量名处会有提示
 public string a2 = &quot;sdf&quot;;
 </code></pre>
 
-<p>UnityAPICompatibilityVersion:</p>
+<h3 id="unityapicompatibilityversion">UnityAPICompatibilityVersion:</h3>
 
-<pre><code>这是个兼容性的UnityApi的Attribute 
+<pre><code class="language-C#">这是个兼容性的UnityApi的Attribute 
 不用怎么关注
 </code></pre>
 
@@ -502,7 +517,7 @@ public string a2 = &quot;sdf&quot;;
 
 <p>暂无整理意愿 : 用不到</p>
 
-<h3 id="总个结">总个结</h3>
+<h2 id="总个结">总个结</h2>
 
 <p>只做了Unity Engine部分<br />
 Unity Editor 和 自定义 Attribute没有动<br />
@@ -515,11 +530,41 @@ Unity Editor 和 自定义 Attribute没有动<br />
 一方面是自己的知识结构还是有问题<br />
 一方面是自己还是强迫症再身不愿意做的很将就<br />
 得改吧</p>
+
+<h2 id="参考声明">参考声明</h2>
+
+<blockquote>
+<p>Attributes are markers that can be placed above a class, property or function in a script to indicate special behaviour.</p>
+</blockquote>
+
+<p>我在Unity Manual里怎么找也只有这一个页面,并没有详细的Attribute的使用说明,经过我反复在网上找到另一些文档才有了着落:</p>
+
+<blockquote>
+<p><strong>References:</strong><br />
+<a href="https://www.cnblogs.com/alan777/p/6139802.html">Attribute是C#的语言特性</a><sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">2</a></sup><br />
+<a href="http://blog.sina.com.cn/s/blog_5b6cb9500101857b.html">Unity3d中的Attributes整理</a><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">3</a></sup><br />
+<a href="https://unity3d.com/cn/learn/tutorials/topics/scripting/attributes">Untiy Tutorial: Attributes</a><sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">4</a></sup><br />
+<a href="https://docs.unity3d.com/ScriptReference/30_search.html?q=Attribute">Unity ScriptAPI</a><sup class="footnote-ref" id="fnref:4"><a rel="footnote" href="#fn:4">5</a></sup><br />
+<a href="https://blog.csdn.net/u013300329/article/details/45701193">Unity3D 的一些Attribute (一些是5.0旧的API)</a><sup class="footnote-ref" id="fnref:5"><a rel="footnote" href="#fn:5">6</a></sup><br />
+<a href="https://blog.csdn.net/douniwan007009/article/details/79475976">UnityEngine、UnityEditor中的所有 Attributes</a><sup class="footnote-ref" id="fnref:6"><a rel="footnote" href="#fn:6">7</a></sup></p>
+</blockquote>
+
+<p>据<a href="https://www.cnblogs.com/alan777/p/6139802.html">参考链接1</a>内容和我自己的所见<br />
+Attribute是可以自定义的<br />
+即可以分为内置Attribute和自定义Attribute两部分<br />
+本文操作:</p>
+
+<ul>
+<li>列一下我自己认为比较有意义的一些内置Attribute<br /></li>
+<li>写一下自定义Attribute的做法</li>
+</ul>
 <div class="footnotes">
 
 <hr />
 
 <ol>
+<li id="fn:7">之后交给谁呢&hellip;
+ <a class="footnote-return" href="#fnref:7">↩</a></li>
 <li id="fn:1"><a href="https://www.cnblogs.com/alan777/">Alan777</a>这个博客仅有6篇但是我已经从2篇中受益,实在感谢这位!
  <a class="footnote-return" href="#fnref:1">↩</a></li>
 <li id="fn:2">这个整理相当的良心
@@ -532,8 +577,6 @@ Unity Editor 和 自定义 Attribute没有动<br />
  <a class="footnote-return" href="#fnref:5">↩</a></li>
 <li id="fn:6">得了,总算找到个什么都有的,我都写了不少了它才出现,哎&hellip;
  <a class="footnote-return" href="#fnref:6">↩</a></li>
-<li id="fn:7">之后交给谁呢&hellip;
- <a class="footnote-return" href="#fnref:7">↩</a></li>
 </ol>
 </div>
 
