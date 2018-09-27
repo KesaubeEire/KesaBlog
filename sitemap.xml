@@ -8,6 +8,21 @@
   </url>
   
   <url>
+    <loc>/post/2018/09/26/strange/</loc>
+    <lastmod>2018-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/09/25/essay-from-mr-zlt/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/09/25/advanced-algebra-crazy/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018/09/25/with-my-aunt/</loc>
     <lastmod>2018-09-25T00:00:00+00:00</lastmod>
   </url>
@@ -338,6 +353,12 @@
   </url>
   
   <url>
+    <loc>/tags/data-mining/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/dotween/</loc>
     <lastmod>2018-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -394,6 +415,12 @@
   </url>
   
   <url>
+    <loc>/tags/oil-market-risk/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/pc/</loc>
     <lastmod>2018-09-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -430,6 +457,12 @@
   </url>
   
   <url>
+    <loc>/tags/strange/</loc>
+    <lastmod>2018-09-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
     <lastmod>2018-08-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -449,7 +482,7 @@
   
   <url>
     <loc>/categories/translation/</loc>
-    <lastmod>2018-09-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -461,7 +494,7 @@
   
   <url>
     <loc>/categories/uselesstalks/</loc>
-    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -684,6 +717,12 @@
   <url>
     <loc>/tags/%E9%9D%92%E6%98%A5/</loc>
     <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
