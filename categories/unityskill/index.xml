@@ -6,10 +6,19 @@
     <description>Recent content in UnitySkill on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/unityskill/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>心情|Young is Good</title>
+      <link>/post/2018/09/28/young-is-good/</link>
+      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/09/28/young-is-good/</guid>
+      <description> 屁股决定脑袋 </description>
+    </item>
     
     <item>
       <title>Unity|Wheel of Unity项目模板</title>
