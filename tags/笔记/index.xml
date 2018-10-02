@@ -6,10 +6,28 @@
     <description>Recent content in 笔记 on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>未完待续_Unity|Shader Graph学习</title>
+      <link>/post/2018/10/01/unity-shader-forge/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/01/unity-shader-forge/</guid>
+      <description>视频教程 B站视频:UP_Shallot
+YouTube视频:水面Shader
+[YouTube视频]()
+[YouTube视频]()
+简单介绍 本来想学ShaderForge的
+无奈当时没有把握好机会
+只能在事赶事的情况下学这个ShaderGraph了
+也不错的
+了解界面    功能 作用 图片     渲染预览 预览最终效果    预制窗口 存放预制体     了解快捷键    功能 快捷键     弹出组件框 空白处 Space   聚焦 F   添加\删除 连接 选择连接右键Delete   快速添加必备组件 拉出连接线后在空白处点击    了解各个小框 from Shallot Vector
+Vector1 Vector2 Vector3 Vector4  Color</description>
+    </item>
     
     <item>
       <title>笔记|NICKY CASE 的H5世界和世界观</title>
@@ -33,16 +51,6 @@ From NewRepublic The Other Political Correction
 另一种政治正确 为什么美国精英高校面对中国审查问题时态度如此谨慎? Issac Stone Fish 2018/9/4
 在美国高校之间,一种面对有关中国问题时的谨慎审查态度的风气逐渐流行起来,这表现为在对抵制中国共产党的问题上采取限制相关讨论和//培养学生和学者远离那些问题//.这种风气促进了中国民众和中国共产党的数万亿美元在美国教育市场的顺利投资,或者我们称之为中国大陆学生的大量涌入&amp;ndash;现在全美约有35万中国大陆学生,是十年前的5倍.因此,在美国学术界有那么群人,太渴望取悦北京,或者说太害怕&amp;rdquo;冒犯&amp;rdquo;中国和中国群众,以至于通过了一种&amp;rdquo;精致&amp;rdquo;的全球审查制度.
 在过去的六个月,我们采访了超过100位美国高校的学生学者\高管校友,他们为我们揭露了</description>
-    </item>
-    
-    <item>
-      <title>未完待续_Unity|Shader Forge学习</title>
-      <link>/post/2018/09/10/unity-shader-forge/</link>
-      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/09/10/unity-shader-forge/</guid>
-      <description>第一个视频教程系列 B站视频
-简单介绍 从3dMax说起: - Shader可以说是材质的计算方法</description>
     </item>
     
     <item>

@@ -6,19 +6,27 @@
     <description>Recent content in Program on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/program/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>未完待续_Unity|Shader Forge学习</title>
-      <link>/post/2018/09/10/unity-shader-forge/</link>
-      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
+      <title>未完待续_Unity|Shader Graph学习</title>
+      <link>/post/2018/10/01/unity-shader-forge/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018/09/10/unity-shader-forge/</guid>
-      <description>第一个视频教程系列 B站视频
-简单介绍 从3dMax说起: - Shader可以说是材质的计算方法</description>
+      <guid>/post/2018/10/01/unity-shader-forge/</guid>
+      <description>视频教程 B站视频:UP_Shallot
+YouTube视频:水面Shader
+[YouTube视频]()
+[YouTube视频]()
+简单介绍 本来想学ShaderForge的
+无奈当时没有把握好机会
+只能在事赶事的情况下学这个ShaderGraph了
+也不错的
+了解界面    功能 作用 图片     渲染预览 预览最终效果    预制窗口 存放预制体     了解快捷键    功能 快捷键     弹出组件框 空白处 Space   聚焦 F   添加\删除 连接 选择连接右键Delete   快速添加必备组件 拉出连接线后在空白处点击    了解各个小框 from Shallot Vector
+Vector1 Vector2 Vector3 Vector4  Color</description>
     </item>
     
     <item>

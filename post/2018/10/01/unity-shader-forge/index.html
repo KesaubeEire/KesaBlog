@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>未完待续_Unity|Shader Graph学习 - Kesa</title>
+    <meta property="og:title" content="未完待续_Unity|Shader Graph学习 - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="B站视频:UP_Shallot
+YouTube视频:水面Shader
+[YouTube视频]()
+[YouTube视频]()
+[&amp;hellip;] 本来想学ShaderForge的
+无奈当时没有把握好机会
+只能在事赶事的情况下学这个ShaderGraph了
+也不错的
+[&amp;hellip;] Vector
+Vector1 Vector2 Vector3 Vector4  Color
+Color:提供颜 &amp;hellip;">
+      <meta property="og:description" content="B站视频:UP_Shallot
+YouTube视频:水面Shader
+[YouTube视频]()
+[YouTube视频]()
+[&amp;hellip;] 本来想学ShaderForge的
+无奈当时没有把握好机会
+只能在事赶事的情况下学这个ShaderGraph了
+也不错的
+[&amp;hellip;] Vector
+Vector1 Vector2 Vector3 Vector4  Color
+Color:提供颜 &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/recents/">RecentsList</a></li>
+  
+  <li><a href="/idiomslist/">Chinese_Idiomlist</a></li>
+  
+  <li><a href="/vocabulary/">English_Vocabulary</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  <li><a href="">br</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>未完待续_Unity|Shader Graph学习</h1>
+
+<h3>Kesa
+  /  2018-10-01</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<h2 id="视频教程">视频教程</h2>
+
+<p><a href="https://www.bilibili.com/video/av32162824/?p=1">B站视频:UP_Shallot</a><br />
+<a href="https://www.youtube.com/watch?v=uuzB93F39P8">YouTube视频:水面Shader</a><br />
+[YouTube视频]()<br />
+[YouTube视频]()</p>
+
+<h3 id="简单介绍">简单介绍</h3>
+
+<p>本来想学ShaderForge的<br />
+无奈当时没有把握好机会<br />
+只能在事赶事的情况下学这个ShaderGraph了<br />
+也不错的</p>
+
+<h3 id="了解界面">了解界面</h3>
+
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>作用</th>
+<th>图片</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>渲染预览</td>
+<td>预览最终效果</td>
+<td><img src="/post/2018-09-10-unity-shader-forge_files/WX20180930-192154.png" alt="" /></td>
+</tr>
+
+<tr>
+<td>预制窗口</td>
+<td>存放预制体</td>
+<td><img src="/post/2018-09-10-unity-shader-forge_files/WX20180930-192240.png" alt="" /></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="了解快捷键">了解快捷键</h3>
+
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>快捷键</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>弹出组件框</td>
+<td>空白处 Space</td>
+</tr>
+
+<tr>
+<td>聚焦</td>
+<td>F</td>
+</tr>
+
+<tr>
+<td>添加\删除 连接</td>
+<td>选择连接右键Delete</td>
+</tr>
+
+<tr>
+<td>快速添加必备组件</td>
+<td>拉出连接线后在空白处点击</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="了解各个小框">了解各个小框</h2>
+
+<h3 id="from-shallot">from Shallot</h3>
+
+<p>Vector</p>
+
+<pre><code>Vector1
+Vector2
+Vector3
+Vector4
+</code></pre>
+
+<p>Color</p>
+
+<pre><code>Color:提供颜色
+</code></pre>
+
+<p>Texture</p>
+
+<pre><code>[目前可以用]
+Texture2D Asset
+Sample Texture2D 
+    - 两者必须兼备才可以输出材质相关的All.R.G.B.A
+
+[目前用不了]
+Texture2D Array Asset
+Sample Texture2D Array 
+    - 两者必须兼备才可以输出材质组(应该是图集)相关的All.R.G.B.A
+
+[目前用不了]    
+Texture3D Asset
+Sample Texture3D 
+    - 两者必须兼备才可以输出材质相关的All.R.G.B.A
+</code></pre>
+
+<p>CubeMap</p>
+
+<pre><code>CubeMap:比较老的一个东西,没有搞懂
+</code></pre>
+
+<p>Boolean</p>
+
+<pre><code>Boolean:逻辑上处理是\否
+</code></pre>
+
+<h3 id="from-my-youtube-learning">From My Youtube Learning</h3>
+
+<pre><code>
+</code></pre>
+
+<h2 id="pbr-基于物理渲染">PBR 基于物理渲染</h2>
+
+<pre><code>Physically Based Renderer
+    - metalic
+        - 灰度,白的高光越来越弱
+    - specular
+        - 模拟材质很好:金属电镀
+</code></pre>
+
+<h2 id="master讲解">Master讲解</h2>
+
+<p>Position</p>
+
+<pre><code>    - 通过使用一些特殊的贴图或者算法控制模型上的顶点
+</code></pre>
+
+<h3 id="通道系列">通道系列</h3>
+
+<ul>
+<li>Albedo:漫反射
+<br /></li>
+</ul>
+
+<pre><code>    - 物体的固有色(Like Diffuse)
+    - 这里的颜色算法是RGB
+</code></pre>
+
+<ul>
+<li>Normal:法线</li>
+</ul>
+
+<pre><code>  - 用来计算光照的反射,在低面模上模拟高面模的效果
+    - 应用:无法线效果:纪念碑谷类的素动漫风格
+</code></pre>
+
+<ul>
+<li>Emission:自发光</li>
+</ul>
+
+<pre><code>    - 不受到其他光照的影响
+    - 模型和uv对应的
+</code></pre>
+
+<ul>
+<li>Metallic:金属度
+
+<ul>
+<li>Smoothness:度</li>
+</ul></li>
+</ul>
+
+<pre><code>    - 和Specular二选一不共存
+    - 反光度的样子
+</code></pre>
+
+<ul>
+<li>Specular:高光度
+
+<ul>
+<li>Smoothness:度</li>
+</ul></li>
+</ul>
+
+<pre><code>    - 和Metallic二选一不共存
+    - 另一种反光度的样子
+</code></pre>
+
+<p><img src="/post/2018-09-10-unity-shader-forge_files/5451538380583_.pic_hd.jpg" alt="" /></p>
+
+<pre><code>上图是一个各种物体的反光度的一个展示
+</code></pre>
+
+<ul>
+<li>(Ambient) Occlusion</li>
+</ul>
+
+<pre><code>    - 环境闭塞:各种遮盖阴影的效果,表现真实性,
+    - 用灯光去解决这种问题的开销是很大的,这样节省计算资源
+</code></pre>
+
+<ul>
+<li>Alpha
+
+<ul>
+<li>AlphaClip Threshold
+<br /></li>
+</ul></li>
+</ul>
+
+<pre><code>    - Alpha里的算法...好像是有点不一样 
+</code></pre>
+
+<h1 id="实例教程">实例教程</h1>
+
+<h2 id="水面shader">水面Shader</h2>
+
+<ul>
+<li>步骤:<br />
+
+<ul>
+<li>p.s. 菲涅尔效应<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>非常有意思
+<br /></li>
+</ul></li>
+</ul>
+
+<pre><code>1.Tilling and offset 控制图片偏移实现流水效果
+  Blender Normal     控制两种法线偏移混合实现更加真实的流水效果
+3.Fresnel Effect     控制实现菲涅耳效应
+</code></pre>
+
+<ul>
+<li>1.Tilling and offset 控制图片偏移实现流水效果
+
+<ul>
+<li>赶快去理解 uv 的意思<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>
+<br /></li>
+</ul></li>
+</ul>
+
+<pre><code>1. 使用Tilling and offset修改Sample Texture 2D的uv实现流水
+  1.1. time 和 Vector 相乘可以做到二维Vector的变换
+  1.2. Vector变换给了贴图的uv层使得贴图Tilling 造成水面移动的效果
+  1.3 两层uv移动上下分开并且借助 Normal Blend 混合使得更加真实
+</code></pre>
+
+<p><img src="/post/2018-09-10-unity-shader-forge_files/Jietu20181001-202221-HD.gif" alt="" />
+<center><i><code>1.1_time 和 Vector 相乘可以做到二维Vector的变换</code></i></center>
+<img src="/post/2018-09-10-unity-shader-forge_files/Jietu20181002-171835-HD.gif" alt="" />
+<center><i><code>1.3_两层uv移动上下分开并且借助 Normal Blend 混合使得更加真实</code></i></center></p>
+
+<pre><code>2. 使用Fresnel Effect 和 One Minus 做一个假的角度导致透明度不同
+  2.1. Fresnel Effect 作用是在不同的角度制造0到1的不等值
+  2.2. 通过Fresnel 的不等值映射到Master上的Alpha上去
+       造成不同角度同透明度的效果
+  2.3. One Minus是一个变换作用是对 Fresnel 的值取反,
+       若Fresnel的效果 反了用这个来调整,
+       甚至可以使用Lerp对具体的颜色变换进行调整
+</code></pre>
+
+<p>$$
+d_D
+$$</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">意思是视线垂直于表面时，反射较弱，<br>而当视线非垂直表面时，夹角越小，反射越明显。<br>from  <a href="https://baike.baidu.com/item/菲涅尔折射率/2712906?fr=aladdin">百度百科</a>
+ <a class="footnote-return" href="#fnref:1">↩</a></li>
+<li id="fn:2">空间坐标是xyz,贴图的坐标是uvw,在二维中是uv<br>from <a href="https://blog.csdn.net/qq_29523119/article/details/53310238">计算机图形学中的常用模型</a>
+ <a class="footnote-return" href="#fnref:2">↩</a></li>
+</ol>
+</div>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
