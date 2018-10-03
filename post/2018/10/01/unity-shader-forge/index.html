@@ -23,25 +23,25 @@
     
       
       <meta property="description" content="B站视频:UP_Shallot
-YouTube视频:水面Shader
+YouTube视频:Water Surface
 YouTube视频:Dissolve
-[YouTube视频]()
+YouTube视频:Flame
+[&amp;hellip;] Flame视频引用的GitHub的Repo
 [&amp;hellip;] 本来想学ShaderForge的
 无奈当时没有把握好机会
 只能在事赶事的情况下学这个ShaderGraph了
 也不错的
-[&amp;hellip;] Vector
-Vector1 Vector2 Vector3 Vector4  Color &amp;hellip;">
+[&amp;hellip;] Vector &amp;hellip;">
       <meta property="og:description" content="B站视频:UP_Shallot
-YouTube视频:水面Shader
+YouTube视频:Water Surface
 YouTube视频:Dissolve
-[YouTube视频]()
+YouTube视频:Flame
+[&amp;hellip;] Flame视频引用的GitHub的Repo
 [&amp;hellip;] 本来想学ShaderForge的
 无奈当时没有把握好机会
 只能在事赶事的情况下学这个ShaderGraph了
 也不错的
-[&amp;hellip;] Vector
-Vector1 Vector2 Vector3 Vector4  Color &amp;hellip;">
+[&amp;hellip;] Vector &amp;hellip;">
       
     
 
@@ -144,10 +144,16 @@ MathJax.Hub.Config({
 
 <h2 id="视频教程">视频教程</h2>
 
+<blockquote>
 <p><a href="https://www.bilibili.com/video/av32162824/?p=1">B站视频:UP_Shallot</a><br />
-<a href="https://www.youtube.com/watch?v=uuzB93F39P8">YouTube视频:水面Shader</a><br />
+<a href="https://www.youtube.com/watch?v=uuzB93F39P8">YouTube视频:Water Surface</a><br />
 <a href="https://www.youtube.com/watch?v=taMp1g1pBeE">YouTube视频:Dissolve</a><br />
-[YouTube视频]()</p>
+<a href="https://www.youtube.com/watch?v=ecMbrOCbbH4">YouTube视频:Flame</a></p>
+
+<blockquote>
+<p><a href="https://github.com/andydbc/unity-shadergraph-sandbox">Flame视频引用的GitHub的Repo</a></p>
+</blockquote>
+</blockquote>
 
 <h3 id="简单介绍">简单介绍</h3>
 
@@ -155,6 +161,24 @@ MathJax.Hub.Config({
 无奈当时没有把握好机会<br />
 只能在事赶事的情况下学这个ShaderGraph了<br />
 也不错的</p>
+
+<h3 id="思想总结">思想总结</h3>
+
+<ul>
+<li>交错的思想
+
+<ul>
+<li>同样的效果同样的大小交错时间</li>
+<li>同样的效果同样的时间交错大小</li>
+<li>同样的效果同样的大小交错二维方向</li>
+</ul></li>
+<li>分层的思想<br />
+
+<ul>
+<li>颜色</li>
+<li>形状</li>
+</ul></li>
+</ul>
 
 <h3 id="了解界面">了解界面</h3>
 
@@ -260,10 +284,26 @@ Sample Texture3D
 <pre><code>Boolean:逻辑上处理是\否
 </code></pre>
 
-<h3 id="from-my-youtube-learning">From My Youtube Learning</h3>
+<h3 id="from-my-youtube-learning-dissolve">From My Youtube Learning:Dissolve</h3>
 
-<pre><code>
+<p>Remap</p>
+
+<pre><code>将输入值的最大最小映射到另一个最大最小
+输入值低于要求最小默认为最小
+输入值高于于要求最大默认为最大
 </code></pre>
+
+<p>Step</p>
+
+<pre><code>将Edge的输入值
+用In作为阈值
+高于阈值的作为White
+低于阈值的作为Black
+</code></pre>
+
+<blockquote>
+<p>Returns 1 if the value of input In is greater than or equal to the value of input Edge, otherwise returns 0.</p>
+</blockquote>
 
 <h2 id="pbr-基于物理渲染">PBR 基于物理渲染</h2>
 
@@ -365,14 +405,15 @@ Sample Texture3D
 <li>步骤:<br />
 
 <ul>
-<li>p.s. 菲涅尔效应<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>非常有意思
-<br /></li>
+<li>p.s. 菲涅尔效应<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>非常有意思</li>
 </ul></li>
 </ul>
 
+<h3 id="总步骤">总步骤</h3>
+
 <pre><code>1.Tilling and offset 控制图片偏移实现流水效果
   Blender Normal     控制两种法线偏移混合实现更加真实的流水效果
-3.Fresnel Effect     控制实现菲涅耳效应
+2.Fresnel Effect     控制实现菲涅耳效应
 </code></pre>
 
 <ul>
@@ -387,7 +428,9 @@ Sample Texture3D
 <pre><code>1. 使用Tilling and offset修改Sample Texture 2D的uv实现流水
   1.1. time 和 Vector 相乘可以做到二维Vector的变换
   1.2. Vector变换给了贴图的uv层使得贴图Tilling 造成水面移动的效果
-  1.3 两层uv移动上下分开并且借助 Normal Blend 混合使得更加真实
+  1.3 两层uv移动上下分开
+      使用二维交错的思想
+      并且借助 Normal Blend 混合使得更加真实
 </code></pre>
 
 <p><img src="/post/2018-09-10-unity-shader-forge_files/Jietu20181001-202221-HD.gif" alt="" />
@@ -404,9 +447,85 @@ Sample Texture3D
        甚至可以使用Lerp对具体的颜色变换进行调整
 </code></pre>
 
+<p><img src="/post/2018-09-10-unity-shader-forge_files/test3.gif" alt="" />
+<center><i><code>最终效果</code></i></center></p>
+
 <p><center> Celebrate $L^AT_EX$ Done</center></p>
 
 <h2 id="dissolve-youtube视频-dissolve-https-www-youtube-com-watch-v-tamp1g1pbee">Dissolve:<a href="https://www.youtube.com/watch?v=taMp1g1pBeE">YouTube视频:Dissolve</a></h2>
+
+<h3 id="总步骤-1">总步骤</h3>
+
+<pre><code>1.使用 Simple Noise 对 Alpha 和 Alpha Threshold 操作造成溶解
+2.add 交错一份溶解 给 Master的 Emiision 让溶解边缘发光
+</code></pre>
+
+<p>1.使用 Simple Noise 对 Alpha 和 Alpha Threshold 操作</p>
+
+<pre><code>1.1 给Alpha层上一个 Simple Noise 使Noise上的黑白值遍布物体
+    这里如果是Transparent模式直接就有透明度体现了
+    在Opaque模式下不会直接显现 需要搭配Alpha Threshold
+1.2 Alpha Threshold 检测每个Material上的黑白值点
+    低于设定值的变为0
+1.3 使用Time.Sine Time和ReMap映射让这个Shader自动开始展示自我
+1.4 我自己发现了如何调整周期使其变化周期的速率
+</code></pre>
+
+<p><img src="/post/2018-09-10-unity-shader-forge_files/test1.gif" alt="" />
+<center><i><code>1.3_Shader自动开始展示自我</code></i></center>
+<img src="/post/2018-09-10-unity-shader-forge_files/test.gif" alt="" />
+<center><i><code>1.4_变化周期的速率</code></i></center></p>
+
+<p>2.add 交错一份溶解 给 Master 的 Emiision 让溶解边缘发光</p>
+
+<pre><code>2.1. Remap出来一个add 让它始终和Remap本身有个差值 
+     起着offset 的作用 导致边缘发光的效果
+2.2. add出来后的值 经过 step 造成一个 黑白值的 阈值变化    
+     反映到Emission上就是边缘发的光
+2.3. Step出来的值乘一个颜色就是发的边缘光的颜色
+</code></pre>
+
+<p><img src="/post/2018-09-10-unity-shader-forge_files/test2.gif" alt="" />
+<center><i><code>2_整体效果1</code></i></center>
+<img src="/post/2018-09-10-unity-shader-forge_files/test4.gif" alt="" />
+<center><i><code>2_整体效果2</code></i></center></p>
+
+<h2 id="flame-flame视频引用的github的repo-https-github-com-andydbc-unity-shadergraph-sandbox">Flame:<a href="https://github.com/andydbc/unity-shadergraph-sandbox">Flame视频引用的GitHub的Repo</a></h2>
+
+<h3 id="总步骤-2">总步骤</h3>
+
+<pre><code>1. 使用voronoi图形 + 复杂的两位uv变形 制作火焰形状
+2. 使用两层形状的大小交错思想做出火焰边缘效果 
+</code></pre>
+
+<ol>
+<li>使用voronoi图形 + 复杂的两位uv变形 制作火焰形状</li>
+</ol>
+
+<pre><code>1.1 利用UV 的 Split创造两个方向垂直的 (0,1) 渐变,
+    2个水平方向一个竖直方向,
+    水平方向的两个做 Lerp的A和B,竖直方向的做Lerp的T
+1.2 将水平方向的A 加上一个Sine做成一个驱动
+    将水平方向的B 不更改作为
+    将竖直方向的C 加个Power作为调整变化极限角度的量
+    (不加也可以 加了可以调整的层次更多)
+1.3 复合成为一个摇摆的 &quot;摇曳三角&quot;
+</code></pre>
+
+<p><img src="/post/2018-09-10-unity-shader-forge_files/test5.gif" alt="" /></p>
+
+<p><center><i><code>1_效果</code></i></center></p>
+
+<ol>
+<li>使用两层形状的大小交错思想做出火焰边缘效果
+<code>
+</code></li>
+</ol>
+
+<p><br>
+<br>
+<br>
+<br></p>
 <div class="footnotes">
 
 <hr />
