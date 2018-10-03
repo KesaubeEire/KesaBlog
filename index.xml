@@ -21,6 +21,19 @@
     </item>
     
     <item>
+      <title>Hugo|搞定了LaTex在RS和Hugo下的使用</title>
+      <link>/post/2018/10/03/hugo%E6%90%9E%E5%AE%9A%E4%BA%86latex%E5%9C%A8rs%E5%92%8Chugo%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/03/hugo%E6%90%9E%E5%AE%9A%E4%BA%86latex%E5%9C%A8rs%E5%92%8Chugo%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description> 致谢:
+ Json
+Dash J(G)ay
+ 很难受的LaTex落地过程  从Json那里搞到了源代码超级牛逼
+  &amp;lt;!--致谢Json的LaTex源--&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;quot;&amp;gt; MathJax.Hub.Config({ tex2jax: { displayMath: [[&#39;$$&#39;,&#39;$$&#39;],[&amp;quot;\\(&amp;quot;,&amp;quot;\\)&amp;quot;]], inlineMath: [[&#39;\\[&#39;,&#39;\\]&#39;], [&#39;$&#39;,&#39;$&#39;]], }, }); &amp;lt;/script&amp;gt; &amp;lt;!--致谢Json的LaTex源--&amp;gt;   搞到了关键的目录(前期被Dash Gay后期率先反杀)  一开始我搞错了目录 后来找到了 纠正了Jay在_default.md中放置&amp;lt;script&amp;gt;的错误 在themes/hugo-ivy/layout/single 中间加入了目标 不过不是Gay帮我也很可能发现不了问题啦  </description>
+    </item>
+    
+    <item>
       <title>心情|Dog still eats shit</title>
       <link>/post/2018/10/03/dog-still-eats-shit/</link>
       <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
@@ -41,7 +54,7 @@
 唯一的渠道下出头的都不简单
 运气和天意催成了巩俐的命运
  评价最高演员:男演员没说:
-  两类电影:艺术类&amp;amp;商业类 - 遗憾 - 艺术类: 很有分量 - 活着 - 秋菊打官司 - 商业类: 很浪漫 跨时代 - 英雄: 集结了奇迹的演员团队  谈超高片酬的中美对比 - 让流量信心带进来,不先给太多,否则怎么拍戏 为什么演导演的戏不要啥片酬 - 一个挑剧本 一个挑导演 一个挑演员 - 现在还是市场膨胀的时候  自我的清晰认知 - 对年轻自己的原生家庭影响的坦诚 - 对自我成就的克制和心根儿的隐忍:Like me - 对完成度和的极致追求&amp;amp;对造型和色彩的天分和努力 - 导演类型: - 用功型: 和李安一种人 - 才华型: 姜文卡|梅隆|王家卫|诺兰| - 逼迫自己: - 领导就是要满足大家的期望:始终用功用心 - 外在的压力和需求 - 为世俗的期望的集合 - 过程是百分百努力的  创作的衍生品:在镣铐中创作 - 深刻是来自批判现实主义的作品 - 判现实主义的作品常常是冒险 - 八十年代相对充满了批评精神  看自己近十年的变化 - 90 00 后成为观影的主要群体 - 网络时代|电脑时代|视频时代 影响了所有人 - 影视行业全世界最大市场的来临 - 之后还会有很大的变化 人口红利还会有很好的尾声 - 老龄化会比较缓慢 未来也会很难翻身 但是时间还很多  始终缺乏好的作品 - 人才的成长没有跟上时代的脚步:满足不了所有需求只能注水 - 好的人才都被预先收走了,很多杂念和浮躁就进来了 - 精品就很难:创作者自己 - 做回你自己 - 做自己有条件: 运气 心态 .</description>
+  两类电影:艺术类&amp;amp;商业类 - 遗憾 - 艺术类: 很有分量 - 活着 - 秋菊打官司 - 商业类: 很浪漫 跨时代 - 英雄: 集结了奇迹的演员团队  谈超高片酬的中美对比 - 让流量信心带进来,不先给太多,否则怎么拍戏 为什么演导演的戏不要啥片酬 - 一个挑剧本 一个挑导演 一个挑演员 - 现在还是市场膨胀的时候  看看十三邀采访张艺谋: After 影 自我的清晰认知 - 对年轻自己的原生家庭影响的坦诚 - 对自我成就的克制和心根儿的隐忍:Like me - 对完成度和的极致追求&amp;amp;对造型和色彩的天分和努力 - 导演类型: - 用功型: 和李安一种人 - 才华型: 姜文卡|梅隆|王家卫|诺兰| - 逼迫自己: - 领导就是要满足大家的期望:始终用功用心 - 外在的压力和需求 - 为世俗的期望的集合 - 过程是百分百努力的  创作的衍生品:在镣铐中创作 - 深刻是来自批判现实主义的作品 - 判现实主义的作品常常是冒险 - 八十年代相对充满了批评精神  看自己近十年的变化 - 90 00 后成为观影的主要群体 - 网络时代|电脑时代|视频时代 影响了所有人 - 影视行业全世界最大市场的来临 - 之后还会有很大的变化 人口红利还会有很好的尾声 - 老龄化会比较缓慢 未来也会很难翻身 但是时间还很多  始终缺乏好的作品 - 人才的成长没有跟上时代的脚步:满足不了所有需求只能注水 - 好的人才都被预先收走了,很多杂念和浮躁就进来了 - 精品就很难:创作者自己 - 做回你自己 - 做自己有条件: 运气 心态 .</description>
     </item>
     
     <item>
@@ -92,7 +105,7 @@ What doesn&amp;rsquo;t kill you makes you stronger
       <guid>/post/2018/10/01/unity-shader-forge/</guid>
       <description>视频教程 B站视频:UP_Shallot
 YouTube视频:水面Shader
-[YouTube视频]()
+YouTube视频:Dissolve
 [YouTube视频]()
 简单介绍 本来想学ShaderForge的
 无奈当时没有把握好机会

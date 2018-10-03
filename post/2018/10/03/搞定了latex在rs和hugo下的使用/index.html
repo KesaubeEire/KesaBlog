@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>搞定了LaTex在RS和Hugo下的使用 - Kesa</title>
+    <meta property="og:title" content="搞定了LaTex在RS和Hugo下的使用 - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="致谢:
+[&amp;hellip;] Json
+Dash Jay
+">
+      <meta property="og:description" content="致谢:
+[&amp;hellip;] Json
+Dash Jay
+">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/recents/">RecentsList</a></li>
+  
+  <li><a href="/idiomslist/">Chinese_Idiomlist</a></li>
+  
+  <li><a href="/vocabulary/">English_Vocabulary</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  <li><a href="">br</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>搞定了LaTex在RS和Hugo下的使用</h1>
+
+<h3>Kesa
+  /  2018-10-03</h3>
+<hr>
+
+
+      </header>
+
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+    tex2jax: {
+        displayMath: [['$$','$$'],["\\(","\\)"]],
+        inlineMath: [['\\[','\\]'], ['$','$']],
+    },
+});
+</script>
+
+
+
+
+
+<p>致谢:</p>
+
+<blockquote>
+<p>Json<br />
+Dash Jay</p>
+</blockquote>
+
+<h3 id="很难受的latex落地过程">很难受的LaTex落地过程</h3>
+
+<ol>
+<li>从Json那里搞到了源代码超级牛逼<br /></li>
+</ol>
+
+<pre><code class="language-js">
+&lt;script type=&quot;text/javascript&quot; 
+src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;
+MathJax.Hub.Config({
+    tex2jax: {
+        displayMath: [['$$','$$'],[&quot;\\(&quot;,&quot;\\)&quot;]],
+        inlineMath: [['\\[','\\]'], ['$','$']],
+    },
+});
+&lt;/script&gt;
+
+</code></pre>
+
+<ol>
+<li>搞到了关键的目录(前期被Dash Gay后期率先反杀)</li>
+</ol>
+
+<pre><code>一开始我搞错了目录
+后来找到了
+纠正了Jay在_default.md中放置&lt;script&gt;的错误
+在themes/hugo-ivy/layout/single 中间加入了目标
+</code></pre>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

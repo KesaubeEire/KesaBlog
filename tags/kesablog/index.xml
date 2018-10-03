@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KesaBlog on Kesa</title>
+    <link>/tags/kesablog/</link>
+    <description>Recent content in KesaBlog on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/kesablog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo|搞定了LaTex在RS和Hugo下的使用</title>
+      <link>/post/2018/10/03/hugo%E6%90%9E%E5%AE%9A%E4%BA%86latex%E5%9C%A8rs%E5%92%8Chugo%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/03/hugo%E6%90%9E%E5%AE%9A%E4%BA%86latex%E5%9C%A8rs%E5%92%8Chugo%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description> 致谢:
+ Json
+Dash J(G)ay
+ 很难受的LaTex落地过程  从Json那里搞到了源代码超级牛逼
+  &amp;lt;!--致谢Json的LaTex源--&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;quot;&amp;gt; MathJax.Hub.Config({ tex2jax: { displayMath: [[&#39;$$&#39;,&#39;$$&#39;],[&amp;quot;\\(&amp;quot;,&amp;quot;\\)&amp;quot;]], inlineMath: [[&#39;\\[&#39;,&#39;\\]&#39;], [&#39;$&#39;,&#39;$&#39;]], }, }); &amp;lt;/script&amp;gt; &amp;lt;!--致谢Json的LaTex源--&amp;gt;   搞到了关键的目录(前期被Dash Gay后期率先反杀)  一开始我搞错了目录 后来找到了 纠正了Jay在_default.md中放置&amp;lt;script&amp;gt;的错误 在themes/hugo-ivy/layout/single 中间加入了目标 不过不是Gay帮我也很可能发现不了问题啦  </description>
+    </item>
+    
+  </channel>
+</rss>
