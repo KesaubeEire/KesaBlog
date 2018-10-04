@@ -107,8 +107,6 @@ YouTube视频:Flame
   
   <li><a href="/categories/to-be-continued">To Be Continued</a></li>
   
-  <li><a href="">br</a></li>
-  
   
   </ul>
 </nav>
@@ -303,6 +301,23 @@ Sample Texture3D
 
 <blockquote>
 <p>Returns 1 if the value of input In is greater than or equal to the value of input Edge, otherwise returns 0.</p>
+</blockquote>
+
+<p>Fresnel Effect<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+
+<pre><code>使得材质可以因为角度不同看到不同的颜色
+原理是菲涅尔效应的
+理想的示例:
+  - 水面
+  - 各种发光球和罩
+
+经常和Lerp配合
+因为规定颜色最理想的是使用Lerp
+规定主题色和边缘色
+</code></pre>
+
+<blockquote>
+<p>The Fresnel Effect node approximates this by calculating the angle between the surface normal and the view direction. The wider this angle is, the greater the return value will be.</p>
 </blockquote>
 
 <h2 id="pbr-基于物理渲染">PBR 基于物理渲染</h2>
@@ -510,17 +525,17 @@ Sample Texture3D
     将竖直方向的C 加个Power作为调整变化极限角度的量
     (不加也可以 加了可以调整的层次更多)
 1.3 复合成为一个摇摆的 &quot;摇曳三角&quot;
+1.4 通过 Tilling &amp; Offset 搞定Voronoi的变化
 </code></pre>
 
 <p><img src="/post/2018-09-10-unity-shader-forge_files/test5.gif" alt="" /></p>
 
-<p><center><i><code>1_效果</code></i></center></p>
+<p><center><i><code>1.3_最后效果</code></i></center>
+<img src="/post/2018-09-10-unity-shader-forge_files/test7.gif" alt="" />
+<center><i><code>1.4_最后效果</code></i></center>
+2. 使用两层形状的大小交错思想做出火焰边缘效果</p>
 
-<ol>
-<li>使用两层形状的大小交错思想做出火焰边缘效果
-<code>
-</code></li>
-</ol>
+<pre><code></code></pre>
 
 <p><br>
 <br>

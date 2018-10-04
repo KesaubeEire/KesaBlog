@@ -12,16 +12,15 @@
     
     
     <item>
-      <title>Hugo|搞定了LaTex在RS和Hugo下的使用</title>
-      <link>/post/2018/10/03/hugo%E6%90%9E%E5%AE%9A%E4%BA%86latex%E5%9C%A8rs%E5%92%8Chugo%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <title>Hugo|搞定LaTex 计划新功能</title>
+      <link>/post/2018/10/03/hugo%E6%90%9E%E5%AE%9Alatex-%E8%AE%A1%E5%88%92%E6%96%B0%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018/10/03/hugo%E6%90%9E%E5%AE%9A%E4%BA%86latex%E5%9C%A8rs%E5%92%8Chugo%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <guid>/post/2018/10/03/hugo%E6%90%9E%E5%AE%9Alatex-%E8%AE%A1%E5%88%92%E6%96%B0%E5%8A%9F%E8%83%BD/</guid>
       <description> 致谢:
  Json
 Dash J(G)ay
- 很难受的LaTex落地过程  从Json那里搞到了源代码超级牛逼
-  &amp;lt;!--致谢Json的LaTex源--&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;quot;&amp;gt; MathJax.Hub.Config({ tex2jax: { displayMath: [[&#39;$$&#39;,&#39;$$&#39;],[&amp;quot;\\(&amp;quot;,&amp;quot;\\)&amp;quot;]], inlineMath: [[&#39;\\[&#39;,&#39;\\]&#39;], [&#39;$&#39;,&#39;$&#39;]], }, }); &amp;lt;/script&amp;gt; &amp;lt;!--致谢Json的LaTex源--&amp;gt;   搞到了关键的目录(前期被Dash Gay后期率先反杀)  一开始我搞错了目录 后来找到了 纠正了Jay在_default.md中放置&amp;lt;script&amp;gt;的错误 在themes/hugo-ivy/layout/single 中间加入了目标 不过不是Gay帮我也很可能发现不了问题啦  </description>
+ 很难受的LaTex落地过程 1. 从Json那里搞到了源代码超级牛逼 &amp;lt;!--致谢Json的LaTex源--&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;quot;&amp;gt; MathJax.Hub.Config({ tex2jax: { displayMath: [[&#39;$$&#39;,&#39;$$&#39;],[&amp;quot;\\(&amp;quot;,&amp;quot;\\)&amp;quot;]], inlineMath: [[&#39;\\[&#39;,&#39;\\]&#39;], [&#39;$&#39;,&#39;$&#39;]], }, }); &amp;lt;/script&amp;gt; &amp;lt;!--致谢Json的LaTex源--&amp;gt;  2. 搞到了关键的目录(前期被Dash Gay后期率先反杀) 一开始我搞错了目录 后来找到了 纠正了Jay在_default.md中放置&amp;lt;script&amp;gt;的错误 在themes/hugo-ivy/layout/single 中间加入了目标 不过不是Gay帮我也很可能发现不了问题啦  3. 计划一下今后对Blog改造的重点导向 1. 字体问题: 1.1. 要不要学谢大搞一个字体后处理渲染 2. 自定义MarkDown解析器: 2.1. 解决居中文本的方便解决方案 2.2. 解决全套Markdown的自定义配置(说说而已) 3. 插入多媒体 3.1. 插入视频/音频链接 3.2. 插入固定视频/音频 4. 更加多元的博客配置 4.1. 能够在主题之外定义架构并自由制作不受Hugo的MarkDown约束的网页  </description>
     </item>
     
     <item>
