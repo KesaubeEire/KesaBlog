@@ -31,7 +31,8 @@ YouTube视频:Flame
 无奈当时没有把握好机会
 只能在事赶事的情况下学这个ShaderGraph了
 也不错的
-[&amp;hellip;] Vector &amp;hellip;">
+[&amp;hellip;] Lerp
+插值变换  &amp;hellip;">
       <meta property="og:description" content="B站视频:UP_Shallot
 YouTube视频:Water Surface
 YouTube视频:Dissolve
@@ -41,7 +42,8 @@ YouTube视频:Flame
 无奈当时没有把握好机会
 只能在事赶事的情况下学这个ShaderGraph了
 也不错的
-[&amp;hellip;] Vector &amp;hellip;">
+[&amp;hellip;] Lerp
+插值变换  &amp;hellip;">
       
     
 
@@ -253,50 +255,19 @@ MathJax.Hub.Config({
 </tbody>
 </table>
 
-<h3 id="了解各个小框-from-shallot">了解各个小框 from Shallot</h3>
-
-<p>Vector</p>
-
-<pre><code>Vector1
-Vector2
-Vector3
-Vector4
-</code></pre>
-
-<p>Color</p>
-
-<pre><code>Color:提供颜色
-</code></pre>
-
-<p>Texture</p>
-
-<pre><code>[目前可以用]
-Texture2D Asset
-Sample Texture2D 
-    - 两者必须兼备才可以输出材质相关的All.R.G.B.A
-
-[目前用不了]
-Texture2D Array Asset
-Sample Texture2D Array 
-    - 两者必须兼备才可以输出材质组(应该是图集)相关的All.R.G.B.A
-
-[目前用不了]    
-Texture3D Asset
-Sample Texture3D 
-    - 两者必须兼备才可以输出材质相关的All.R.G.B.A
-</code></pre>
-
-<p>CubeMap</p>
-
-<pre><code>CubeMap:比较老的一个东西,没有搞懂
-</code></pre>
-
-<p>Boolean</p>
-
-<pre><code>Boolean:逻辑上处理是\否
-</code></pre>
-
 <h3 id="了解各个小框-from-my-youtube-learning">了解各个小框 From My Youtube Learning</h3>
+
+<p>Lerp</p>
+
+<pre><code>插值变换
+输入A B的值
+以及输入插值T
+当T为0时       输出A
+当T为1时       输出B
+当T为0-1时     输出相应的中间插值
+当T不属于0-1时 输出相应的超出值
+挺好理解的
+</code></pre>
 
 <p>Remap</p>
 
@@ -585,7 +556,12 @@ Sample Texture3D
 
 <p><center><img src="/post/2018-09-10-unity-shader-forge_files/test12.gif" alt="" /></center>
 <center><i><code>最终效果</code></i></center>
-<br>
+todo:看了很久没有搞懂<br />
+先行跳过</p>
+
+<h2 id="anime-style-https-github-com-andydbc-unity-shadergraph-sandbox"><a href="https://github.com/andydbc/unity-shadergraph-sandbox">Anime Style</a></h2>
+
+<p><br>
 <br>
 <br>
 <br></p>
