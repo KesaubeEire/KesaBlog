@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>瞎JB玩|LaTex - Kesa</title>
-    <meta property="og:title" content="瞎JB玩|LaTex - Kesa">
+    <title>LaTex|初步搞定LaTex - Kesa</title>
+    <meta property="og:title" content="LaTex|初步搞定LaTex - Kesa">
     
     <meta name="twitter:card" content="summary">
 
@@ -22,20 +22,14 @@
 
     
       
-      <meta property="description" content="说实话这部分挺难受的,内容不是很难,搞得人晕头转向
-[&amp;hellip;] 公式测试 $$L^AT_EX$$
-今天打算写一篇博客把我的学习过程记录下来,方便未来的自己翻新昨日
-[&amp;hellip;] A. 热力学第零定律和第一定律
-[&amp;hellip;] (1) 等容过程 $$ A=pdV=0 $$
-(2) 等压过程 $$ A=\int_{V_1}^{V_2}pdV=p(V_2-V_1) $$
- (3) &amp;hellip;">
-      <meta property="og:description" content="说实话这部分挺难受的,内容不是很难,搞得人晕头转向
-[&amp;hellip;] 公式测试 $$L^AT_EX$$
-今天打算写一篇博客把我的学习过程记录下来,方便未来的自己翻新昨日
-[&amp;hellip;] A. 热力学第零定律和第一定律
-[&amp;hellip;] (1) 等容过程 $$ A=pdV=0 $$
-(2) 等压过程 $$ A=\int_{V_1}^{V_2}pdV=p(V_2-V_1) $$
- (3) &amp;hellip;">
+      <meta property="description" content="1. 从DashJay处获得本地渲染LaTex的需求 2. 把上次JSON给的远端Scripts换成从Node.js爬下来的本地Scripts 3. 更改/themes/hugo-ivy/layouts/_default/single.html处的地址  以下总结from DashJay  希腊字母表格  大写字母若和英文字母相同则无法大写
+
+[&amp;hellip;] 
+[&amp;hellip;] 分数使 &amp;hellip;">
+      <meta property="og:description" content="1. 从DashJay处获得本地渲染LaTex的需求 2. 把上次JSON给的远端Scripts换成从Node.js爬下来的本地Scripts 3. 更改/themes/hugo-ivy/layouts/_default/single.html处的地址  以下总结from DashJay  希腊字母表格  大写字母若和英文字母相同则无法大写
+
+[&amp;hellip;] 
+[&amp;hellip;] 分数使 &amp;hellip;">
       
     
 
@@ -46,6 +40,11 @@
 
     
     
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
 
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
@@ -105,7 +104,7 @@
     <article class="main">
       <header class="title">
       
-<h1>瞎JB玩|LaTex</h1>
+<h1>LaTex|初步搞定LaTex</h1>
 
 <h3>Kesa
   /  2018-10-05</h3>
@@ -141,174 +140,221 @@
 
 
 
-<blockquote>
-<p>说实话这部分挺难受的,内容不是很难,搞得人晕头转向</p>
-</blockquote>
+<h2 id="历程">历程</h2>
 
-<p>公式测试
-$$L^AT_EX$$</p>
+<pre><code>1. 从DashJay处获得本地渲染LaTex的需求
+2. 把上次JSON给的远端Scripts换成从Node.js爬下来的本地Scripts
+3. 更改/themes/hugo-ivy/layouts/_default/single.html处的地址
+</code></pre>
 
-<p><strong>今天打算写一篇博客把我的学习过程记录下来,方便未来的自己翻新昨日</strong></p>
+<h2 id="以下总结from-dashjay">以下总结from DashJay</h2>
 
-<h3 id="课本目录">课本目录</h3>
+<p><center> <strong>希腊字母表格</strong> </center>
+<center><code>大写字母若和英文字母相同则无法大写</code></center></p>
 
-<ul>
-<li>热力学第一定律
+<p><center></p>
 
-<ul>
-<li>功 热量 热力学第一定律</li>
-<li>准静态过程</li>
-<li>热容</li>
-<li>绝热过程</li>
-<li>循环过程</li>
-<li>卡诺循环</li>
-<li>制冷循环</li>
-<li>习题
-<br /></li>
-</ul></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>小写</th>
+<th>大写</th>
+<th>$ L^AT_EX $</th>
+</tr>
+</thead>
 
-<h3 id="ppt顺序">PPT顺序</h3>
+<tbody>
+<tr>
+<td>α</td>
+<td>A</td>
+<td>\alpha</td>
+</tr>
 
-<ul>
-<li><p>A. 热力学第零定律和第一定律</p>
+<tr>
+<td>β</td>
+<td>B</td>
+<td>\beta</td>
+</tr>
 
-<ul>
-<li>a. 热力学第零定律<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
-<li>b. 热力学过程
+<tr>
+<td>γ</td>
+<td>Γ</td>
+<td>\gamma</td>
+</tr>
 
-<ul>
-<li>1. 过程:系统状态发生变化, 称系统经历了一个过程</li>
-<li>2. 准静态过程:每一时刻的状态都近似是<strong>平衡态</strong>的过程</li>
-<li>3. 状态图(略)</li>
-</ul></li>
-<li>c. 功 热量&mdash;一点说明<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>
+<tr>
+<td>δ</td>
+<td>Δ</td>
+<td>\delta</td>
+</tr>
 
-<ul>
-<li>1. 气体体积变化会做功(前提:无摩擦):体积改变系统对外界做功 $ dA=pSdl $ 推导出 $ A=\int_{V_1}^{V_2}pdV $
-<br /></li>
-</ul></li>
-</ul>
+<tr>
+<td>ϵ</td>
+<td>E</td>
+<td>\epsilon</td>
+</tr>
 
-<p><center>(1) 等容过程 </center>$$ A=pdV=0 $$</p>
+<tr>
+<td>ζ</td>
+<td>Z</td>
+<td>\zeta</td>
+</tr>
 
-<p><center>(2) 等压过程 </center>$$ A=\int_{V_1}^{V_2}pdV=p(V_2-V_1) $$</p>
+<tr>
+<td>ν</td>
+<td>N</td>
+<td>\nu</td>
+</tr>
 
-<p><center> (3) 等温过程</center>
-  <center><img src="/post/2018-10-05-first_files/untitled.png" alt="" /></center></p>
+<tr>
+<td>ξ</td>
+<td>Ξ</td>
+<td>\xi</td>
+</tr>
 
-<hr />
+<tr>
+<td>ο</td>
+<td>O</td>
+<td>\omicron</td>
+</tr>
 
-<ul>
-<li>c. 功 热量&mdash; 防止格式发生变化加入的一个标题
+<tr>
+<td>π</td>
+<td>Π</td>
+<td>\pi</td>
+</tr>
 
-<ul>
-<li>2. 气体的内能
+<tr>
+<td>ρ</td>
+<td>P</td>
+<td>\rho</td>
+</tr>
 
-<ul>
-<li>(1) 理想气体的内能: $ E=\frac{i}{2}nRT $ 内能是状态量,是状态参量T的单值函数</li>
-<li>(2) 实际气体内能: 所有分子热运动的动能和分子间的势能的总和,其中内能是T,V的函数</li>
-<li>(3) 改变系统内能的两种方式:做功和热传递<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup></li>
-</ul></li>
-<li>3. 热量:Q&gt;0吸热反之放热</li>
-</ul></li>
-<li>d. 热力学第一定律<br>系统从外界吸收热量Q<br>系统对外界做功<br>系统能量变化<br>能量守恒$ Q=\Delta E+A $<br>微分形式$ dQ=dE+dA $<br>
-<br /></li>
-</ul>
+<tr>
+<td>σ</td>
+<td>Σ</td>
+<td>\sigma</td>
+</tr>
 
-<hr />
+<tr>
+<td>η</td>
+<td>H</td>
+<td>\eta</td>
+</tr>
 
-<p>[热力学第一定律]对理想气体无摩擦的准静态过程
-$$ Q=\int_{V_1}^{V_2}pdV+\frac{i}{2}nR({T_2}-{T_1}) $$</p>
+<tr>
+<td>θ</td>
+<td>Θ</td>
+<td>\theta</td>
+</tr>
 
-<hr /></li>
+<tr>
+<td>ι</td>
+<td>I</td>
+<td>\iota</td>
+</tr>
 
-<li><p>B.热力学第一定律的应用</p>
+<tr>
+<td>κ</td>
+<td>K</td>
+<td>\kappa</td>
+</tr>
 
-<ul>
-<li>a. 理想气体的等容过程dA=0 $$ Q_v=\Delta E=\frac{i}{2}nR(T_2-T_1) $$</li>
-<li>b. 理想气体的等压过程$pV=nRT$ $$ Q_p=\Delta E=(1+\frac{i}{2})nR(T_2-T_1) $$</li>
-<li>c. 理想气体的等温过程$dE=0 pV=nRT$
-<br /></li>
-</ul>
+<tr>
+<td>λ</td>
+<td>Λ</td>
+<td>\lambda</td>
+</tr>
 
-<p>$$ dQ=dA=pdV=\frac{nRT}{V}dV $$</p>
+<tr>
+<td>μ</td>
+<td>M</td>
+<td>\mu</td>
+</tr>
 
-<p><center><img src="/post/2018-10-05-first_files/ddddd.png" alt="" /></center></p>
+<tr>
+<td>ϕ</td>
+<td>Φ</td>
+<td>\phi，（φφ：<code>\varphi</code>）</td>
+</tr>
 
-<ul>
-<li>d. 热容量:系统温度升高1k所吸收的热量$ C&rsquo;=\frac{dQ}{dT} $
+<tr>
+<td>χ</td>
+<td>X</td>
+<td>\chi</td>
+</tr>
 
-<ul>
-<li>1.等容摩尔热熔 $ C_V=\frac{i}{2}R $</li>
-<li>2.等压摩尔热熔 $ C_P=(1+\frac{i}{2})R $</li>
-<li>3.热熔比$\gamma=\frac{1+\frac{i}{2}}{\frac{i}{2}}$
-$$(pV)&lsquo;=(nRT)&rsquo;=&gt;pdV+Vdp=nRdT$$
-借助$ pdV=C_V n d T $ <br>可以化为$ C_p pdV=-C_V Vdp $
-<br /></li>
-</ul></li>
-</ul>
+<tr>
+<td>ψ</td>
+<td>Ψ</td>
+<td>\psi</td>
+</tr>
 
-<hr />
+<tr>
+<td>ω</td>
+<td>Ω</td>
+<td>\omega</td>
+</tr>
+</tbody>
+</table>
 
-<p>引入热容量$\gamma$绝热方程式可以有以下三种形式</p>
+<p></center></p>
 
-<p>$$ pV^{\gamma}=c_1 $$</p>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>LaTex</th>
+</tr>
+</thead>
 
-<p>$$ TV^{\gamma-1}=c_2 $$</p>
+<tbody>
+<tr>
+<td><code>$\frac{1}{2}$</code></td>
+<td>$$\frac{1}{2}$$</td>
+</tr>
+</tbody>
+</table>
 
-<p>$$ p^{\gamma-1} T^{-\gamma}=c_3 $$</p>
+<p><center><code>分数使用\frac实现</code></center></p>
 
-<hr />
+<p><br></p>
 
-<ul>
-<li>e. 理想气体的绝热过程
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>LaTex</th>
+</tr>
+</thead>
 
-<ul>
-<li>1. 理想气体的准静态绝热过程</li>
-<li>所做的功$$ A=\int_{V_1}^{V_2}pdV $$
-$$  $$</li>
-<li>2. 绝热自由膨胀</li>
-</ul></li>
-</ul></li>
+<tbody>
+<tr>
+<td><code>$\int_{V_1}^{V_2}$</code></td>
+<td>$$\int_{V_1}^{V_2}$$</td>
+</tr>
+</tbody>
+</table>
 
-<li><p>C. 循环过程 卡诺循环</p>
-
-<ul>
-<li>a. 循环过程:工作物质经历一系列变化之后又回到初始状态的过程
-
-<ul>
-<li>1. 特点: 循环过程又必须由高温热源,低温热源,工作物质组成.</li>
-<li>2. 循环过程
-<center>&lt; img src=&ldquo;/post/2018-10-05-first_files/dsad.jpg&rdquo; alt=&ldquo;&rdquo; width=&ldquo;80%&rdquo;/&gt;</center></li>
-<li>3. 热机效率 $$ \eta=1-\frac{|Q_2|}{Q_1} $$</li>
-<li>4. 制冷效率 $$ \omega =\frac{Q_2}{Q_1-Q_2}$$</li>
-</ul></li>
-<li>b. 卡诺循环 $$\eta=1-\frac{T_2}{T_1}$$</li>
-<li>c. 制冷循环</li>
-</ul></li>
-</ul>
-<div class="footnotes">
-
-<hr />
-
-<ol>
-<li id="fn:1">热力学第零定律: 若A和B 处于热平衡，且C和B也处于热平衡则，A和C必定也处于热平衡 。——热力学第零定律
- <a class="footnote-return" href="#fnref:1">↩</a></li>
-
-<li id="fn:2"><p>功的物理意义<br>(1)系统在某过程作的功与过程有关，其大小
-  等于其 p–V曲线下的面积。<br>(2)热力学系统体积减少，系统对外作负功；
-  反之，系统作正功。</p>
- <a class="footnote-return" href="#fnref:2">↩</a></li>
-<li id="fn:3">(1)功和热量都是过程量<br>(2)在改变系统状态方面,热传导和做功是等效的<br>(3) 做工时系统热能与外界其他形式能量转化的量度.热量是系统与外界热量转换的量度
- <a class="footnote-return" href="#fnref:3">↩</a></li>
-</ol>
-</div>
+<p><center><code>极限符号使用\int实现</code></center></p>
 
 
   <footer>
   
   
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
   
   <hr>

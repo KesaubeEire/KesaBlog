@@ -6,10 +6,21 @@
     <description>Recent content in GeneralSkill on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/generalskill/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LaTex|初步搞定LaTex</title>
+      <link>/post/2018/10/05/jb-latex/</link>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/05/jb-latex/</guid>
+      <description>历程 1. 从DashJay处获得本地渲染LaTex的需求 2. 把上次JSON给的远端Scripts换成从Node.js爬下来的本地Scripts 3. 更改/themes/hugo-ivy/layouts/_default/single.html处的地址  以下总结from DashJay  希腊字母表格  大写字母若和英文字母相同则无法大写
+
+   小写 大写 $ L^AT_EX $     α A \alpha   β B \beta   γ Γ \gamma   δ Δ \delta   ϵ E \epsilon   ζ Z \zeta   ν N \nu   ξ Ξ \xi   ο O \omicron   π Π \pi   ρ P \rho   σ Σ \sigma   η H \eta   θ Θ \theta   ι I \iota   κ K \kappa   λ Λ \lambda   μ M \mu   ϕ Φ \phi，（φφ：\varphi）   χ X \chi   ψ Ψ \psi   ω Ω \omega</description>
+    </item>
     
     <item>
       <title>Hugo|搞定LaTex 计划新功能</title>

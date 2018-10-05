@@ -12,18 +12,14 @@
     
     
     <item>
-      <title>瞎JB玩|LaTex</title>
+      <title>LaTex|初步搞定LaTex</title>
       <link>/post/2018/10/05/jb-latex/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/10/05/jb-latex/</guid>
-      <description>说实话这部分挺难受的,内容不是很难,搞得人晕头转向
- 公式测试 $$L^AT_EX$$
-今天打算写一篇博客把我的学习过程记录下来,方便未来的自己翻新昨日
-课本目录  热力学第一定律  功 热量 热力学第一定律 准静态过程 热容 绝热过程 循环过程 卡诺循环 制冷循环 习题    PPT顺序  A. 热力学第零定律和第一定律
- a. 热力学第零定律1 b. 热力学过程  1. 过程:系统状态发生变化, 称系统经历了一个过程 2. 准静态过程:每一时刻的状态都近似是平衡态的过程 3. 状态图(略)  c. 功 热量&amp;mdash;一点说明2  1. 气体体积变化会做功(前提:无摩擦):体积改变系统对外界做功 $ dA=pSdl $ 推导出 $ A=\int_{V_1}^{V_2}pdV $    (1) 等容过程 $$ A=pdV=0 $$
-(2) 等压过程 $$ A=\int_{V_1}^{V_2}pdV=p(V_2-V_1) $$
- (3) 等温过程</description>
+      <description>历程 1. 从DashJay处获得本地渲染LaTex的需求 2. 把上次JSON给的远端Scripts换成从Node.js爬下来的本地Scripts 3. 更改/themes/hugo-ivy/layouts/_default/single.html处的地址  以下总结from DashJay  希腊字母表格  大写字母若和英文字母相同则无法大写
+
+   小写 大写 $ L^AT_EX $     α A \alpha   β B \beta   γ Γ \gamma   δ Δ \delta   ϵ E \epsilon   ζ Z \zeta   ν N \nu   ξ Ξ \xi   ο O \omicron   π Π \pi   ρ P \rho   σ Σ \sigma   η H \eta   θ Θ \theta   ι I \iota   κ K \kappa   λ Λ \lambda   μ M \mu   ϕ Φ \phi，（φφ：\varphi）   χ X \chi   ψ Ψ \psi   ω Ω \omega</description>
     </item>
     
   </channel>
