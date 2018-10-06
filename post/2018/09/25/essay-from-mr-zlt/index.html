@@ -105,7 +105,12 @@
 
 
 
-<script type="text/javascript" src="/js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
     MathJax.Hub.Config({
         tex2jax: {
             displayMath: [
@@ -114,16 +119,11 @@
             ],
             inlineMath: [
                 ['\\[', '\\]'],
-                ['$', '$']
+                ['$', '$'],
             ],
         },
     });
-</script>
-
-
-
-
-
+</script> 
 
 
 
@@ -156,19 +156,17 @@
 <p>PLSA模型是广泛应用的主题聚类方法之一。它假设与石油市场相关的新闻项目可以包含多个主题，而新闻主题遵循多项分布。因此，第一步是定义生成模拟新闻的过程。</p>
 
 <p><strong>定义1</strong><br />
-让$d \in D = \lbrace d_1,d_2,&hellip;.,d_N \rbrace$作为一个原油市场新闻文档,<br />
-让$z \in Z = \lbrace z_1,z_2&hellip;,z_N \rbrace$作为在原油市场新闻中隐含的话题,<br />
+让$d \in D = \lbrace d_1,d_2,&hellip;.,d_N \rbrace$作为一个石油市场新闻文档,<br />
+让$z \in Z = \lbrace z_1,z_2&hellip;,z_N \rbrace$作为在石油市场新闻中隐含的话题,<br />
 让$w \in W = \lbrace w_1,w_2&hellip;,w_N \rbrace$作为新闻中的单词,<br />
 让$n(d)$作为新闻中的单词总数,<br />
-则$P(d)$是选中一篇原油市场新闻的概率,<br />
-则$P(z|d)$是选中一篇含有隐含话题的原油市场新闻的概率,<br />
+则$P(d)$是选中一篇石油市场新闻的概率,<br />
+则$P(z|d)$是选中一篇含有隐含话题的石油市场新闻的概率,<br />
 则$P(w|z)$是生成相关单词的概率,<br />
 则石油市场新闻的联合概率分布为:</p>
 
-<p>$$<br />
-\begin{eqnarray}
-P (d,w) = P(d) \sum_{z \in Z} P(w|z) P(z|d) <br />
-\end{eqnarray}
+<p>$$
+P (d,w) = P(d) \sum_{z \in Z} P(w|z) P(z|d)
 $$
 对应的对数似然函数为:<br />
 <code>(The corresponding log likelihood function is:)</code></p>
@@ -188,13 +186,50 @@ $$
 <p>LDA模型与PLSA模型的区别在于在新闻主题分布和主题词分布中加入了Dirichlet先验分布。同样，我们首先定义石油市场新闻是如何产生的。</p>
 
 <p><strong>定义2</strong><br />
-令 $\theta \in \Theta = \lbrace \theta_1,\theta_2,&hellip;.,\theta_N \rbrace$ 作为 d 的新闻主题分布,<br />
-令 $ d \in D = \lbrace d_1,d_2&hellip;,d<em>N \rbrace$ 作为概率 $P(\theta ; a)$ 在狄利克雷分布 $a$中的采样,
-$z</em>{i,j}$在新闻中是自上而下第j个单词的位置,<br />
+<!--
+令 $\theta \in \Theta = \lbrace \theta_1,\theta_2,....,\theta_N \rbrace$ 作为 d 的新闻主题分布,  
+令 $ d \in D = \lbrace d_1,d_2...,d_N \rbrace$ 作为概率 $P(\theta ; a)$ 在狄利克雷分布 $a$中的采样,
+$z_{i,j}$在新闻中是自上而下第j个单词的位置,  
 这个新闻是在概率 $P(w|z:\beta)$ 在狄利克雷分布$\beta$中的采样:
-$ w \in W = {w_1,w_2,w<em>M } $作为从 $ \varphi</em>{z_{i,j}} $ 中样本生成的单词.</p>
+$ w \in W = \{w_1,w_2,w_M \} $作为从 $ \varphi_{z_{i,j}} $ 中样本生成的单词.
+-->
+<center><img src="/post/2018-09-25-essay-from-mr-zlt_files/WX20181006-155828.png" alt="" /></center></p>
 
-<p><br></p>
+<!--
+$$
+P(w) = \int_{\theta \in \Theta} \left( \prod_{w \in W} \sum_{z \in Z} P(w|z; \beta) P(z | \theta) \right) P( \theta; a)d\theta
+$$
+-->
+
+<p><center><img src="/post/2018-09-25-essay-from-mr-zlt_files/36971538813581_.pic.jpg" alt="" /></center></p>
+
+<p>在定义2的基础上，提出了一种基于LDA模型的石油市场风险因子提取算法。</p>
+
+<p><strong>算法1.</strong> (石油市场风险因素提取算法)</p>
+
+<blockquote>
+<ol>
+<li>清理石油市场新闻，选择合适的话题数量;<br /></li>
+<li>引导石油市场新闻，也就是说，所有出现在新闻中的词组成一个字典。如果这个词w出现在新闻d中，是1;否则就是0;<br /></li>
+<li>利用EM算法估计新闻词汇的联合概率分布，并求解最优新闻主题;<br /></li>
+<li>检查新闻主题是否合理或有效。如果无效，重复以上步骤。如果有效，输出当前新闻主题，并逐条对应风险因素，初步获得与石油市场相关的风险因素。</li>
+</ol>
+</blockquote>
+
+<h4 id="3-数据来源-date-source">3.数据来源_Date Source</h4>
+
+<p>本文以“石油”、“市场”、“风险”为关键词，从路透社网站上搜索相关数据，利用web爬虫技术获取2012年1月至2018年4月的每日新闻。获得的文件数量超过1.8万份。</p>
+
+<h4 id="4-实证研究-empirical-study">4.实证研究_Empirical study</h4>
+
+<p>基于上述石油市场风险因素提取算法，实证过程主要分为三个模块:清理石油市场新闻，利用LDA主题模型提取新闻话题，分析石油市场风险因素。具体过程如图1所示。
+<img src="/post/2018-09-25-essay-from-mr-zlt_files/WX20181006-162553.png" alt="" /></p>
+
+<h5 id="4-1-石油市场新闻选题">4.1. 石油市场新闻选题</h5>
+
+<p>在提取与石油市场新闻相关的话题之前，文本需要进行预处理。预处理包括四个步骤:删除空白文本、删除不相关的符号、删除停止字以及移除形态学转换。停止字移除是一个相对复杂的任务。在石油市场新闻中，停词不仅包括一般的停词(a、an、The等)，还可以包含大量与风险因素相关的非代表性信息(年份、时间、周等)，从而干扰对结果的分析。通过对初步结果的分析，我们将34个没有具体信息的词作为停词，形成了石油市场新闻的独特停词库。
+话题数的确定是新闻话题提取效果的关键因素。这里，在文献综述的基础上，题目的数量分别基于20、30、40、50、60和70的值。通过重复执行算法1并对结果进行分析，最终发现最优主题数为50个。此时，该主题具有最强的解释性。一些主题提取效果如表1所示。
+<br></p>
 <div class="footnotes">
 
 <hr />

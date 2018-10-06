@@ -56,16 +56,15 @@ YouTube视频:Flame
 2.模型_Model 本文基于新闻的客观性、时效性和海量性,提出了风险因素与新闻话题的一一对应关系,并提出了针对石油市场的新闻识别模型,目的是从网络新闻中提取石油市场的主要风险因素.文本挖掘技术的主流方法有两种:传统的文本聚类,主要包括K-means和DBSCAN;另一种是基于文本主题,主要包括PLSA和LDA模型.传统的文本聚类方法大多忽略了语义的考虑,在处理新闻数据时很难反映文章的因果关系和相关性.因此,本文采用了基于文本主题的聚类方法.
 2.1基于PLSA模型的石油市场风险因素提取算法 PLSA模型是广泛应用的主题聚类方法之一。它假设与石油市场相关的新闻项目可以包含多个主题，而新闻主题遵循多项分布。因此，第一步是定义生成模拟新闻的过程。
 定义1
-让$d \in D = \lbrace d_1,d_2,&amp;hellip;.,d_N \rbrace$作为一个原油市场新闻文档,
-让$z \in Z = \lbrace z_1,z_2&amp;hellip;,z_N \rbrace$作为在原油市场新闻中隐含的话题,
+让$d \in D = \lbrace d_1,d_2,&amp;hellip;.,d_N \rbrace$作为一个石油市场新闻文档,
+让$z \in Z = \lbrace z_1,z_2&amp;hellip;,z_N \rbrace$作为在石油市场新闻中隐含的话题,
 让$w \in W = \lbrace w_1,w_2&amp;hellip;,w_N \rbrace$作为新闻中的单词,
 让$n(d)$作为新闻中的单词总数,
-则$P(d)$是选中一篇原油市场新闻的概率,
-则$P(z|d)$是选中一篇含有隐含话题的原油市场新闻的概率,
+则$P(d)$是选中一篇石油市场新闻的概率,
+则$P(z|d)$是选中一篇含有隐含话题的石油市场新闻的概率,
 则$P(w|z)$是生成相关单词的概率,
 则石油市场新闻的联合概率分布为:
-$$
-\begin{eqnarray} P (d,w) = P(d) \sum_{z \in Z} P(w|z) P(z|d) \end{eqnarray} $$ 对应的对数似然函数为:
+$$ P (d,w) = P(d) \sum_{z \in Z} P(w|z) P(z|d) $$ 对应的对数似然函数为:
 (The corresponding log likelihood function is:)</description>
     </item>
     
