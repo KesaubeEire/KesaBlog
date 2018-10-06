@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Unity|Shader Graph学习(二) - Kesa</title>
+    <meta property="og:title" content="Unity|Shader Graph学习(二) - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="相关笔记:
+Unity|Shader Graph学习(一)
+Unity|Shader Graph学习(二)
+[&amp;hellip;]  最终效果 todo:看了很久没有搞懂
+先行跳过 总步骤
+1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 最终效果
+总步骤
+1. 用 Normal Vector 实现一半的颜色不一致 2. 用 View Direction &amp;hellip;">
+      <meta property="og:description" content="相关笔记:
+Unity|Shader Graph学习(一)
+Unity|Shader Graph学习(二)
+[&amp;hellip;]  最终效果 todo:看了很久没有搞懂
+先行跳过 总步骤
+1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 最终效果
+总步骤
+1. 用 Normal Vector 实现一半的颜色不一致 2. 用 View Direction &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/recents/">RecentsList</a></li>
+  
+  <li><a href="/idiomslist/">Chinese_Idiomlist</a></li>
+  
+  <li><a href="/vocabulary/">English_Vocabulary</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Unity|Shader Graph学习(二)</h1>
+
+<h3>Kesa
+  /  2018-10-06</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            displayMath: [
+                ['$$', '$$'],
+                ["\\(", "\\)"]
+            ],
+            inlineMath: [
+                ['\\[', '\\]'],
+                ['$', '$'],
+            ],
+        },
+    });
+</script> 
+
+
+
+
+
+<h2 id="这里主要是部分shader实例的扩展">这里主要是部分Shader实例的扩展</h2>
+
+<p><code>相关笔记:</code><br>
+<a href="/post/2018/10/01/unity-shader-forge/">Unity|Shader Graph学习(一)</a><br />
+<a href="/post/2018/10/06/unity-shader-graph2/">Unity|Shader Graph学习(二)</a></p>
+
+<h2 id="目录">目录</h2>
+
+<ul>
+<li><a href="#digital-dissolve-https-github-com-andydbc-unity-shadergraph-sandbox">Digital Dissolve</a></li>
+<li><a href="#toon-https-github-com-andydbc-unity-shadergraph-sandbox">Toon</a></li>
+</ul>
+
+<h2 id="digital-dissolve-https-github-com-andydbc-unity-shadergraph-sandbox"><a href="https://github.com/andydbc/unity-shadergraph-sandbox">Digital Dissolve</a></h2>
+
+<p><center><img src="/post/2018-09-10-unity-shader-forge_files/test12.gif" alt="" /></center>
+<center><i><code>最终效果</code></i></center>
+todo:看了很久没有搞懂<br />
+先行跳过
+总步骤</p>
+
+<pre><code>1. 用擦除实现无效果的擦除
+2. 用块状噪点在擦除边缘offset实现边缘发光
+</code></pre>
+
+<h2 id="toon-https-github-com-andydbc-unity-shadergraph-sandbox"><a href="https://github.com/andydbc/unity-shadergraph-sandbox">Toon</a></h2>
+
+<p><img src="/post/2018-09-10-unity-shader-forge_files/Xnip2018-10-05_03-49-54.jpg" alt="" />
+<center><i><code>最终效果</code></i></center></p>
+
+<p>总步骤</p>
+
+<pre><code>1. 用 Normal Vector 实现一半的颜色不一致
+2. 用 View Direction + Normalize 实现 亮点的跟随
+3. 所有颜色使用Step做去色阶实现漫画效果sa
+</code></pre>
+
+<ol>
+<li>用 Normal Vector 实现一半的颜色不一致</li>
+</ol>
+
+<pre><code>
+</code></pre>
+
+<p><img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-183000.png" alt="" />
+<center><code>1.1_实现亮光的跟随基础</code></center>
+2. 用 View Direction + Normalize 实现 亮点的跟随</p>
+
+<pre><code>2.1 (Vector 3*(亮光方向向量)-&gt; Normalize)  控制亮光方向
+    Add 
+    (View Direction       -&gt; Normalize)  支持随视角变化亮光方向
+</code></pre>
+
+<p><img src="/post/2018-10-06-unity-shader-graph2_files/5491538821384_.pic.jpg" alt="" />
+<center><code>2.1_实现亮光的跟随基础</code></center>
+<br></p>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
