@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>To_Be_Continued翻译|Essay from Mr. ZLT</title>
+      <title>未完待续_翻译|Essay from Mr. ZLT</title>
       <link>/post/2018/09/25/essay-from-mr-zlt/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
@@ -22,9 +22,19 @@
 基于对海量文本的有效处理和分析,文本挖掘技术的应用越来越广泛.关键词提取技术作为文本挖掘的一个重要分支,其目的是从文本集合中提取主题词或重要词.许多方法正是在文本挖掘技术和数学理论的结合中得到的.
 前人研究678表明,常见的文本挖掘技术存在忽略文本语义表达的缺点,模型容易过度拟合,这些缺点对文本中的风险因素识别带来一定的困难.通过文献综述,证明了基于LDA主题模型的实证结果优于其他传统模型9.鉴于LDA的优异性能,本文选择使用LDA模型提取石油市场相关文本中的主题并识别风险因素. 有效识别石油市场中的风险因素是把握市场方向、作出投资决策的关键.在大数据时代背景下,本文结合新闻与文本挖掘技术提取石油市场风险因素,对石油市场供应链进行了新的分析,从而有别于以往的研究.与传统方法相比,该方法具有时效性好、客观、全面等优点.通过对风险因素主次关系的分析,并通过它们与石油供应链的结合,我们能从目前的风险因素数据中分析出更多意义.
 2.模型_Model 本文基于新闻的客观性、时效性和海量性,提出了风险因素与新闻话题的一一对应关系,并提出了针对石油市场的新闻识别模型,目的是从网络新闻中提取石油市场的主要风险因素.文本挖掘技术的主流方法有两种:传统的文本聚类,主要包括K-means和DBSCAN;另一种是基于文本主题,主要包括PLSA和LDA模型.传统的文本聚类方法大多忽略了语义的考虑,在处理新闻数据时很难反映文章的因果关系和相关性.因此,本文采用了基于文本主题的聚类方法.
-2.1基于PLSA模型的石油市场风险因素算法 PLSA模型是广泛应用的主题聚类方法之一。它假设与石油市场相关的新闻项目可以包含多个主题，而新闻主题遵循多项分布。因此，第一步是定义生成模拟新闻的过程。
-定义1 让
- Zhao L-T, Wang Y, Guo S-Q, Zeng G-R. A novel method based on numerical fitting for oil price trend forecasting. Applied Energy. 2018;220:154-63. ↩ Tule MK, Ndako UB, Onipede SF. Oil price shocks and volatility spillovers in the Nigerian sovereign bond market. Review of Financial Economics.</description>
+2.1基于PLSA模型的石油市场风险因素提取算法 PLSA模型是广泛应用的主题聚类方法之一。它假设与石油市场相关的新闻项目可以包含多个主题，而新闻主题遵循多项分布。因此，第一步是定义生成模拟新闻的过程。
+定义1
+让$d \in D = \lbrace d_1,d_2,&amp;hellip;.,d_N \rbrace$作为一个原油市场新闻文档,
+让$z \in Z = \lbrace z_1,z_2&amp;hellip;,z_N \rbrace$作为在原油市场新闻中隐含的话题,
+让$w \in W = \lbrace w_1,w_2&amp;hellip;,w_N \rbrace$作为新闻中的单词,
+让$n(d)$作为新闻中的单词总数,
+则$P(d)$是选中一篇原油市场新闻的概率,
+则$P(z|d)$是选中一篇含有隐含话题的原油市场新闻的概率,
+则$P(w|z)$是生成相关单词的概率,
+则石油市场新闻的联合概率分布为:
+$$
+\begin{eqnarray} P (d,w) = P(d) \sum_{z \in Z} P(w|z) P(z|d) \end{eqnarray} $$ 对应的对数似然函数为:
+(The corresponding log likelihood function is:)</description>
     </item>
     
   </channel>

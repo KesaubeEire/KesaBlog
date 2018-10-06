@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>To_Be_Continued翻译|Essay from Mr. ZLT - Kesa</title>
-    <meta property="og:title" content="To_Be_Continued翻译|Essay from Mr. ZLT - Kesa">
+    <title>未完待续_翻译|Essay from Mr. ZLT - Kesa</title>
+    <meta property="og:title" content="未完待续_翻译|Essay from Mr. ZLT - Kesa">
     
     <meta name="twitter:card" content="summary">
 
@@ -93,7 +93,7 @@
     <article class="main">
       <header class="title">
       
-<h1>To_Be_Continued翻译|Essay from Mr. ZLT</h1>
+<h1>未完待续_翻译|Essay from Mr. ZLT</h1>
 
 <h3>Kesa
   /  2018-09-25</h3>
@@ -151,11 +151,50 @@
 
 <p>本文基于新闻的客观性、时效性和海量性,提出了风险因素与新闻话题的一一对应关系,并提出了针对石油市场的新闻识别模型,目的是从网络新闻中提取石油市场的主要风险因素.文本挖掘技术的主流方法有两种:传统的文本聚类,主要包括K-means和DBSCAN;另一种是基于文本主题,主要包括PLSA和LDA模型.传统的文本聚类方法大多忽略了语义的考虑,在处理新闻数据时很难反映文章的因果关系和相关性.因此,本文采用了基于文本主题的聚类方法.</p>
 
-<h5 id="2-1基于plsa模型的石油市场风险因素算法">2.1基于PLSA模型的石油市场风险因素算法</h5>
+<h5 id="2-1基于plsa模型的石油市场风险因素提取算法">2.1基于PLSA模型的石油市场风险因素提取算法</h5>
 
 <p>PLSA模型是广泛应用的主题聚类方法之一。它假设与石油市场相关的新闻项目可以包含多个主题，而新闻主题遵循多项分布。因此，第一步是定义生成模拟新闻的过程。</p>
 
-<p><strong>定义1</strong> 让</p>
+<p><strong>定义1</strong><br />
+让$d \in D = \lbrace d_1,d_2,&hellip;.,d_N \rbrace$作为一个原油市场新闻文档,<br />
+让$z \in Z = \lbrace z_1,z_2&hellip;,z_N \rbrace$作为在原油市场新闻中隐含的话题,<br />
+让$w \in W = \lbrace w_1,w_2&hellip;,w_N \rbrace$作为新闻中的单词,<br />
+让$n(d)$作为新闻中的单词总数,<br />
+则$P(d)$是选中一篇原油市场新闻的概率,<br />
+则$P(z|d)$是选中一篇含有隐含话题的原油市场新闻的概率,<br />
+则$P(w|z)$是生成相关单词的概率,<br />
+则石油市场新闻的联合概率分布为:</p>
+
+<p>$$<br />
+\begin{eqnarray}
+P (d,w) = P(d) \sum_{z \in Z} P(w|z) P(z|d) <br />
+\end{eqnarray}
+$$
+对应的对数似然函数为:<br />
+<code>(The corresponding log likelihood function is:)</code></p>
+
+<p><center><img src="/post/2018-09-25-essay-from-mr-zlt_files/gif.latex.gif" alt="" /></center></p>
+
+<!--
+$$
+L  =  \sum_{d\in D} n(d)  [  log P(d) + \sum_{w\in W} \frac{n(d,w)}{n(d)} log \sum_{z \in Z} P(w|z) P(z|d) ]
+$$
+-->
+
+<p>这个对数似函数包含一个潜变量,并且函数不能被一个简单最大似然估计方法估计,所以EM算法<sup class="footnote-ref" id="fnref:10"><a rel="footnote" href="#fn:10">10</a></sup>被用来找到最优值 $P(w|z)$ 和 $P(z|d)$,然后根据概率找到最接近的每个新闻的主题,并为每个主题找到最接近的单词,从而获得石油市场风险因素.然而，由于PLSA模型中使用了太多的参数，当数据量较大时，容易过拟合，从而陷入局部最优解。基于此，我们采用了基于Bayes&rsquo;理论的LDA主题模型，该模型用于识别石油市场新闻隐含的风险因素时更加科学、全面、严谨。</p>
+
+<h5 id="2-2基于lda模型的石油市场风险因素提取算法">2.2基于LDA模型的石油市场风险因素提取算法</h5>
+
+<p>LDA模型与PLSA模型的区别在于在新闻主题分布和主题词分布中加入了Dirichlet先验分布。同样，我们首先定义石油市场新闻是如何产生的。</p>
+
+<p><strong>定义2</strong><br />
+令 $\theta \in \Theta = \lbrace \theta_1,\theta_2,&hellip;.,\theta_N \rbrace$ 作为 d 的新闻主题分布,<br />
+令 $ d \in D = \lbrace d_1,d_2&hellip;,d<em>N \rbrace$ 作为概率 $P(\theta ; a)$ 在狄利克雷分布 $a$中的采样,
+$z</em>{i,j}$在新闻中是自上而下第j个单词的位置,<br />
+这个新闻是在概率 $P(w|z:\beta)$ 在狄利克雷分布$\beta$中的采样:
+$ w \in W = {w_1,w_2,w<em>M } $作为从 $ \varphi</em>{z_{i,j}} $ 中样本生成的单词.</p>
+
+<p><br></p>
 <div class="footnotes">
 
 <hr />
@@ -179,6 +218,9 @@
  <a class="footnote-return" href="#fnref:8">↩</a></li>
 <li id="fn:9">Pavlinek M, Podgorelec V. Text classification method based on se lf-training and LDA topic models. Expert Systems with Applications. 2017;80:83-93.
  <a class="footnote-return" href="#fnref:9">↩</a></li>
+<li id="fn:10">Dempster AP, Laird NM, Rubin DB. Maximum likelihood from incomplete data via EM algorithm. Journal of Royal Statistics Soc B. 1977;39:1-38.
+
+ <a class="footnote-return" href="#fnref:10">↩</a></li>
 </ol>
 </div>
 
