@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Unity|Shader Graph学习(零) - Kesa</title>
+    <meta property="og:title" content="Unity|Shader Graph学习(零) - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="相关笔记:
+Unity|Shader Graph学习(零)
+Unity|Shader Graph学习(一)
+Unity|Shader Graph学习(二)
+[&amp;hellip;] 本来想学ShaderForge的
+无奈当时没有把握好机会
+只能在事赶事的情况下学这个ShaderGraph了
+也不错的
+[&amp;hellip;] 这里强烈推荐洪流学堂的
+ShaderGraph &amp;hellip;">
+      <meta property="og:description" content="相关笔记:
+Unity|Shader Graph学习(零)
+Unity|Shader Graph学习(一)
+Unity|Shader Graph学习(二)
+[&amp;hellip;] 本来想学ShaderForge的
+无奈当时没有把握好机会
+只能在事赶事的情况下学这个ShaderGraph了
+也不错的
+[&amp;hellip;] 这里强烈推荐洪流学堂的
+ShaderGraph &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/recents/">RecentsList</a></li>
+  
+  <li><a href="/idiomslist/">Chinese_Idiomlist</a></li>
+  
+  <li><a href="/vocabulary/">English_Vocabulary</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Unity|Shader Graph学习(零)</h1>
+
+<h3>Kesa
+  /  2018-09-30</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            displayMath: [
+                ['$$', '$$'],
+                ["\\(", "\\)"]
+            ],
+            inlineMath: [
+                ['\\[', '\\]'],
+                ['$', '$'],
+            ],
+        },
+    });
+</script> 
+
+
+
+
+
+<h2 id="这里主要shader-graph的总体介绍和node介绍">这里主要Shader Graph的总体介绍和Node介绍</h2>
+
+<p><code>相关笔记:</code><br>
+<a href="/post/2018/09/30/unity-shader-graph/">Unity|Shader Graph学习(零)</a><br />
+<a href="/post/2018/10/01/unity-shader-forge/">Unity|Shader Graph学习(一)</a><br />
+<a href="/post/2018/10/06/unity-shader-graph2/">Unity|Shader Graph学习(二)</a></p>
+
+<h2 id="简单介绍">简单介绍</h2>
+
+<p>本来想学ShaderForge的<br />
+无奈当时没有把握好机会<br />
+只能在事赶事的情况下学这个ShaderGraph了<br />
+也不错的</p>
+
+<h3 id="思想总结">思想总结</h3>
+
+<ul>
+<li>交错的思想
+
+<ul>
+<li>同样的效果同样的大小交错时间</li>
+<li>同样的效果同样的时间交错大小</li>
+<li>同样的效果同样的大小交错二维方向</li>
+</ul></li>
+<li>分层的思想<br />
+
+<ul>
+<li>颜色</li>
+<li>形状</li>
+</ul></li>
+</ul>
+
+<h3 id="了解界面">了解界面</h3>
+
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>作用</th>
+<th>图片</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>渲染预览</td>
+<td>预览最终效果</td>
+<td><img src="/post/2018-09-10-unity-shader-forge_files/WX20180930-192154.png" alt="" /></td>
+</tr>
+
+<tr>
+<td>预制窗口</td>
+<td>存放预制体<br>(可Public出去在外面调整)<br>(也可以被外部代码改变)</td>
+<td><img src="/post/2018-09-10-unity-shader-forge_files/WX20180930-192240.png" alt="" /></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="了解快捷键">了解快捷键</h3>
+
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>快捷键</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>弹出组件框</td>
+<td>空白处 Space</td>
+</tr>
+
+<tr>
+<td>聚焦</td>
+<td>F</td>
+</tr>
+
+<tr>
+<td>添加\删除 连接</td>
+<td>选择连接右键Delete</td>
+</tr>
+
+<tr>
+<td>快速添加必备组件</td>
+<td>拉出连接线后在空白处点击</td>
+</tr>
+
+<tr>
+<td>Cut/Copy/Paste/Duplicate</td>
+<td>常规按键 CMD + X/C/V/D</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="了解各种节点-node">了解各种节点(Node)</h3>
+
+<p>这里强烈推荐洪流学堂的<br />
+ShaderGraph节点大全<br />
+以下为一些自我的心得
+<br>
+Lerp</p>
+
+<pre><code>插值变换
+输入A B的值
+以及输入插值T
+当T为0时       输出A
+当T为1时       输出B
+当T为0-1时     输出相应的中间插值
+当T不属于0/1时  输出相应的超出值
+挺好理解的
+</code></pre>
+
+<p>Remap</p>
+
+<pre><code>将输入值的最大最小映射到另一个最大最小
+输入值低于要求最小默认为最小
+输入值高于于要求最大默认为最大
+</code></pre>
+
+<p>Saturate</p>
+
+<pre><code>相当于简化版的Remap
+只不过对所有范围
+都映射到(0,1)
+</code></pre>
+
+<p>Step</p>
+
+<pre><code>将Edge的输入值
+用In作为阈值
+高于阈值的作为White
+低于阈值的作为Black
+</code></pre>
+
+<blockquote>
+<p>Returns 1 if the value of input In is greater than or equal to the value of input Edge, otherwise returns 0.</p>
+</blockquote>
+
+<p>Fresnel Effect[^1]</p>
+
+<pre><code>使得材质可以因为角度不同看到不同的颜色
+原理是菲涅尔效应的
+理想的示例:
+  - 水面
+  - 各种发光球和罩
+
+经常和Lerp配合
+因为规定颜色最理想的是使用Lerp
+规定主题色和边缘色
+</code></pre>
+
+<blockquote>
+<p>The Fresnel Effect node approximates this by calculating the angle between the surface normal and the view direction. The wider this angle is, the greater the return value will be.</p>
+</blockquote>
+
+<h3 id="了解总输出-master">了解总输出(Master)</h3>
+
+<p>PBR 基于物理渲染</p>
+
+<pre><code>Physically Based Renderer
+    - metalic
+        - 灰度,白的高光越来越弱
+    - specular
+        - 模拟材质很好:金属电镀
+</code></pre>
+
+<p>Position</p>
+
+<pre><code>    - 通过使用一些特殊的贴图或者算法控制模型上的顶点
+</code></pre>
+
+<h3 id="通道系列-tables-from-unity-shader-wiki-https-github-com-unity-technologies-shadergraph-wiki-pbr-master-node">通道系列 : <a href="https://github.com/Unity-Technologies/ShaderGraph/wiki/PBR-Master-Node">Tables from Unity Shader Wiki</a></h3>
+
+<p><center>PBR Master Ports</center></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Binding</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Albedo</td>
+<td>V 3</td>
+<td>None</td>
+<td>Defines material&rsquo;s albedo value. Expected range 0 - 1.</td>
+</tr>
+
+<tr>
+<td>Normal</td>
+<td>V 3</td>
+<td>Tangent Space Normal</td>
+<td>Defines material&rsquo;s normal value. Expects normals in tangent space.</td>
+</tr>
+
+<tr>
+<td>Emission</td>
+<td>V 3</td>
+<td>None</td>
+<td>Defines material&rsquo;s emission color value. Expects positive values.</td>
+</tr>
+
+<tr>
+<td>Metallic</td>
+<td>V 1</td>
+<td>None</td>
+<td>Defines material&rsquo;s metallic value where 0 is non-metallic and 1 is metallic. Only available in Metallic <strong>Workflow</strong> mode.</td>
+</tr>
+
+<tr>
+<td>Specular</td>
+<td>V 3</td>
+<td>None</td>
+<td>Defines material&rsquo;s specular color value. Expected range 0 - 1. Only available in Specular <strong>Workflow</strong> mode.</td>
+</tr>
+
+<tr>
+<td>Smoothness</td>
+<td>V 1</td>
+<td>None</td>
+<td>Defines material&rsquo;s smoothness value. Expected range 0 - 1.</td>
+</tr>
+
+<tr>
+<td>Occlusion</td>
+<td>V 1</td>
+<td>None</td>
+<td>Defines material&rsquo;s ambient occlusion value. Expected range 0 - 1.</td>
+</tr>
+
+<tr>
+<td>Alpha</td>
+<td>V 1</td>
+<td>None</td>
+<td>Defines material&rsquo;s alpha value. Used for transparency and/or alpha clip. Expected range 0 - 1.</td>
+</tr>
+
+<tr>
+<td>Alpha Clip Threshold</td>
+<td>V 1</td>
+<td>None</td>
+<td>Fragments with an alpha below this value will be discarded. Requires a node connection. Expected range 0 - 1.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
+<center>Unlit Master Ports</center></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Color</td>
+<td>V3</td>
+<td>Defines material&rsquo;s color value. Expected range 0 - 1.</td>
+</tr>
+
+<tr>
+<td>Alpha</td>
+<td>V1</td>
+<td>Defines material&rsquo;s alpha value. <br>Used for transparency and/or alpha clip. <br>Expected range 0 - 1.</td>
+</tr>
+
+<tr>
+<td>Alpha Clip Threshold</td>
+<td>V1</td>
+<td>Fragments with an alpha below this value will be discarded. Requires a node connection. Expected range 0 - 1.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
+<center>Master Parameters</center></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Workflow</td>
+<td>Dropdown</td>
+<td>Metallic, Specular</td>
+<td>Defines workflow mode for the material</td>
+</tr>
+
+<tr>
+<td>Surface</td>
+<td>Dropdown</td>
+<td>Opaque, Transparent</td>
+<td>Defines if the material is transparent</td>
+</tr>
+
+<tr>
+<td>Blend</td>
+<td>Dropdown</td>
+<td>Alpha, Premultiply, Additive, Multiply</td>
+<td>Defines blend mode of a transparent material</td>
+</tr>
+
+<tr>
+<td>Two Sided</td>
+<td>Toggle</td>
+<td>True, False</td>
+<td>If true both front and back faces of the mesh are rendered</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
+<br>
+- Albedo:漫反射</p>
+
+<pre><code>    - 物体的固有色(Like Diffuse)
+    - 这里的颜色算法是RGB
+</code></pre>
+
+<ul>
+<li>Normal:法线</li>
+</ul>
+
+<pre><code>  - 用来计算光照的反射,在低面模上模拟高面模的效果
+    - 应用:无法线效果:纪念碑谷类的素动漫风格
+</code></pre>
+
+<ul>
+<li>Emission:自发光</li>
+</ul>
+
+<pre><code>    - 不受到其他光照的影响
+    - 模型和uv对应的
+</code></pre>
+
+<ul>
+<li>Metallic:金属度
+
+<ul>
+<li>Smoothness:度</li>
+</ul></li>
+</ul>
+
+<pre><code>    - 和Specular二选一不共存
+    - 反光度的样子
+</code></pre>
+
+<ul>
+<li>Specular:反射度(英文是镜子的意思)
+
+<ul>
+<li>Smoothness:度</li>
+</ul></li>
+</ul>
+
+<pre><code>    - 和Metallic二选一不共存
+    - 另一种反光度的样子
+</code></pre>
+
+<p><img src="/post/2018-09-10-unity-shader-forge_files/5451538380583_.pic_hd.jpg" alt="" /></p>
+
+<pre><code>上图是一个各种物体的反光度的一个展示
+</code></pre>
+
+<ul>
+<li>(Ambient) Occlusion</li>
+</ul>
+
+<pre><code>    - 环境闭塞:各种遮盖阴影的效果,表现真实性,
+    - 用灯光去解决这种问题的开销是很大的,这样节省计算资源
+</code></pre>
+
+<ul>
+<li>Alpha
+
+<ul>
+<li>AlphaClip Threshold
+<br /></li>
+</ul></li>
+</ul>
+
+<pre><code>    - Alpha里的算法...好像是有点不一样 
+</code></pre>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>

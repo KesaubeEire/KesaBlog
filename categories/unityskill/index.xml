@@ -18,14 +18,15 @@
       
       <guid>/post/2018/10/06/unity-shader-graph2/</guid>
       <description>这里主要是部分Shader实例的扩展 相关笔记:
+Unity|Shader Graph学习(零)
 Unity|Shader Graph学习(一)
 Unity|Shader Graph学习(二)
 目录  Digital Dissolve Toon  Digital Dissolve  最终效果 todo:看了很久没有搞懂
 先行跳过 总步骤
-1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 最终效果
+1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 难点:如何理解 Normal Vector 和 View Direction
+Normal Vector : 获取mesh的法线向量。 View Direction : 获取mesh的顶点或片段的视角方向向量。 从顶点或片段到相机的方向。  最终效果
 总步骤
-1. 用 Normal Vector 实现一半的颜色不一致 2. 用 View Direction + Normalize 实现 亮点的跟随 3. 所有颜色使用Step做去色阶实现漫画效果sa   用 Normal Vector 实现一半的颜色不一致    1.1_实现亮光的跟随基础 2. 用 View Direction + Normalize 实现 亮点的跟随
-2.1 (Vector 3*(亮光方向向量)-&amp;gt; Normalize) 控制亮光方向 Add (View Direction -&amp;gt; Normalize) 支持随视角变化亮光方向  2.</description>
+1. 用 Normal Vector 实现一半的颜色不一致(对半颜色) 2. 用 View Direction + Normalize 实现 亮点的跟随 3. 使两层效果相加   用 Normal Vector 实现对半颜色  1.1 ( Vector 3*(亮光方向向量)-&amp;gt; Normalize ) 控制亮光方向 Dot ( 点乘 ) ( Normal Vector ) 1.</description>
     </item>
     
     <item>
@@ -34,7 +35,7 @@ Unity|Shader Graph学习(二)
       <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/10/01/unity-shader-forge/</guid>
-      <description>相关笔记:
+      <description>相关笔记: Unity|Shader Graph学习(零)
 Unity|Shader Graph学习(一)
 Unity|Shader Graph学习(二)
 视频教程  B站视频:UP_Shallot
@@ -42,9 +43,23 @@ YouTube视频:Water Surface
 YouTube视频:Dissolve
 YouTube视频:Flame
  Flame视频引用的GitHub的Repo
-  目录   简单介绍
- 实例教程
- 水面Shader Dissolve Flame    简单介绍 本来想学ShaderForge的
+  目录   实例教程
+ 水面Shader Dissolve Flame    实例教程 水面Shader:YouTube视频:水面Shader 总体效果 - 步骤:
+- p.s. 菲涅尔效应1非常有意思
+总步骤 1.Tilling and offset 控制图片偏移实现流水效果 Blender Normal 控制两种法线偏移混合实现更加真实的流水效果 2.Fresnel Effect 控制实现菲涅耳效应   1.Tilling and offset 控制图片偏移实现流水效果  赶快去理解 uv 的意思2    1. 使用Tilling and offset修改Sample Texture 2D的uv实现流水 1.1. time 和 Vector 相乘可以做到二维Vector的变换 1.</description>
+    </item>
+    
+    <item>
+      <title>Unity|Shader Graph学习(零)</title>
+      <link>/post/2018/09/30/unity-shader-graph/</link>
+      <pubDate>Sun, 30 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/09/30/unity-shader-graph/</guid>
+      <description>这里主要Shader Graph的总体介绍和Node介绍 相关笔记:
+Unity|Shader Graph学习(零)
+Unity|Shader Graph学习(一)
+Unity|Shader Graph学习(二)
+简单介绍 本来想学ShaderForge的
 无奈当时没有把握好机会
 只能在事赶事的情况下学这个ShaderGraph了
 也不错的
@@ -52,15 +67,6 @@ YouTube视频:Flame
  颜色 形状   了解界面    功能 作用 图片     渲染预览 预览最终效果    预制窗口 存放预制体
 (可Public出去在外面调整)
 (也可以被外部代码改变)     了解快捷键    功能 快捷键     弹出组件框 空白处 Space   聚焦 F   添加\删除 连接 选择连接右键Delete   快速添加必备组件 拉出连接线后在空白处点击   Cut/Copy/Paste/Duplicate 常规按键 CMD + X/C/V/D    了解各种节点(Node) 这里强烈推荐洪流学堂的</description>
-    </item>
-    
-    <item>
-      <title>心情|Young is Good</title>
-      <link>/post/2018/09/28/young-is-good/</link>
-      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/09/28/young-is-good/</guid>
-      <description> 屁股决定脑袋 </description>
     </item>
     
     <item>

@@ -23,21 +23,19 @@
     
       
       <meta property="description" content="相关笔记:
+Unity|Shader Graph学习(零)
 Unity|Shader Graph学习(一)
 Unity|Shader Graph学习(二)
 [&amp;hellip;]  最终效果 todo:看了很久没有搞懂
 先行跳过 总步骤
-1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 最终效果
-总步骤
-1. 用 Normal Vector 实现一半的颜色不一致 2. 用 View Direction &amp;hellip;">
+1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 难点:如何理解 Normal Vector 和 View &amp;hellip;">
       <meta property="og:description" content="相关笔记:
+Unity|Shader Graph学习(零)
 Unity|Shader Graph学习(一)
 Unity|Shader Graph学习(二)
 [&amp;hellip;]  最终效果 todo:看了很久没有搞懂
 先行跳过 总步骤
-1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 最终效果
-总步骤
-1. 用 Normal Vector 实现一半的颜色不一致 2. 用 View Direction &amp;hellip;">
+1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 难点:如何理解 Normal Vector 和 View &amp;hellip;">
       
     
 
@@ -151,6 +149,7 @@ Unity|Shader Graph学习(二)
 <h2 id="这里主要是部分shader实例的扩展">这里主要是部分Shader实例的扩展</h2>
 
 <p><code>相关笔记:</code><br>
+<a href="/post/2018/09/30/unity-shader-graph/">Unity|Shader Graph学习(零)</a><br />
 <a href="/post/2018/10/01/unity-shader-forge/">Unity|Shader Graph学习(一)</a><br />
 <a href="/post/2018/10/06/unity-shader-graph2/">Unity|Shader Graph学习(二)</a></p>
 
@@ -175,34 +174,62 @@ todo:看了很久没有搞懂<br />
 
 <h2 id="toon-https-github-com-andydbc-unity-shadergraph-sandbox"><a href="https://github.com/andydbc/unity-shadergraph-sandbox">Toon</a></h2>
 
+<p>难点:如何理解 Normal Vector 和 View Direction</p>
+
+<pre><code>Normal Vector  : 获取mesh的法线向量。
+View Direction : 获取mesh的顶点或片段的视角方向向量。
+                 从顶点或片段到相机的方向。
+</code></pre>
+
 <p><img src="/post/2018-09-10-unity-shader-forge_files/Xnip2018-10-05_03-49-54.jpg" alt="" />
 <center><i><code>最终效果</code></i></center></p>
 
 <p>总步骤</p>
 
-<pre><code>1. 用 Normal Vector 实现一半的颜色不一致
+<pre><code>1. 用 Normal Vector 实现一半的颜色不一致(对半颜色)
 2. 用 View Direction + Normalize 实现 亮点的跟随
-3. 所有颜色使用Step做去色阶实现漫画效果sa
+3. 使两层效果相加
 </code></pre>
 
 <ol>
-<li>用 Normal Vector 实现一半的颜色不一致</li>
+<li>用 Normal Vector 实现对半颜色</li>
 </ol>
 
-<pre><code>
+<pre><code>1.1 ( Vector 3*(亮光方向向量)-&gt; Normalize )  控制亮光方向
+    Dot ( 点乘 )
+    ( Normal Vector )
+1.2 Step 后 分别加颜色
 </code></pre>
 
 <p><img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-183000.png" alt="" />
-<center><code>1.1_实现亮光的跟随基础</code></center>
+<center><code>1_对半颜色</code></center>
 2. 用 View Direction + Normalize 实现 亮点的跟随</p>
 
 <pre><code>2.1 (Vector 3*(亮光方向向量)-&gt; Normalize)  控制亮光方向
     Add 
     (View Direction       -&gt; Normalize)  支持随视角变化亮光方向
+    
+    然后以上整体 
+    再搞一个和 Normal Vector 的 点乘
+    最终才支持对不同视角的动态反光支持
+2.2 Power后让高亮部分缩小 -&gt; Step 后动漫风格化
+    加高亮区颜色
 </code></pre>
 
-<p><img src="/post/2018-10-06-unity-shader-graph2_files/5491538821384_.pic.jpg" alt="" />
+<p><img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-184701.png" alt="" />
 <center><code>2.1_实现亮光的跟随基础</code></center>
+<img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-191815.png" alt="" />
+<center><code>2.2_Power &amp; Step</code></center>
+3. 使两层效果相加</p>
+
+<pre><code>3.1 和1._中的对半颜色融合:
+    先将之前Step之后未上色的小部分 multiply 底色(对半颜色)
+3.2 将小部分和 Multiply 之后的空缺相加
+    
+</code></pre>
+
+<p><img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-191319.png" alt="" />
+<center><code>3_颜色'相加'</code></center>
 <br></p>
 
 
