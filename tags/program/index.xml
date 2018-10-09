@@ -21,7 +21,7 @@
 Unity|Shader Graph学习(零)
 Unity|Shader Graph学习(一)
 Unity|Shader Graph学习(二)
-目录  Digital Dissolve Toon  Digital Dissolve  最终效果 todo:看了很久没有搞懂
+目录  Digital Dissolve Toon HoloGram  Digital Dissolve  最终效果 todo:看了很久没有搞懂
 先行跳过 总步骤
 1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 难点:如何理解 Normal Vector 和 View Direction
 Normal Vector : 获取mesh的法线向量。 View Direction : 获取mesh的顶点或片段的视角方向向量。 从顶点或片段到相机的方向。  最终效果

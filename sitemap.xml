@@ -8,17 +8,37 @@
   </url>
   
   <url>
+    <loc>/post/2018/10/09/de-bug/</loc>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/10/08/result-of/</loc>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/10/08/beauty/</loc>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/keyinfo-wifi-in-unitab/</loc>
+    <lastmod>2018-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018/10/06/unity-shader-graph2/</loc>
     <lastmod>2018-10-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2018/10/06/from-after/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+    <loc>/post/2018/10/05/jb-latex/</loc>
+    <lastmod>2018-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2018/10/05/jb-latex/</loc>
+    <loc>/post/2018/10/05/from-after/</loc>
     <lastmod>2018-10-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -358,6 +378,12 @@
   </url>
   
   <url>
+    <loc>/tags/android/</loc>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/artsdome/</loc>
     <lastmod>2018-08-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -400,6 +426,12 @@
   <url>
     <loc>/tags/data-mining/</loc>
     <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/debug/</loc>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -467,7 +499,7 @@
   
   <url>
     <loc>/categories/note/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -527,13 +559,13 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2018-08-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/talkthought/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -557,7 +589,7 @@
   
   <url>
     <loc>/categories/uselesstalks/</loc>
-    <lastmod>2018-10-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -575,7 +607,7 @@
   
   <url>
     <loc>/tags/works/</loc>
-    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -611,7 +643,7 @@
   
   <url>
     <loc>/tags/%E5%A5%87%E8%91%A9%E8%AF%B4/</loc>
-    <lastmod>2018-09-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -647,7 +679,7 @@
   
   <url>
     <loc>/tags/%E5%BC%A0%E8%89%BA%E8%B0%8B/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -695,7 +727,7 @@
   
   <url>
     <loc>/tags/%E6%99%93%E8%AF%B4/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -743,7 +775,7 @@
   
   <url>
     <loc>/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -779,7 +811,7 @@
   
   <url>
     <loc>/tags/%E9%82%A3%E5%90%BE%E5%85%8B%E7%83%AD/</loc>
-    <lastmod>2018-09-19T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -798,6 +830,12 @@
   <url>
     <loc>/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/</loc>
     <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E9%BC%93%E6%A7%8C/</loc>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

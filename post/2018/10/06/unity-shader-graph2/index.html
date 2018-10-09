@@ -158,6 +158,7 @@ Unity|Shader Graph学习(二)
 <ul>
 <li><a href="#digital-dissolve-https-github-com-andydbc-unity-shadergraph-sandbox">Digital Dissolve</a></li>
 <li><a href="#toon-https-github-com-andydbc-unity-shadergraph-sandbox">Toon</a></li>
+<li><a href="#hologram-https-github-com-andydbc-unity-shadergraph-sandbox">HoloGram</a></li>
 </ul>
 
 <h2 id="digital-dissolve-https-github-com-andydbc-unity-shadergraph-sandbox"><a href="https://github.com/andydbc/unity-shadergraph-sandbox">Digital Dissolve</a></h2>
@@ -218,7 +219,7 @@ View Direction : 获取mesh的顶点或片段的视角方向向量。
 
 <p><img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-184701.png" alt="" />
 <center><code>2.1_实现亮光的跟随基础</code></center>
-<img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-191815.png" alt="" />
+<center><img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-191815.png" alt="" /></center>
 <center><code>2.2_Power &amp; Step</code></center>
 3. 使两层效果相加</p>
 
@@ -228,8 +229,38 @@ View Direction : 获取mesh的顶点或片段的视角方向向量。
     
 </code></pre>
 
-<p><img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-191319.png" alt="" />
-<center><code>3_颜色'相加'</code></center>
+<p><center><img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-191319.png" alt="" /></center>
+<center><code>3_颜色'相加'</code></center></p>
+
+<h2 id="hologram-https-github-com-andydbc-unity-shadergraph-sandbox"><a href="https://github.com/andydbc/unity-shadergraph-sandbox">Hologram</a></h2>
+
+<p>难点:如何理解从上到下或者 从某方向 到 另一方向的推进</p>
+
+<pre><code>利用[ (-1,1) + time * multi_1 ] * multi_2 和 fraction取值
+造成一个单方向的推进循环
+multiply_1是单次推进的速度
+multiply_2是显示的条数(当 multiply_2 = 0.25 正好是一个周期)
+</code></pre>
+
+<p><center><img src="/post/2018-10-06-unity-shader-graph2_files/test16.gif" alt="" /></center>
+<center><i><code>最终效果</code></i></center></p>
+
+<p>总步骤</p>
+
+<pre><code>1. 整体加从上到下的亮光推进
+   相当于multi_2很小,0.25 到 0.2 左右
+2. 加中间斑马条纹
+   相当于multi_2很大, 10 到 20 左右
+3. 用Fresnel效果做中间透明边缘亮光的效果
+   各个层次都要有 很烦但是没办法
+</code></pre>
+
+<p><center><img src="/post/2018-10-06-unity-shader-graph2_files/test18.gif" alt="" /></center>
+<center><code>1_亮光推进的基础</code></center>
+<center><img src="/post/2018-10-06-unity-shader-graph2_files/test17.gif" alt="" /></center>
+<center><code>2_中间斑马条纹的基础</code></center>
+<center><img src="/post/2018-10-06-unity-shader-graph2_files/WX20181006-231956.png" alt="" /></center>
+<center><code>3_总的效果</code></center>
 <br></p>
 
 

@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android</title>
+      <link>/tags/android/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/android/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Attribute Tag</title>
@@ -53,6 +62,15 @@
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/data-mining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debug</title>
+      <link>/tags/debug/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/debug/</guid>
       <description></description>
     </item>
     
@@ -194,7 +212,7 @@
     <item>
       <title>Works</title>
       <link>/tags/works/</link>
-      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/works/</guid>
       <description></description>
@@ -248,7 +266,7 @@
     <item>
       <title>奇葩说</title>
       <link>/tags/%E5%A5%87%E8%91%A9%E8%AF%B4/</link>
-      <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/%E5%A5%87%E8%91%A9%E8%AF%B4/</guid>
       <description></description>
@@ -302,7 +320,7 @@
     <item>
       <title>张艺谋</title>
       <link>/tags/%E5%BC%A0%E8%89%BA%E8%B0%8B/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/%E5%BC%A0%E8%89%BA%E8%B0%8B/</guid>
       <description></description>
@@ -374,7 +392,7 @@
     <item>
       <title>晓说</title>
       <link>/tags/%E6%99%93%E8%AF%B4/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/%E6%99%93%E8%AF%B4/</guid>
       <description></description>
@@ -446,7 +464,7 @@
     <item>
       <title>笔记</title>
       <link>/tags/%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
@@ -500,7 +518,7 @@
     <item>
       <title>那吾克热</title>
       <link>/tags/%E9%82%A3%E5%90%BE%E5%85%8B%E7%83%AD/</link>
-      <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/%E9%82%A3%E5%90%BE%E5%85%8B%E7%83%AD/</guid>
       <description></description>
@@ -530,6 +548,15 @@
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>鼓槌</title>
+      <link>/tags/%E9%BC%93%E6%A7%8C/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E9%BC%93%E6%A7%8C/</guid>
       <description></description>
     </item>
     

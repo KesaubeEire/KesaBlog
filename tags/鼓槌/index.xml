@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>鼓槌 on Kesa</title>
+    <link>/tags/%E9%BC%93%E6%A7%8C/</link>
+    <description>Recent content in 鼓槌 on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/%E9%BC%93%E6%A7%8C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>心情|有他娘De了一下午一晚上的Bug</title>
+      <link>/post/2018/10/09/de-bug/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/09/de-bug/</guid>
+      <description> 两点收获  lxr同志的专业精神很强
+ 比起lb那个XXX好到不知道哪里去了  秒级沟通,完全不走开电脑面前 专业精神和沟通态度 真的让我佩服 比我专业 debug的乐观精神反映了非常的经验和态度 总评放心 &amp;amp; 用心 之后的所有安卓项目我都会优先考虑xr    debug 还是tm一件苦差事
+ 哭哭哭   </description>
+    </item>
+    
+  </channel>
+</rss>

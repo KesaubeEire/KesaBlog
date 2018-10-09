@@ -21,6 +21,63 @@
     </item>
     
     <item>
+      <title>心情|有他娘De了一下午一晚上的Bug</title>
+      <link>/post/2018/10/09/de-bug/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/09/de-bug/</guid>
+      <description> 两点收获  lxr同志的专业精神很强
+ 比起lb那个XXX好到不知道哪里去了  秒级沟通,完全不走开电脑面前 专业精神和沟通态度 真的让我佩服 比我专业 debug的乐观精神反映了非常的经验和态度 总评放心 &amp;amp; 用心 之后的所有安卓项目我都会优先考虑xr    debug 还是tm一件苦差事
+ 哭哭哭   </description>
+    </item>
+    
+    <item>
+      <title>感叹|Result of 中国新说唱</title>
+      <link>/post/2018/10/08/result-of/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/08/result-of/</guid>
+      <description> 虽然早已知道最后
+结果可能没有走向我的预想
+但是没有想到为什么差距那么大
+但是多想想肯定是知道的
+有什么问题在这里面
+看了那么多文章
+心中也有了答案
+因为是价值相似
+更注重责任梦想
+挣扎中奋斗中努力中走着
+痛苦中迷茫中觉悟中爬着
+嗨
+还是好家庭的孩子幸福呢
+但是奋斗才是精彩的人生
+ </description>
+    </item>
+    
+    <item>
+      <title>笔记|人生的美妙 from MM马</title>
+      <link>/post/2018/10/08/beauty/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/08/beauty/</guid>
+      <description> 马东的人生观  人生的美妙其实在于
+你有机会的时候 你会选择重新发育一遍
+然而你已经没有机会了
+你正在发育的时候
+你永远期待你有一个成熟的灵魂
+ </description>
+    </item>
+    
+    <item>
+      <title>KeyInfo|Wifi in Unitab</title>
+      <link>/keyinfo-wifi-in-unitab/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/keyinfo-wifi-in-unitab/</guid>
+      <description>Stock: 222.28.41.250 Passwd: kesa 加密方式:aes-256-cfb  WIFI:DashJay Passwd:Zhao5220655</description>
+    </item>
+    
+    <item>
       <title>Unity|Shader Graph学习(二)</title>
       <link>/post/2018/10/06/unity-shader-graph2/</link>
       <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
@@ -30,26 +87,12 @@
 Unity|Shader Graph学习(零)
 Unity|Shader Graph学习(一)
 Unity|Shader Graph学习(二)
-目录  Digital Dissolve Toon  Digital Dissolve  最终效果 todo:看了很久没有搞懂
+目录  Digital Dissolve Toon HoloGram  Digital Dissolve  最终效果 todo:看了很久没有搞懂
 先行跳过 总步骤
 1. 用擦除实现无效果的擦除 2. 用块状噪点在擦除边缘offset实现边缘发光  Toon 难点:如何理解 Normal Vector 和 View Direction
 Normal Vector : 获取mesh的法线向量。 View Direction : 获取mesh的顶点或片段的视角方向向量。 从顶点或片段到相机的方向。  最终效果
 总步骤
 1. 用 Normal Vector 实现一半的颜色不一致(对半颜色) 2. 用 View Direction + Normalize 实现 亮点的跟随 3. 使两层效果相加   用 Normal Vector 实现对半颜色  1.1 ( Vector 3*(亮光方向向量)-&amp;gt; Normalize ) 控制亮光方向 Dot ( 点乘 ) ( Normal Vector ) 1.</description>
-    </item>
-    
-    <item>
-      <title>笔记|From 晓说对谈张艺谋 after 影</title>
-      <link>/post/2018/10/06/from-after/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/10/06/from-after/</guid>
-      <description> 放在前面 今天听了反派影评对张艺谋的两期 一期谈&amp;lt;&amp;lt;影&amp;gt;&amp;gt; 基本都是说缺点的 但是对我而言是有收获的 强化了我对一个人物成长历史观的辩证看待 尤其是对一个人的原生家庭出生阶层和文化起点 还有对精英视角的质疑和对自我认知的自信 因为我觉得这帮我一直很信赖的家伙们 其实也往往不能做到客观历史看待导演和他们的作品 当然也可能是我先入为主对张艺谋有了好感 这tm就很尴尬了 不过总之我的感受是 张艺谋的长处在形式和艺术风格 还有对工程项目的精准把控 短处在故事和选角 特点在妥协和闲不住 妥协被说成是缺点但是我觉得不能这么看 嗨 但是被他们这么反复一说我就很难改变 这是一个缺点的意识 现在脑子里看到张艺谋妥协的部分和性格 我下意识的回去觉得这个是他的缺点 还是做自己难吖  正文 演员的才能:
-把对一个角色的所有理性设计
-用血肉之躯转化为感性
-自然的表现出来
-谈故事|讲剧本|设计人物 都是理性的 但是镜头面前的时候 就是要那么些个瞬间的感性传达 一个眼神就得出来 from导演  电影和话剧对演员的要求不同
-话剧是顺着眼 有情绪的积累 是一气呵成的 但是电影是零碎的 上一秒是这个环境下一片完全就变了 话剧演员台词功底是第一位 电影演员更加复杂一些  </description>
     </item>
     
     <item>
@@ -62,6 +105,20 @@ Normal Vector : 获取mesh的法线向量。 View Direction : 获取mesh的顶�
 以下总结from DashJay  希腊字母表格  大写字母若和英文字母相同则无法大写
 
    小写 大写 $ L^AT_EX $     α A \alpha   β B \beta   γ Γ \gamma   δ Δ \delta   ϵ E \epsilon   ζ Z \zeta   ν N \nu   ξ Ξ \xi   ο O \omicron   π Π \pi   ρ P \rho   σ Σ \sigma   η H \eta   θ Θ \theta   ι I \iota   κ K \kappa   λ Λ \lambda   μ M \mu   ϕ Φ \phi，（φφ：\varphi）   χ X \chi   ψ Ψ \psi   ω Ω \omega</description>
+    </item>
+    
+    <item>
+      <title>笔记|From 晓说对谈张艺谋 after 影</title>
+      <link>/post/2018/10/05/from-after/</link>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/05/from-after/</guid>
+      <description> 放在前面 今天听了反派影评对张艺谋的两期 一期谈 &amp;lt;&amp;lt;影&amp;gt;&amp;gt; 基本都是说缺点的 但是对我而言是有收获的 强化了我对一个人物成长历史观的辩证看待 尤其是对一个人的原生家庭出生阶层和文化起点 还有对精英视角的质疑和对自我认知的自信 因为我觉得这帮我一直很信赖的家伙们 其实也往往不能做到客观历史看待导演和他们的作品 当然也可能是我先入为主对张艺谋有了好感 这tm就很尴尬了 不过总之我的感受是 张艺谋的长处在形式和艺术风格 还有对工程项目的精准把控 短处在故事和选角 特点在妥协和闲不住 妥协被说成是缺点但是我觉得不能这么看 嗨 但是被他们这么反复一说我就很难改变 这是一个缺点的意识 现在脑子里看到张艺谋妥协的部分和性格 我下意识的回去觉得这个是他的缺点 还是做自己难吖  正文 演员的才能:
+把对一个角色的所有理性设计
+用血肉之躯转化为感性
+自然的表现出来
+谈故事|讲剧本|设计人物 都是理性的 但是镜头面前的时候 就是要那么些个瞬间的感性传达 一个眼神就得出来 from导演  电影和话剧对演员的要求不同
+话剧是顺着眼 有情绪的积累 是一气呵成的 但是电影是零碎的 上一秒是这个环境下一片完全就变了 话剧演员台词功底是第一位 电影演员更加复杂一些  </description>
     </item>
     
     <item>
