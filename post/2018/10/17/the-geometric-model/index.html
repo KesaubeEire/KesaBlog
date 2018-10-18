@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>作业|概率论小论文:几何概型应用 - Kesa</title>
+    <meta property="og:title" content="作业|概率论小论文:几何概型应用 - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="论文要求
+[&amp;hellip;] 学生信息:
+[&amp;hellip;] 几何概型的应用在CNKI的搜索结果大多都与初高中数学教学相关,在这个领域的研究重点在于把握几何概形区分于古典概型的性质和依据这些特殊的性质的应用,以下的前一部分是对几份高中教学研讨文献综述的提取总结;另一方面仍然有少数文献针对高校数学专业学科问题讨论了一些问题,后一部分是对这些文献综述的提取总结.
+[&amp;hellip;] 主要内容:节 &amp;hellip;">
+      <meta property="og:description" content="论文要求
+[&amp;hellip;] 学生信息:
+[&amp;hellip;] 几何概型的应用在CNKI的搜索结果大多都与初高中数学教学相关,在这个领域的研究重点在于把握几何概形区分于古典概型的性质和依据这些特殊的性质的应用,以下的前一部分是对几份高中教学研讨文献综述的提取总结;另一方面仍然有少数文献针对高校数学专业学科问题讨论了一些问题,后一部分是对这些文献综述的提取总结.
+[&amp;hellip;] 主要内容:节 &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/recents/">RecentsList</a></li>
+  
+  <li><a href="/idiomslist/">Chinese_Idiomlist</a></li>
+  
+  <li><a href="/phrases/">English_Phrases</a></li>
+  
+  <li><a href="/vocabulary/">English_Vocabulary</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>作业|概率论小论文:几何概型应用</h1>
+
+<h3>Kesa
+  /  2018-10-17</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            displayMath: [
+                ['$$', '$$'],
+                ["\\(", "\\)"]
+            ],
+            inlineMath: [
+                ['\\[', '\\]'],
+                ['$', '$'],
+            ],
+        },
+    });
+</script> 
+
+
+
+
+
+<p>论文要求</p>
+
+<ol>
+<li>文献综述：对查阅的至少五篇文献进行综述，含文献的主要内容、方法、应用，对前人工作的改进等；</li>
+<li>相关知识：对文献中涉及的数学知识进行归纳、总结，列出公式、性质、定理等；</li>
+<li>应用实例：可以是文献中的，也可以是自己编的；</li>
+<li>总结感受：写出自己对文献的归纳总结和心得体会；</li>
+<li>文献列表：将查阅的文献（作者、题目、期刊、卷号、期号、页码）以列表形式附在最后。</li>
+</ol>
+
+<p>学生信息:</p>
+
+<table>
+<thead>
+<tr>
+<th>学号</th>
+<th>姓名</th>
+<th>班级</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>41522262</td>
+<td>魏先</td>
+<td>信计171</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="几何概型及应用">几何概型及应用</h1>
+
+<h3 id="文献综述">文献综述</h3>
+
+<p>几何概型的应用在CNKI的搜索结果大多都与初高中数学教学相关,在这个领域的研究重点在于把握几何概形区分于古典概型的性质和依据这些特殊的性质的应用,以下的前一部分是对几份高中教学研讨文献综述的提取总结;另一方面仍然有少数文献针对高校数学专业学科问题讨论了一些问题,后一部分是对这些文献综述的提取总结.</p>
+
+<h4 id="文献1-杨芝艳-几何概型与古典概型概念认识的统一性及几何概型的应用">文献1:(杨芝艳)几何概型与古典概型概念认识的统一性及几何概型的应用</h4>
+
+<p>主要内容:节选自文章摘要</p>
+
+<blockquote>
+<p>摘要本文旨在将概率论基本概型之一的几何概型同经典的古典概型统一起来，对古典（几何）榄率定义、性质方面的统一性作了系统的论述，针对不同的问题给出了应用上较方便的计算方法，并运用例子说明几何概型（几何概率）在实际问题中的应用。</p>
+</blockquote>
+
+<h4 id="文献2-杨-艺-透视几何概型应用中的易错点">文献2:(杨 艺)透视几何概型应用中的易错点</h4>
+
+<blockquote>
+<p>“几何概型”是新课程新增加的内容之一, 数学课程标准 将其定义为: 信息化的现代社会, 统计和概率的基础知识已 经成为一个未来公民的必备常识, 要求学生“初步体会几何 概型的意义, 会进行简单的几何概率计算”. 几何概型概念的 理解, 重在对试验的正确建模和几何度量的选择. 在运用概 念解题时, 我们应注意不同的说法既可能是概念多样性的不 同表述, 但也可能导致对概念的本质理解产生偏差, 也影响 对几何度量的选择. 因此, 区别古典概型和几何概型, 透视几 何概型应用中的易错点有利于学生正确理解和掌握几何概 型.</p>
+</blockquote>
+
+<h4 id="文献3-何晓勤-几何概型测度的类型及应用">文献3:(何晓勤)几何概型测度的类型及应用</h4>
+
+<p>主要内容:节选自文章摘要</p>
+
+<blockquote>
+<p>几何概型是一种特殊的随机事件概率模型，是概率问题的几何形式.求解此类问题时可把每个基本事件理解为从某个特定的可度量的几何区域D内随机取一点，区域D内的每一点被取到的可能性大小相同，即点在区域D内是均匀分布的;随机事件A发生则可理解为恰好取到区域D内的子区域d内的点，从而得到事件A发生的概率为
+的测度的测度 $ P(A)=\frac{d的测度}{D的测度} $  .因此，解决几何概型问题的关键是确定点对应的几何区域，并正确计算相应区域的测度.高中阶段碰到的几何区域主要包括线段、射线、平面图形和立体图形，对应的测度分别为长度、角度、面积和体积.</p>
+</blockquote>
+
+<h4 id="文献4-杨-杰-几何概型的求解技巧与应用">文献4:(杨 杰)几何概型的求解技巧与应用</h4>
+
+<p>主要内容:节选自文章摘要</p>
+
+<blockquote>
+<p>此前, 已有很多学者对几何概型的求解及应用做了研
+究, 得出了些相应的结论, 大大推动了概率论的不断前进. 在此文中主要是利用几何概型的定义来探讨此类概率的 一些求解技巧与应用, 并总结了其解题的一般步骤.这里 分为两类几何概型求解, 一类是样本空间的几何意义较明 显的几何概型; 一类是几何意义不明显的几何概型.前者 较简单, 易于求解; 后者较复杂, 求解富有技巧性.另外, 对 Buffon 投针做了进一步推广, 用正三角形代替针.</p>
+</blockquote>
+
+<h4 id="文献5-辛萍芳-均匀分布与几何概型在现代计算技术中的应用">文献5:(辛萍芳)均匀分布与几何概型在现代计算技术中的应用</h4>
+
+<blockquote>
+<p>给出了均匀分布与几何概型的联系，以及在实际应用过程中各自的计算优势，并且介绍了均匀分布在现 代计算技术中的应用。</p>
+</blockquote>
+
+<p>       本文个人总结:</p>
+
+<blockquote>
+<p>作者在引言中讲解了均匀分布和几何概型之间的联系,指出均匀分布是几何概型的概率模型,并给出了上一篇文章作者没有做出的几何概型的概率密度代数式并进行了讲解;利用均匀分布,作者指出了针对几种情况下(3个例子)以此计算概率的优势,特别地指出了2种均匀分布在现代计算技术中的应用:在舍入误差中的应用和蒙特卡罗方法</p>
+</blockquote>
+
+<h3 id="相关知识-应用实例">相关知识 &amp; 应用实例</h3>
+
+<p>归纳总结以上文献的各种知识,大致分为两类:</p>
+
+<ol>
+<li>(简单知识)区别\联系\统一古典概型和几何概型的知识</li>
+<li>(简单知识)对几何概型研究的测度总结</li>
+<li>(深度知识)在其他模型或问题中几何模型的作用价值</li>
+</ol>
+
+<h4 id="1-区别-联系-统一古典概型和几何概型的知识">1.区别\联系\统一古典概型和几何概型的知识</h4>
+
+<h5 id="1-1-古典概型">1.1 古典概型</h5>
+
+<p><strong>定义 1</strong> <br>设试验 E 是古典概型，其样本空间几中共有 n 个样本点，事件 A 包含 h 个样本点，则定义事件 A 的概率为：
+$$
+P(A) = \frac{k}{n} = \frac{A包含的样本数}{\Omega中的样本数}
+$$
+称此为古典概形,有如下特征:</p>
+
+<ol>
+<li>试验所有可能的结果个数有限，即基本事件个数有限;</li>
+<li>各个试验结果,在每次实验中发生的可能性是一样的.</li>
+</ol>
+
+<h5 id="1-2-几何概型">1.2 几何概型</h5>
+
+<p><strong>定义 2</strong><br>
+$$
+A={向区域\Omega上随机投掷一点,它落在区域 G\subset Q}
+$$
+则A的概率定义为:
+$$
+P(A)=\frac{G的测度}{F的测度}=\frac{\mu(G)}{\mu(\Omega)}
+$$</p>
+
+<h5 id="1-3-古典概型和几何概形的联系">1.3 古典概型和几何概形的联系</h5>
+
+<p>可见，几何概型只不过是将定义 I 中的样本空间推广到区域、空间，把试验结果个数有限改为无限，等可能性不变的情形。它们都具有一定统一的数学结构:
+$$
+P(A)=\frac{f(G)}{f(\Omega)}
+$$
+对于古典概型, $ f(\Omega) $指的是计数函数<br>对于几何概型, $ f(\Omega) $指的是测度函数</p>
+
+<p><strong>此外古典概型满足:</strong></p>
+
+<ol>
+<li><p>非负性：对任一事件A，有 $P(A)&gt;0$;</p></li>
+
+<li><p>规范性：对必然事件D，有$P(N)=1$;</p></li>
+
+<li><p>有限可加性：设 $A_1,A_2,&hellip;, A_n$。为互不相容事件，则</p></li>
+</ol>
+
+<p>$$
+P (\bigcup_{i=1}^{n}A<em>i) =  \sum</em>{i=1}^{n}  P (A_i)
+$$</p>
+
+<p><strong>而几何概率除满足，上面（1) - (3) 条外，还满足：</strong></p>
+
+<ol>
+<li>可列可加性：设  $A_1,A_2,&hellip;, A_n$为可列无穷多个互不相容事件，则</li>
+</ol>
+
+<p>$$
+P (\bigcup_{i=1}^{\infty}A<em>i) =  \sum</em>{i=1}^{\infty}  P (A_i)
+$$</p>
+
+<p>从另一个角度解释两者的统一性</p>
+
+<h4 id="2-对几何概型研究的测度总结以及应用实例">2.对几何概型研究的测度总结以及应用实例</h4>
+
+<p>归纳常见题型的类型为:<br>长度型\角度型\面积型\体积型 等4种,<br>概率的计算方式分别是:将长度\角度\面积\体积等4种量作为测度量<br>带入的测度的测度 的测度的测度
+$$
+P(A)=\frac{d的测度}{D的测度}
+$$
+式中.
+即分别为:</p>
+
+<h5 id="1-长度型">1.长度型</h5>
+
+<p>$$
+P(长度型)=\frac{d的长度}{D的长度}
+$$
+<strong>例题1:</strong><br>如图 1, $\angle AOB = 60$, OA = 2, OB = 5, 在线段 OB 上任取一点 C，<br>求△AOC 为锐角三角形的概率。(解略)<br></p>
+
+<p><img src="/Users/w/Downloads/时不时的截图/Xnip2018-10-18_01-42-05.jpg" alt="Xnip2018-10-18_01-42-05" /></p>
+
+<pre><code>事件的临界状态出发探究，是正确求得几何区域的关键.
+测度为长度的几何区域主要有平面线段(或圆弧)、时间段、取值区间等，
+对待此类问题，要完整正确地把握所求事件的区域对应的长度，
+防止遗漏或以偏概全.
+</code></pre>
+
+<h5 id="2-角度型">2.角度型</h5>
+
+<p>$$
+P(角度型)=\frac{d的角度}{D的角度}
+$$
+<strong>例题2:</strong><br>如图2，在等腰三角形ABC中，∠B=∠C=30°，过点A在∠BAC的内部任作射线AP交线段BC于P，求BP<AB的概率.(解略)<br></p>
+
+<p><img src="/Users/w/Downloads/时不时的截图/Xnip2018-10-18_01-46-39.jpg" alt="Xnip2018-10-18_01-46-39" /></p>
+
+<pre><code>若将本题中的“过点A在∠BAC的内部任作射线AP交线段BC于P”
+改为“在线段BC上取点P”，则测度就是“长度”.
+因而对于背景类似的问题，一定要认真推敲，
+弄清一次试验是什么，一个基本事件是什么，注意区别.
+</code></pre>
+
+<h5 id="3-面积型">3.面积型</h5>
+
+<p>$$
+P(面积型)=\frac{d的面积}{D的面积}
+$$
+<strong>例题3:</strong><br>(会面问题)甲、乙两人相约7点到8点在某地会面，先到者等候另一人15分钟方可离去，如果两人出发是各自独立的，在7点到8点各时刻相见的可能性是相等的，求甲乙两人能会面的概率.(解略)<br></p>
+
+<p><img src="/Users/w/Downloads/时不时的截图/Xnip2018-10-18_01-47-25.jpg" alt="Xnip2018-10-18_01-47-25" /></p>
+
+<pre><code>本题关键在于把两个时间分别用x，y两个坐标表示，
+构成平面内的点(x，y)，
+利用数形结合将时间是一段长度问题转化为平面图形的二维面积问题，
+转化成面积型几何概型问题.
+</code></pre>
+
+<h5 id="4-体积型">4.体积型</h5>
+
+<p>$$
+P(体积型)=\frac{d的体积}{D的体积}
+$$
+<strong>例题4:</strong><br>在线段[0,1]上任意投三个点,由0至这三点的三条线段,能构成三角形与不能构成三角形这两个事件中,哪一个事件的概率大?(详解)<br></p>
+
+<p><img src="/Users/w/Downloads/时不时的截图/Xnip2018-10-18_01-47-38.jpg" alt="Xnip2018-10-18_01-47-38" /></p>
+
+<p>分析:<br>
+在线段上投放三个点，可分成三条线段，只要设出三条线段的长度，则由能构成三角形的条件，可列出关于这三条线段长度的不等式组，于是可以联想到空间“区域”，此时区域为立体图形，测度为体积.</p>
+
+<p>解:</p>
+
+<pre><code>相应的右端点坐标为x,y,z，显然0&lt;x,y,x&lt;1,
+这三条线段构成三角形的充要条件是： x+y&gt;z,x+z&gt;y,y+z&gt;x.
+线段[0,1]上任意投三点x,y,z, 
+与立方体0&lt;x&lt;1,0&lt;y&lt;1,0&lt;z&lt;1中的点（x,y,z)一一对应，
+可见所求“构成三角形”的概率，
+等价于边长为1的立方体T中均匀地掷点，
+而点落在x+y&gt;z,x+x&gt;y,y+z&gt;x区域中的概率；这也就是落在图中
+由△ADC,△ADB,△BDC,△AOC,△AOB,△BOC所围成的区域G中的概率。
+计算体积得p = 1/2
+由此得，能与不能构成三角形两事件的概率一样大。
+</code></pre>
+
+<pre><code>本例的关键是引入线段长度x,y,z,
+列出它们满足的不等式组,从而联系到空间点的坐标(x,y,z),
+并由条件构造出空间图形,进而转化为体积型几何概型求解.
+</code></pre>
+
+<h4 id="3-在其他模型或问题中几何模型的作用价值">3.在其他模型或问题中几何模型的作用价值</h4>
+
+<h3 id="心得体会">心得体会</h3>
+
+<p>在CNKI以 &ldquo;几何概型&rdquo; &ldquo;应用&rdquo; 作为关键词查询相关论文,所得共30余篇查询结果.遍历所有文章后,发现多数文章的应用领域为初高中教师的数学教学及相关研究,几乎所属机构都是中学及其数学教研室;剩余类型的文章大多是对几何概型的子类型进行综述和简介,多数也没有站在大学数学的教育层次上,仍然是以高中层次的视角看待几何概型上的问题,文章内容很少能直接对我们的课程有所帮助.在这个基础上,大部分的文章都是对教学案例和高考题目的解析,不过还是有一些概念比较贴近我们的研究角度 : 测度.从这个角度出发甚至可以利用那些充斥着题目和案例的\只为解决题目没有总结共性和特征的文章.</p>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
