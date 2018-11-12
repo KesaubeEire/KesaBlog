@@ -30,18 +30,36 @@
     </item>
     
     <item>
+      <title>Math</title>
+      <link>/categories/math/</link>
+      <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Note</title>
       <link>/categories/note/</link>
-      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/note/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>SelfJudge</title>
+      <link>/categories/selfjudge/</link>
+      <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/selfjudge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Talk&amp;Thought</title>
       <link>/categories/talkthought/</link>
-      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/talkthought/</guid>
       <description></description>
@@ -77,7 +95,7 @@
     <item>
       <title>UselessTalks</title>
       <link>/categories/uselesstalks/</link>
-      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/uselesstalks/</guid>
       <description></description>
@@ -95,7 +113,7 @@
     <item>
       <title>WorkGet</title>
       <link>/categories/workget/</link>
-      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/workget/</guid>
       <description></description>

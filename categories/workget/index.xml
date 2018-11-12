@@ -6,10 +6,19 @@
     <description>Recent content in WorkGet on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/workget/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ML|SunSpot_grGroup</title>
+      <link>/post/2018/11/04/ml-sunspot-grgroup/</link>
+      <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/04/ml-sunspot-grgroup/</guid>
+      <description> 总体感悟  处理数据比选择模型更加重要 解决相关问题可以通过看论文简化 投入时间和精力去和团队和老师沟通  </description>
+    </item>
     
     <item>
       <title>工作心得|产品模式的目的</title>
