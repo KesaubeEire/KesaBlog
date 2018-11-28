@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manim on Kesa</title>
+    <link>/tags/manim/</link>
+    <description>Recent content in Manim on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/manim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Skill|安装Manim</title>
+      <link>/post/2018/11/17/skill-manim/</link>
+      <pubDate>Sat, 17 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/17/skill-manim/</guid>
+      <description>心路历程 在Linux上我还是差zwj同志十万八千里呢
+其实也不只是Linux上,各种层次上我都是
+不过这次呢我打算好好认真地记录一下次次安装这个操蛋玩意儿的经历
+不再搞得啥都零散破碎
+以下所有的东西都基于master
+其他的开发线尚不清楚问题
+安装各种库 最苦逼的事情就是安装各种库
+需要安装的库分两种:
+ 系统库:  LaTex(没法直接用)  MacOS 里用 MacTex Ubuntu 里用 LiveTex  ffmpeg sox  Python库(超级超级超级大坑): 问题在于这玩意儿他太难受了  用Conda 安装 : 创建环境:Conda create [你的Conda环境名] 进入环境  MacOS : Source activate [你的Conda环境名] Ubuntu : Conda activate [你的Conda环境名]     - argparse==1.4.0 - colour==0.1.5 - numpy==1.15.0 - Pillow==5.2.0 - progressbar==2.5 - scipy==1.1.0 - tqdm==4.24.0 - opencv-python==3.4.2.17 - pycairo==1.17.1  Conda这里的问题</description>
+    </item>
+    
+  </channel>
+</rss>

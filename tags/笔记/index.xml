@@ -6,10 +6,33 @@
     <description>Recent content in 笔记 on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>笔记|问题 &amp; 问题</title>
+      <link>/post/2018/11/25/%E7%AC%94%E8%AE%B0%E9%97%AE%E9%A2%98--%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/25/%E7%AC%94%E8%AE%B0%E9%97%AE%E9%A2%98--%E9%97%AE%E9%A2%98/</guid>
+      <description>&amp;ndash; from MacTalk:
+ 创业者不喜欢人员空转，就会潜意识的创造问题，
+很多都是伪问题，也就是「麻烦」，这会增加无谓的工作量。
+搞得自己无比忙碌，公司上下也特别忙，看起来红红火火，
+都在解决问题，其实这些问题都是自己拼命制造出来的。
+ </description>
+    </item>
+    
+    <item>
+      <title>笔记|Talk with Gods of Products</title>
+      <link>/post/2018/11/18/talk-with-gods-of-products/</link>
+      <pubDate>Sun, 18 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/18/talk-with-gods-of-products/</guid>
+      <description> 非常值得铭记的一次长谈 </description>
+    </item>
     
     <item>
       <title>To_Be_Continued&amp;Math|直观理解线性代数 from 3B1B</title>
@@ -178,7 +201,7 @@ From NewRepublic The Other Political Correction
     </item>
     
     <item>
-      <title>未完待续_CSharp|&lt;&lt;编写高质量C#代码建议&gt;&gt;提炼</title>
+      <title>CSharp|StopWatch 和 Time.DeltaTime 的比较</title>
       <link>/post/2018/09/01/c-c/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
       

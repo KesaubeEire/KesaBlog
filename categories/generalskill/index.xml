@@ -6,10 +6,47 @@
     <description>Recent content in GeneralSkill on Kesa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/generalskill/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSharp|ref &amp; out || static &amp; non-static</title>
+      <link>/post/2018/11/22/c-ref-out/</link>
+      <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/22/c-ref-out/</guid>
+      <description>这件事的起源是鹏哥的指点
+栈空间和对空间放的东西完全不一样
+变量名和值类型的值都在栈空间
+引用类型的值在对空间
+栈空间中引用类型的变量名存着堆空间中引用类型的地址
+ 以上是我对鹏哥的话的个人理解
+这里有书上的解释
+从这里开始我懂了很多东西
+ref &amp;amp; out 核心思想:
+ ref是让形参直接指向实参的内存而不用复制一份
+ out是承担初始化变量的责任,顺便把外部声明但是未赋值的变量带出去  实践部分 ref: 不加ref的情况
+///代码 internal class Program { public static void Main(string[] args) { MyClass a1 = new MyClass(); int a2 = 10; MyMethod(a1, a2); Console.WriteLine($&amp;quot;f1.Value : {a1.Value} f2: {a2}&amp;quot;); } static void MyMethod(MyClass f1, int f2) { f1.Value += 5; f2 += 5; Console.WriteLine($&amp;quot;f1.Value : {f1.Value} f2: {f2}&amp;quot;); } public class MyClass { public int Value = 25; public List&amp;lt;int&amp;gt; _List = new List&amp;lt;int&amp;gt;(); } } ///输出 f1.</description>
+    </item>
+    
+    <item>
+      <title>Skill|安装Manim</title>
+      <link>/post/2018/11/17/skill-manim/</link>
+      <pubDate>Sat, 17 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/17/skill-manim/</guid>
+      <description>心路历程 在Linux上我还是差zwj同志十万八千里呢
+其实也不只是Linux上,各种层次上我都是
+不过这次呢我打算好好认真地记录一下次次安装这个操蛋玩意儿的经历
+不再搞得啥都零散破碎
+以下所有的东西都基于master
+其他的开发线尚不清楚问题
+安装各种库 最苦逼的事情就是安装各种库
+需要安装的库分两种:
+ 系统库:  LaTex(没法直接用)  MacOS 里用 MacTex Ubuntu 里用 LiveTex  ffmpeg sox  Python库(超级超级超级大坑): 问题在于这玩意儿他太难受了  用Conda 安装 : 创建环境:Conda create [你的Conda环境名] 进入环境  MacOS : Source activate [你的Conda环境名] Ubuntu : Conda activate [你的Conda环境名]     - argparse==1.4.0 - colour==0.1.5 - numpy==1.15.0 - Pillow==5.2.0 - progressbar==2.5 - scipy==1.1.0 - tqdm==4.24.0 - opencv-python==3.4.2.17 - pycairo==1.17.1  Conda这里的问题</description>
+    </item>
     
     <item>
       <title>作业|概率论小论文:几何概型应用</title>
@@ -55,7 +92,7 @@ Dash J(G)ay
     </item>
     
     <item>
-      <title>未完待续_CSharp|&lt;&lt;编写高质量C#代码建议&gt;&gt;提炼</title>
+      <title>CSharp|StopWatch 和 Time.DeltaTime 的比较</title>
       <link>/post/2018/09/01/c-c/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
       
@@ -85,15 +122,6 @@ Unity中之所以可以通过这种方法实现时间计算
 发现这个事情大有可言
 便搞了一阵儿
 using System; using System.Diagnostics; using System.Threading; namespace TestInBook { internal class Program { public static void Main(string[] args) { // StopTimeTest(); // DateTimeTest(); Thread thread1 = new Thread(DateTimeTest); //线程1管DT Thread thread2 = new Thread(StopTimeTest); //线程1管SW Thread thread3 = new Thread(Cal2MethodDiff); //线程3管DT-SW thread1.</description>
-    </item>
-    
-    <item>
-      <title>未完待续_CSharp|ref &amp; out 参数的深入理解</title>
-      <link>/post/2018/09/01/c-ref-out/</link>
-      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/09/01/c-ref-out/</guid>
-      <description></description>
     </item>
     
     <item>

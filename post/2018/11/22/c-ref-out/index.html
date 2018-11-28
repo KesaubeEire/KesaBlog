@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>CSharp|ref &amp; out || static &amp; non-static - Kesa</title>
+    <meta property="og:title" content="CSharp|ref &amp; out || static &amp; non-static - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="这件事的起源是鹏哥的指点
+栈空间和对空间放的东西完全不一样
+变量名和值类型的值都在栈空间
+引用类型的值在对空间
+栈空间中引用类型的变量名存着堆空间中引用类型的地址
+[&amp;hellip;] 以上是我对鹏哥的话的个人理解
+这里有书上的解释
+从这里开始我懂了很多东西
+[&amp;hellip;] 核心思想:
+[&amp;hellip;] 不加ref的情况
+///代码 internal class Program { &amp;hellip;">
+      <meta property="og:description" content="这件事的起源是鹏哥的指点
+栈空间和对空间放的东西完全不一样
+变量名和值类型的值都在栈空间
+引用类型的值在对空间
+栈空间中引用类型的变量名存着堆空间中引用类型的地址
+[&amp;hellip;] 以上是我对鹏哥的话的个人理解
+这里有书上的解释
+从这里开始我懂了很多东西
+[&amp;hellip;] 核心思想:
+[&amp;hellip;] 不加ref的情况
+///代码 internal class Program { &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/recents/">RecentsList</a></li>
+  
+  <li><a href="/idiomslist/">Chinese_Idiomlist</a></li>
+  
+  <li><a href="/phrases/">English_Phrases</a></li>
+  
+  <li><a href="/vocabulary/">English_Vocabulary</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>CSharp|ref &amp; out || static &amp; non-static</h1>
+
+<h3>Kesa
+  /  2018-11-22</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            displayMath: [
+                ['$$', '$$'],
+                ["\\(", "\\)"]
+            ],
+            inlineMath: [
+                ['\\[', '\\]'],
+                ['$', '$'],
+            ],
+        },
+    });
+</script> 
+
+
+
+
+
+<blockquote>
+<p>这件事的起源是鹏哥的指点</p>
+
+<p>栈空间和对空间放的东西完全不一样<br />
+变量名和值类型的值都在栈空间<br />
+引用类型的值在对空间<br />
+栈空间中引用类型的变量名存着堆空间中引用类型的地址</p>
+</blockquote>
+
+<p>以上是我对鹏哥的话的个人理解</p>
+
+<p><img src="/post/2018-11-22-c-ref-out_files/Xnip2018-11-22_00-32-24.jpg" alt="" /><br />
+<center><em>这里有书上的解释</em></center></p>
+
+<p>从这里开始我懂了很多东西</p>
+
+<h2 id="ref-out">ref &amp; out</h2>
+
+<p><strong>核心思想:</strong></p>
+
+<ul>
+<li>ref是让形参直接指向实参的内存而不用复制一份<br /></li>
+<li>out是承担初始化变量的责任,顺便把外部声明但是未赋值的变量带出去</li>
+</ul>
+
+<h3 id="实践部分">实践部分</h3>
+
+<h4 id="ref">ref:</h4>
+
+<p><strong>不加ref的情况</strong></p>
+
+<pre><code class="language-C#">
+///代码
+internal class Program
+{
+    public static void Main(string[] args)
+    {
+        MyClass a1 = new MyClass();
+        int a2 = 10;
+        MyMethod(a1, a2);
+        Console.WriteLine($&quot;f1.Value : {a1.Value} f2: {a2}&quot;);
+    }
+
+    static void MyMethod(MyClass f1, int f2)
+    {
+        f1.Value += 5;
+        f2 += 5;
+        Console.WriteLine($&quot;f1.Value : {f1.Value} f2: {f2}&quot;);
+    }
+
+    public class MyClass
+    {
+        public int Value = 25;
+        public List&lt;int&gt; _List = new List&lt;int&gt;();
+    }
+}
+
+///输出
+f1.Value : 30 f2: 15
+f1.Value : 30 f2: 10
+</code></pre>
+
+<p><img src="/post/2018-11-22-c-ref-out_files/WX20181122-001729.png" alt="" />
+<center><em>没有ref</em></center></p>
+
+<p><strong>加了ref的情况</strong></p>
+
+<pre><code class="language-C#">internal class Program
+{
+    public static void Main(string[] args)
+    {
+        MyClass a1 = new MyClass();
+        int a2 = 10;
+        MyMethod(ref a1, ref a2);
+        Console.WriteLine($&quot;f1.Value : {a1.Value} f2: {a2}&quot;);
+    }
+
+    static void MyMethod(ref MyClass f1, ref int f2)
+    {
+        f1.Value += 5;
+        f2 += 5;
+        Console.WriteLine($&quot;f1.Value : {f1.Value} f2: {f2}&quot;);
+    }
+
+    public class MyClass
+    {
+        public int Value = 25;
+        public List&lt;int&gt; _List = new List&lt;int&gt;();
+    }
+}
+
+///输出
+f1.Value : 30 f2: 15
+f1.Value : 30 f2: 15
+</code></pre>
+
+<p><img src="/post/2018-11-22-c-ref-out_files/Xnip2018-11-22_00-21-30.jpg" alt="" />
+<center><em>加了ref</em></center></p>
+
+<p>可见区别<br />
+不加ref的情况,由于形参调用实参时<br />
+相当于复制了一份实参在栈中的内存值<br />
+之后使用的都是形参的值<br />
+而形参在函数结束后就被出栈消灭了<br />
+留下的实参并没有被真正改变过</p>
+
+<p>加了ref的情况下<br />
+由于加了ref的形参相当于实参的别名<br />
+则相当于所有的操作实际上还是对实参操作的<br />
+形参相当于就是披了个衣服的实参<br />
+那所有改动就相当于给了实参</p>
+
+<h3 id="out">out</h3>
+
+<p>out是比起来ref对我来说更好理解的一个东西<br />
+可能是最先体会到这个东西<br />
+也是最先从鹏哥那里领悟这个东西的意义<br />
+详见最开头</p>
+
+<blockquote>
+<p>与引用参数不同，输出参数有以下要求:<br />
+在方法内部，输出参数在能够被读取之前必须被赋值。<br />
+这意味着参数的初始值是无关的，而且没有必要在方法调用之前为实参赋值。<br />
+在方法返回之前，方法内部贯穿的任何可能路径都必须为所有输出参数进行一次赋值。<br />
+因为方法内的代码在读取输出变量之前必须对其写人，所以不可能使用输出参数把数据传入方法。<br />
+事实上，如果方法中有任何执行路径试图在输出参数被方法赋值之前读取它，编译器就会产生一条错误信息。</p>
+</blockquote>
+
+<p><img src="/post/2018-11-22-c-ref-out_files/Xnip2018-11-22_00-42-17.jpg" alt="" /></p>
+
+<h2 id="static-non-static">static &amp; non-static</h2>
+
+<h3 id="实践部分-1">实践部分</h3>
+
+<p><strong>核心思想:</strong></p>
+
+<ul>
+<li>静态方法变量对于对象是<strong>碰不到</strong>的<br /></li>
+
+<li><p>即便是Main也可以被静态类拿到<br />
+void Main(string[] args) 只不过是默认被执行罢了<br />
+除此之外没什么特殊的</p>
+
+<pre><code class="language-C#">internal class Program
+{   
+    //这样会递归,但是也说明了这样是没什么问题的
+    static void Main(string[] args)
+    {
+        var a = new Program();
+        a.PrinData();
+        Program.Main((new[] {&quot;23&quot;, &quot;三大&quot;}));
+    }
+
+    void KinectLink()
+    {
+    }
+
+    void PrinData()
+    {
+        DateTime _dateTime = DateTime.Now;
+        Console.WriteLine($&quot;Now is {_dateTime}!&quot;);
+    }
+}
+</code></pre></li>
+</ul>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>

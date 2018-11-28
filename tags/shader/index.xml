@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shader on Kesa</title>
+    <link>/tags/shader/</link>
+    <description>Recent content in Shader on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/shader/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>笔记|一日一记一学_为什么发现贴图主要是蓝色的</title>
+      <link>/post/2018/11/27/bluebump/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/27/bluebump/</guid>
+      <description> 法线是什么玩意儿 计算机中的法线从哪里来 如何解释法线和RGB颜色的关系 回到主题:为什么法线贴图主要是蓝色 </description>
+    </item>
+    
+  </channel>
+</rss>

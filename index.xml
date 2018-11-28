@@ -21,12 +21,122 @@
     </item>
     
     <item>
+      <title>笔记|一日一记一学_为什么发现贴图主要是蓝色的</title>
+      <link>/post/2018/11/27/bluebump/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/27/bluebump/</guid>
+      <description> 法线是什么玩意儿 计算机中的法线从哪里来 如何解释法线和RGB颜色的关系 回到主题:为什么法线贴图主要是蓝色 </description>
+    </item>
+    
+    <item>
+      <title>笔记|问题 &amp; 问题</title>
+      <link>/post/2018/11/25/%E7%AC%94%E8%AE%B0%E9%97%AE%E9%A2%98--%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/25/%E7%AC%94%E8%AE%B0%E9%97%AE%E9%A2%98--%E9%97%AE%E9%A2%98/</guid>
+      <description>&amp;ndash; from MacTalk:
+ 创业者不喜欢人员空转，就会潜意识的创造问题，
+很多都是伪问题，也就是「麻烦」，这会增加无谓的工作量。
+搞得自己无比忙碌，公司上下也特别忙，看起来红红火火，
+都在解决问题，其实这些问题都是自己拼命制造出来的。
+ </description>
+    </item>
+    
+    <item>
+      <title>CSharp|ref &amp; out || static &amp; non-static</title>
+      <link>/post/2018/11/22/c-ref-out/</link>
+      <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/22/c-ref-out/</guid>
+      <description>这件事的起源是鹏哥的指点
+栈空间和对空间放的东西完全不一样
+变量名和值类型的值都在栈空间
+引用类型的值在对空间
+栈空间中引用类型的变量名存着堆空间中引用类型的地址
+ 以上是我对鹏哥的话的个人理解
+这里有书上的解释
+从这里开始我懂了很多东西
+ref &amp;amp; out 核心思想:
+ ref是让形参直接指向实参的内存而不用复制一份
+ out是承担初始化变量的责任,顺便把外部声明但是未赋值的变量带出去  实践部分 ref: 不加ref的情况
+///代码 internal class Program { public static void Main(string[] args) { MyClass a1 = new MyClass(); int a2 = 10; MyMethod(a1, a2); Console.WriteLine($&amp;quot;f1.Value : {a1.Value} f2: {a2}&amp;quot;); } static void MyMethod(MyClass f1, int f2) { f1.Value += 5; f2 += 5; Console.WriteLine($&amp;quot;f1.Value : {f1.Value} f2: {f2}&amp;quot;); } public class MyClass { public int Value = 25; public List&amp;lt;int&amp;gt; _List = new List&amp;lt;int&amp;gt;(); } } ///输出 f1.</description>
+    </item>
+    
+    <item>
+      <title>笔记|Talk with Gods of Products</title>
+      <link>/post/2018/11/18/talk-with-gods-of-products/</link>
+      <pubDate>Sun, 18 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/18/talk-with-gods-of-products/</guid>
+      <description> 非常值得铭记的一次长谈 </description>
+    </item>
+    
+    <item>
+      <title>Skill|安装Manim</title>
+      <link>/post/2018/11/17/skill-manim/</link>
+      <pubDate>Sat, 17 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/17/skill-manim/</guid>
+      <description>心路历程 在Linux上我还是差zwj同志十万八千里呢
+其实也不只是Linux上,各种层次上我都是
+不过这次呢我打算好好认真地记录一下次次安装这个操蛋玩意儿的经历
+不再搞得啥都零散破碎
+以下所有的东西都基于master
+其他的开发线尚不清楚问题
+安装各种库 最苦逼的事情就是安装各种库
+需要安装的库分两种:
+ 系统库:  LaTex(没法直接用)  MacOS 里用 MacTex Ubuntu 里用 LiveTex  ffmpeg sox  Python库(超级超级超级大坑): 问题在于这玩意儿他太难受了  用Conda 安装 : 创建环境:Conda create [你的Conda环境名] 进入环境  MacOS : Source activate [你的Conda环境名] Ubuntu : Conda activate [你的Conda环境名]     - argparse==1.4.0 - colour==0.1.5 - numpy==1.15.0 - Pillow==5.2.0 - progressbar==2.5 - scipy==1.1.0 - tqdm==4.24.0 - opencv-python==3.4.2.17 - pycairo==1.17.1  Conda这里的问题</description>
+    </item>
+    
+    <item>
+      <title>心情|很长时间之后的再次审视自己</title>
+      <link>/post/2018/11/16/self-monitor/</link>
+      <pubDate>Fri, 16 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/16/self-monitor/</guid>
+      <description>很久没有认真写博客了 大概快2个月了
+距离上一次我认真写博客的时间
+我想大概是我自己有陷入了舒适圈
+又不想出来了
+从地下室搬到806这段时间
+本以为能有什么变化
+却还是一成不变的懒散和懈怠
+除此之外的自己还是这样的没用和emotional
+wait wait
+这不是我应该有的样子
+很久没有总结一些东西了
+我觉得在这里试着再次回味一下这一年
+这又快要过去的一年
+我有什么收获
+我有什么失去
+我有什么计划没有落实
+或者是我落实了什么计划吧
+梳理一年来自己的各种认知的变化 认知趋势变化
+年初:心理学 健身 前端 python 算法 数据结构 ...啥都想整来着 年中:产品经理 出国 python 年末:人工智能 机器学习 python  静态发展项目
+Unity BLog(勉强算是吧)  感性认知变化
+电影 电台 高价值自媒体: 晓说 鸿观|潜流 奇葩说  收获
+- 技术层次: - Unity: - 完整项目 - Error_AI - Steel - Aero Drum(即将完成) - .Net: - (作业)计网的Socket - (作业)数据库 - Python - 乏善可陈 - BLog - 感性层次: - 电影: - 对电影的审美和意见来源的认识 - 对三大电影up主的依赖 - 二次元 - 若即若离 - 实用性为主 - 心理学 - 浅尝辄止 - 辩论 - 采纳观点 - 游戏设计 - 未曾尝试 - 产品经理 - 还没开始  &amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>笔记|逻辑思维:逼迫自己成为一个上进的人</title>
+      <link>/post/2018/11/16/%E7%AC%94%E8%AE%B0%E9%80%BB%E8%BE%91%E6%80%9D%E7%BB%B4%E9%80%BC%E8%BF%AB%E8%87%AA%E5%B7%B1%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E4%B8%8A%E8%BF%9B%E7%9A%84%E4%BA%BA/</link>
+      <pubDate>Fri, 16 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/16/%E7%AC%94%E8%AE%B0%E9%80%BB%E8%BE%91%E6%80%9D%E7%BB%B4%E9%80%BC%E8%BF%AB%E8%87%AA%E5%B7%B1%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E4%B8%8A%E8%BF%9B%E7%9A%84%E4%BA%BA/</guid>
+      <description> How to Do?  设计你的环境 引入外部监督 寻求不确定反馈 选择无止境晋升的职业  </description>
+    </item>
+    
+    <item>
       <title>笔记|机核_如何写科幻故事</title>
       <link>/post/2018/11/12/sf/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/11/12/sf/</guid>
-      <description> 好的科幻故事  新奇性 认知有效性  </description>
+      <description>好的科幻故事  新奇性 认知有效性  &amp;lt;&amp;lt;平面国&amp;gt;&amp;gt;
+长篇倾向于社会性
+短片倾向于新奇性</description>
     </item>
     
     <item>
@@ -1138,7 +1248,7 @@ From NewRepublic The Other Political Correction
     </item>
     
     <item>
-      <title>未完待续_CSharp|&lt;&lt;编写高质量C#代码建议&gt;&gt;提炼</title>
+      <title>CSharp|StopWatch 和 Time.DeltaTime 的比较</title>
       <link>/post/2018/09/01/c-c/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
       
@@ -1168,15 +1278,6 @@ Unity中之所以可以通过这种方法实现时间计算
 发现这个事情大有可言
 便搞了一阵儿
 using System; using System.Diagnostics; using System.Threading; namespace TestInBook { internal class Program { public static void Main(string[] args) { // StopTimeTest(); // DateTimeTest(); Thread thread1 = new Thread(DateTimeTest); //线程1管DT Thread thread2 = new Thread(StopTimeTest); //线程1管SW Thread thread3 = new Thread(Cal2MethodDiff); //线程3管DT-SW thread1.</description>
-    </item>
-    
-    <item>
-      <title>未完待续_CSharp|ref &amp; out 参数的深入理解</title>
-      <link>/post/2018/09/01/c-ref-out/</link>
-      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/09/01/c-ref-out/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -2090,7 +2191,7 @@ Learn and Generate</description>
       <pubDate>Sat, 28 Jul 2018 21:48:51 -0700</pubDate>
       
       <guid>/recents/</guid>
-      <description>不定期更新  丘比特的恶作剧 重评 战神 分析  重构神话 父子关系 阴谋论  李健和杰伦 - 我的少年和青年时代 自己的性格弱点:  不真诚:对自己 对他人 都很难做到真诚,尤其是对亲密的人 不勇敢:往往没有勇气踏出那几步  挖掘漫画 和 电影的故事  找到作者和作品 的 另一面  漫画作者们 - From 蓝得说  安达充  青春 梦想 爱情 和 努力 友情 胜利 的对比  今敏  大友克洋 梦 平泽进 妄想代理人 opus 梦侦探  沙村广明:无限之住人 井上雄彦:漫画的艺术 技 &amp;amp; 艺 &amp;amp; 道 荒川弘:厚积薄发 青春在哪里
+      <description>不定期更新  基耶斯洛夫斯基  红 蓝 白  普瑞斯纳 丘比特的恶作剧 重评 战神 分析  重构神话 父子关系 阴谋论  李健和杰伦 - 我的少年和青年时代 挖掘漫画 和 电影的故事  找到作者和作品 的 另一面  漫画作者们 - From 蓝得说  安达充  青春 梦想 爱情 和 努力 友情 胜利 的对比  今敏  大友克洋 梦 平泽进 妄想代理人 opus 梦侦探  沙村广明:无限之住人 井上雄彦:漫画的艺术 技 &amp;amp; 艺 &amp;amp; 道 荒川弘:厚积薄发 青春在哪里
   人物传记的意义何在: 从第一认知:感性角度说起 姜文:红楼梦的讲述手法-里面一个故事 外面一个故事 影评:男人的魅力终归是他一生的阅历，是他注视你的眼神，是他心中掩藏不住的凌厉与孤独——宋雯婷 青蛇:成人|成神|不如为妖 问舰:有趣的科幻电影评析</description>
     </item>
     

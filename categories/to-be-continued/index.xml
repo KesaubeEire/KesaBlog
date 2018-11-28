@@ -21,6 +21,26 @@
     </item>
     
     <item>
+      <title>CSharp|ref &amp; out || static &amp; non-static</title>
+      <link>/post/2018/11/22/c-ref-out/</link>
+      <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/22/c-ref-out/</guid>
+      <description>这件事的起源是鹏哥的指点
+栈空间和对空间放的东西完全不一样
+变量名和值类型的值都在栈空间
+引用类型的值在对空间
+栈空间中引用类型的变量名存着堆空间中引用类型的地址
+ 以上是我对鹏哥的话的个人理解
+这里有书上的解释
+从这里开始我懂了很多东西
+ref &amp;amp; out 核心思想:
+ ref是让形参直接指向实参的内存而不用复制一份
+ out是承担初始化变量的责任,顺便把外部声明但是未赋值的变量带出去  实践部分 ref: 不加ref的情况
+///代码 internal class Program { public static void Main(string[] args) { MyClass a1 = new MyClass(); int a2 = 10; MyMethod(a1, a2); Console.WriteLine($&amp;quot;f1.Value : {a1.Value} f2: {a2}&amp;quot;); } static void MyMethod(MyClass f1, int f2) { f1.Value += 5; f2 += 5; Console.WriteLine($&amp;quot;f1.Value : {f1.Value} f2: {f2}&amp;quot;); } public class MyClass { public int Value = 25; public List&amp;lt;int&amp;gt; _List = new List&amp;lt;int&amp;gt;(); } } ///输出 f1.</description>
+    </item>
+    
+    <item>
       <title>To_Be_Continued&amp;Math|直观理解线性代数 from 3B1B</title>
       <link>/post/2018/11/03/to-be-continued-math-from-3b1b/</link>
       <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
@@ -114,48 +134,6 @@ Unity 更新进展 Unity Blog</description>
 也在不断回忆反思中传播更加优秀的观念和价值
 我再一次被这种Up主打动
 这次是这位</description>
-    </item>
-    
-    <item>
-      <title>未完待续_CSharp|&lt;&lt;编写高质量C#代码建议&gt;&gt;提炼</title>
-      <link>/post/2018/09/01/c-c/</link>
-      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/09/01/c-c/</guid>
-      <description>总结:  StopWatch 和 Time.DeltaTime 的比较  了解StopWatch这个数据类型也是用来做时长判断的 Stopwatch 和 DateTime 对比 : 具体用法见下面的详情  StopWatch就是个计时器 DateTime是了解从年月日时分秒毫秒的    StopWatch 和 Time.DeltaTime 的比较 在看到几次作者尝试调试代码比较速度的时候
-我好多次看到了
-Stopwatch watch1 = Stopwatch.StartNew();  这句话
-我想到和我日常中用的Time.DeltaTime应该是一类东西
-只不过这个可能更便捷更规范?
-我自己想看看原码
-然而我发现在Console下编程根本没有Time这个Unity中常用到的类
-难道这个也是UnityEngine里面的东西?
-没错 Time这个类的确是UnityEngine NameSpace下的
-然而又是只读所以不能很清楚的知道到底是不是和StopWatch是Api同源
-就没办法知道到底自己在Unity中是不是应该继续用Time.DeltaTime
-不过总之还是很好地启发了我应该试试StopWatch
-至少搜一搜它们之间的区别(🚄上没网有点小难受)
-&amp;mdash;&amp;mdash;&amp;ndash;上网收获&amp;mdash;&amp;mdash;&amp;ndash;
-查了一下发现没什么这两个东西有联系的网页
-但是再次提醒了我 Time.DeltaTime指的是每帧的运行时长
-Unity中之所以可以通过这种方法实现时间计算
-是因为通过把运行的每帧的时间加起来得到的
-和真实的时间是有区别的
-计算可能完成但是渲染等其他计算耽误画面呈现从而让得到的时间往往比真实时间长一些
-&amp;mdash;&amp;mdash;&amp;ndash;折了个腾&amp;mdash;&amp;mdash;&amp;ndash;
-后来又看到了DateTime和StopWatch的争辩
-发现这个事情大有可言
-便搞了一阵儿
-using System; using System.Diagnostics; using System.Threading; namespace TestInBook { internal class Program { public static void Main(string[] args) { // StopTimeTest(); // DateTimeTest(); Thread thread1 = new Thread(DateTimeTest); //线程1管DT Thread thread2 = new Thread(StopTimeTest); //线程1管SW Thread thread3 = new Thread(Cal2MethodDiff); //线程3管DT-SW thread1.</description>
-    </item>
-    
-    <item>
-      <title>未完待续_CSharp|ref &amp; out 参数的深入理解</title>
-      <link>/post/2018/09/01/c-ref-out/</link>
-      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/09/01/c-ref-out/</guid>
-      <description></description>
     </item>
     
     <item>

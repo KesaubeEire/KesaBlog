@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Skill|安装Manim - Kesa</title>
+    <meta property="og:title" content="Skill|安装Manim - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="在Linux上我还是差zwj同志十万八千里呢
+其实也不只是Linux上,各种层次上我都是
+不过这次呢我打算好好认真地记录一下次次安装这个操蛋玩意儿的经历
+不再搞得啥都零散破碎
+以下所有的东西都基于master
+其他的开发线尚不清楚问题
+[&amp;hellip;] 最苦逼的事情就是安装各种库
+需要安装的库分两种:
+[&amp;hellip;] - argparse==1.4.0 - colour==0.1.5 - &amp;hellip;">
+      <meta property="og:description" content="在Linux上我还是差zwj同志十万八千里呢
+其实也不只是Linux上,各种层次上我都是
+不过这次呢我打算好好认真地记录一下次次安装这个操蛋玩意儿的经历
+不再搞得啥都零散破碎
+以下所有的东西都基于master
+其他的开发线尚不清楚问题
+[&amp;hellip;] 最苦逼的事情就是安装各种库
+需要安装的库分两种:
+[&amp;hellip;] - argparse==1.4.0 - colour==0.1.5 - &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/recents/">RecentsList</a></li>
+  
+  <li><a href="/idiomslist/">Chinese_Idiomlist</a></li>
+  
+  <li><a href="/phrases/">English_Phrases</a></li>
+  
+  <li><a href="/vocabulary/">English_Vocabulary</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Skill|安装Manim</h1>
+
+<h3>Kesa
+  /  2018-11-17</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            displayMath: [
+                ['$$', '$$'],
+                ["\\(", "\\)"]
+            ],
+            inlineMath: [
+                ['\\[', '\\]'],
+                ['$', '$'],
+            ],
+        },
+    });
+</script> 
+
+
+
+
+
+<h3 id="心路历程">心路历程</h3>
+
+<p>在Linux上我还是差zwj同志十万八千里呢<br />
+其实也不只是Linux上,各种层次上我都是<br />
+不过这次呢我打算好好认真地记录一下次次安装这个操蛋玩意儿的经历<br />
+不再搞得啥都零散破碎<br />
+以下所有的东西都基于master<br />
+其他的开发线尚不清楚问题</p>
+
+<h2 id="安装各种库">安装各种库</h2>
+
+<p>最苦逼的事情就是安装各种库<br />
+需要安装的库分两种:</p>
+
+<ul>
+<li>系统库:
+
+<ul>
+<li>LaTex(没法直接用)
+
+<ul>
+<li>MacOS  里用 MacTex</li>
+<li>Ubuntu 里用 LiveTex</li>
+</ul></li>
+<li>ffmpeg</li>
+<li>sox</li>
+</ul></li>
+<li>Python库(超级超级超级大坑): 问题在于这玩意儿他太难受了
+
+<ul>
+<li>用Conda 安装 :</li>
+<li>创建环境:Conda create [你的Conda环境名]</li>
+<li>进入环境
+
+<ul>
+<li>MacOS  : Source activate [你的Conda环境名]</li>
+<li>Ubuntu : Conda  activate [你的Conda环境名]
+<br /></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<pre><code>- argparse==1.4.0
+- colour==0.1.5
+- numpy==1.15.0
+- Pillow==5.2.0
+- progressbar==2.5
+- scipy==1.1.0
+- tqdm==4.24.0
+- opencv-python==3.4.2.17
+- pycairo==1.17.1
+</code></pre>
+
+<p>Conda这里的问题<br />
+最多也不过是有的包Conda不能装<br />
+只能让Pip全局安装<br />
+这样会使得环境整体被破坏<br />
+或者叫被污染吧<br />
+有空还是用Conda一下下来比较好<br />
+环境会很整齐</p>
+
+<h2 id="debug源文件">Debug源文件</h2>
+
+<p>这里才是最难受的事情<br />
+前面的事情也很折磨苦逼<br />
+但是没有这么难受<br />
+最难受的是明明已经安装完毕<br />
+但是没能运行成功</p>
+
+<p>前期一直报错Numpy的包搞不定的问题</p>
+
+<pre><code>pip install numpy
+就搞定了
+
+优先使用Conda安装  
+如果Conda不支持立马用pip装
+</code></pre>
+
+<p>后来一直提示media_dir.txt</p>
+
+<pre><code>这个就是真的很无奈  
+Manim的gitginore里面把这个屏蔽了
+</code></pre>
+
+<p>没想到是这样的<br />
+然后就解决了问题<br />
+给media_dir.txt添加路径即可:(这个路径我也不知道有啥用 并没有被利用)</p>
+
+<h2 id="最后的效果">最后的效果</h2>
+
+<p>只能说最后能搞出来非常不容易<br />
+但是效果又非常好<br />
+我觉得那天晚上踩的坑主要是有关环境的问题<br />
+其余的问题基本没多少<br />
+所以我希望之后&hellip;如果有人有幸能搜到<br />
+能少走一点弯路也算是有所帮助咯</p>
+
+<h2 id="遗留问题">遗留问题</h2>
+
+<p>后来打开赵总给我的Ubuntu的PVM<br />
+发现还是不能用<br />
+主要报错是</p>
+
+<pre><code class="language-bash">scenes.py SquareToCircle -pl
+Traceback (most recent call last):
+  File &quot;extract_scene.py&quot;, line 15, 
+    in &lt;module&gt;
+    from scene.scene import Scene
+  File &quot;/home/parallels/Desktop/manim/scene/scene.py&quot;, line 17, 
+    in &lt;module&gt;
+    from camera.camera import Camera
+  File &quot;/home/parallels/Desktop/manim/camera/camera.py&quot;, line 10, 
+    in &lt;module&gt;
+    import cairo
+ModuleNotFoundError: No module named 'cairo'
+</code></pre>
+
+<p>也不是那个&rsquo;cairo&rsquo;的个体问题<br />
+所有的requirement.txt上的库应该是都是这样的<br />
+尝试了<br />
+<code>Conda install xxx</code></p>
+
+<pre><code>Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - requirements.txt
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main/linux-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/free/linux-64
+  - https://repo.anaconda.com/pkgs/free/noarch
+  - https://repo.anaconda.com/pkgs/r/linux-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+  - https://repo.anaconda.com/pkgs/pro/linux-64
+  - https://repo.anaconda.com/pkgs/pro/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+</code></pre>
+
+<p>也尝试了<br />
+<code>pip install xxx</code></p>
+
+<pre><code>反正也是搞不定
+</code></pre>
+
+<p>最后的最后<br />
+反正是我没有搞不定各种东西<br />
+但是<br />
+还是zwj牛逼<br />
+一句<code>conda info --envs</code></p>
+
+<pre><code>Manim                 *  /home/parallels/.conda/envs/Manim
+base                     /home/parallels/anaconda3
+</code></pre>
+
+<p>妈的这就搞定了<br />
+气从何来</p>
+
+<h2 id="结论">结论</h2>
+
+<p>装环境是一件非常折磨人的事情<br />
+这里面有很多很多坑得踩<br />
+我想我能做的也就是继续和zwj保持py了</p>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>

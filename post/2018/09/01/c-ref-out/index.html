@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>未完待续_CSharp|ref &amp; out 参数的深入理解 - Kesa</title>
-    <meta property="og:title" content="未完待续_CSharp|ref &amp; out 参数的深入理解 - Kesa">
+    <title>CSharp|ref &amp; out || static &amp; non-static - Kesa</title>
+    <meta property="og:title" content="CSharp|ref &amp; out || static &amp; non-static - Kesa">
     
     <meta name="twitter:card" content="summary">
 
@@ -22,6 +22,15 @@
 
     
       
+      <meta property="description" content="这件事的起源是鹏哥的指点
+[&amp;hellip;] 核心思想:
+[&amp;hellip;] 不加ref的情况
+///代码 internal class Program { public static void Main(string[] args) { MyClass a1 = new MyClass(); int a2 = 10; MyMethod(a1, a2); &amp;hellip;">
+      <meta property="og:description" content="这件事的起源是鹏哥的指点
+[&amp;hellip;] 核心思想:
+[&amp;hellip;] 不加ref的情况
+///代码 internal class Program { public static void Main(string[] args) { MyClass a1 = new MyClass(); int a2 = 10; MyMethod(a1, a2); &amp;hellip;">
+      
     
 
     
@@ -31,6 +40,11 @@
 
     
     
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
 
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
@@ -92,7 +106,7 @@
     <article class="main">
       <header class="title">
       
-<h1>未完待续_CSharp|ref &amp; out 参数的深入理解</h1>
+<h1>CSharp|ref &amp; out || static &amp; non-static</h1>
 
 <h3>Kesa
   /  2018-09-01</h3>
@@ -128,9 +142,157 @@
 
 
 
+<blockquote>
+<p>这件事的起源是鹏哥的指点</p>
+</blockquote>
+
+<h2 id="ref-out">ref &amp; out</h2>
+
+<p><strong>核心思想:</strong></p>
+
+<ul>
+<li>ref是让形参直接指向实参的内存而不用复制一份<br /></li>
+<li>out是承担初始化变量的责任,顺便把外部声明但是未赋值的变量带出去</li>
+</ul>
+
+<h3 id="实践部分">实践部分</h3>
+
+<h4 id="ref">ref:</h4>
+
+<p>不加ref的情况</p>
+
+<pre><code class="language-C#">
+///代码
+internal class Program
+{
+    public static void Main(string[] args)
+    {
+        MyClass a1 = new MyClass();
+        int a2 = 10;
+        MyMethod(a1, a2);
+        Console.WriteLine($&quot;f1.Value : {a1.Value} f2: {a2}&quot;);
+    }
+
+    static void MyMethod(MyClass f1, int f2)
+    {
+        f1.Value += 5;
+        f2 += 5;
+        Console.WriteLine($&quot;f1.Value : {f1.Value} f2: {f2}&quot;);
+    }
+
+    public class MyClass
+    {
+        public int Value = 25;
+        public List&lt;int&gt; _List = new List&lt;int&gt;();
+    }
+}
+
+///输出
+f1.Value : 30 f2: 15
+f1.Value : 30 f2: 10
+</code></pre>
+
+<p><center>没有ref</center></p>
+
+<p>加了ref的情况</p>
+
+<pre><code class="language-C#">internal class Program
+{
+    public static void Main(string[] args)
+    {
+        MyClass a1 = new MyClass();
+        int a2 = 10;
+        MyMethod(ref a1, ref a2);
+        Console.WriteLine($&quot;f1.Value : {a1.Value} f2: {a2}&quot;);
+    }
+
+    static void MyMethod(ref MyClass f1, ref int f2)
+    {
+        f1.Value += 5;
+        f2 += 5;
+        Console.WriteLine($&quot;f1.Value : {f1.Value} f2: {f2}&quot;);
+    }
+
+    public class MyClass
+    {
+        public int Value = 25;
+        public List&lt;int&gt; _List = new List&lt;int&gt;();
+    }
+}
+
+///输出
+f1.Value : 30 f2: 15
+f1.Value : 30 f2: 15
+</code></pre>
+
+<p>可见区别<br />
+不加ref的情况,由于形参调用实参时<br />
+相当于复制了一份实参在栈中的内存值<br />
+之后使用的都是形参的值<br />
+而形参在函数结束后就被出栈消灭了<br />
+留下的实参并没有被真正改变过</p>
+
+<p>加了ref的情况下<br />
+由于加了ref的形参相当于实参的别名<br />
+则相当于所有的操作实际上还是对实参操作的<br />
+形参相当于就是披了个衣服的实参<br />
+那所有改动就相当于给了实参</p>
+
+<h2 id="static-non-static">static &amp; non-static</h2>
+
+<h3 id="实践部分-1">实践部分</h3>
+
+<p><strong>核心思想:</strong></p>
+
+<ul>
+<li>静态方法变量对于对象是<strong>碰不到</strong>的<br /></li>
+
+<li><p>即便是Main也可以被静态类拿到<br />
+void Main(string[] args) 只不过是默认被执行罢了<br />
+除此之外没什么特殊的</p>
+
+<pre><code class="language-C#">internal class Program
+{   
+    //这样会递归,但是也说明了这样是没什么问题的
+    static void Main(string[] args)
+    {
+        var a = new Program();
+        a.PrinData();
+        Program.Main((new[] {&quot;23&quot;, &quot;三大&quot;}));
+    }
+
+    void KinectLink()
+    {
+    }
+
+    void PrinData()
+    {
+        DateTime _dateTime = DateTime.Now;
+        Console.WriteLine($&quot;Now is {_dateTime}!&quot;);
+    }
+}
+</code></pre></li>
+
+<li></li>
+</ul>
+
+
   <footer>
   
   
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
   
   <hr>
