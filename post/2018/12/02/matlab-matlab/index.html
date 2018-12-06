@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Categories - Kesa</title>
-    <meta property="og:title" content="Categories - Kesa">
+    <title>MatLab|编程第一步:格式化MatLab代码 - Kesa</title>
+    <meta property="og:title" content="MatLab|编程第一步:格式化MatLab代码 - Kesa">
     
     <meta name="twitter:card" content="summary">
 
@@ -22,6 +22,11 @@
 
     
       
+      <meta property="description" content="加入快捷方式:
+[&amp;hellip;] ">
+      <meta property="og:description" content="加入快捷方式:
+[&amp;hellip;] ">
+      
     
 
     
@@ -29,8 +34,6 @@
 
     
 
-    
-    <link href="/categories/index.xml" rel="alternate" type="application/rss+xml" title="Kesa" />
     
     
 
@@ -40,7 +43,7 @@
   </head>
 
   
-  <body class="categories">
+  <body class="post">
     <header class="masthead">
       <h1><a href="/">Kesa</a></h1>
 
@@ -71,7 +74,7 @@
   
   <li><a href="/vocabulary/">English_Vocabulary</a></li>
   
-  <li class="active"><a href="/categories/">Categories </a></li>
+  <li><a href="/categories/">Categories </a></li>
   
   <li><a href="/tags/">Tags</a></li>
   
@@ -94,103 +97,65 @@
     <article class="main">
       <header class="title">
       
-<h1>Categories</h1>
+<h1>MatLab|编程第一步:格式化MatLab代码</h1>
 
-<h3>
-</h3>
+<h3>Kesa
+  /  2018-12-02</h3>
 <hr>
 
 
       </header>
 
 
-<ul class="terms">
-  
-  <li>
-    <a href="/categories/artsdome">
-      Artsdome
-    </a>
-    (5)
-  </li>
-  
-  <li>
-    <a href="/categories/generalskill">
-      GeneralSkill
-    </a>
-    (9)
-  </li>
-  
-  <li>
-    <a href="/categories/math">
-      Math
-    </a>
-    (1)
-  </li>
-  
-  <li>
-    <a href="/categories/note">
-      Note
-    </a>
-    (18)
-  </li>
-  
-  <li>
-    <a href="/categories/selfjudge">
-      SelfJudge
-    </a>
-    (1)
-  </li>
-  
-  <li>
-    <a href="/categories/talkthought">
-      Talk&amp;Thought
-    </a>
-    (25)
-  </li>
-  
-  <li>
-    <a href="/categories/to-be-continued">
-      To be continued
-    </a>
-    (12)
-  </li>
-  
-  <li>
-    <a href="/categories/translation">
-      Translation
-    </a>
-    (2)
-  </li>
-  
-  <li>
-    <a href="/categories/unityskill">
-      UnitySkill
-    </a>
-    (12)
-  </li>
-  
-  <li>
-    <a href="/categories/uselesstalks">
-      UselessTalks
-    </a>
-    (27)
-  </li>
-  
-  <li>
-    <a href="/categories/vocabulary">
-      Vocabulary
-    </a>
-    (1)
-  </li>
-  
-  <li>
-    <a href="/categories/workget">
-      WorkGet
-    </a>
-    (2)
-  </li>
-  
-</ul>
+
+
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            displayMath: [
+                ['$$', '$$'],
+                ["\\(", "\\)"]
+            ],
+            inlineMath: [
+                ['\\[', '\\]'],
+                ['$', '$'],
+            ],
+        },
+    });
+</script> 
+
+
+
+
+
+<h2 id="讲一下如何使用-mbeautifier-https-github-com-davidvarga-mbeautifier-格式化matlab代码">讲一下如何使用<a href="https://github.com/davidvarga/MBeautifier">MBeautifier</a>格式化Matlab代码</h2>
+
+<ol>
+<li>放入下载的release到当前文件夹里面<br /></li>
+<li>Matlab自带的命令行:<br />
+
+<ol>
+<li>里面输入<code>cd MBeautifier-1.3.2/</code>(就是那个文件夹)<br /></li>
+<li>再输入 <code>MBeautify.setup()</code>(也就是执行<code>MBeautify.m</code>中的<code>setup()</code>)<br /></li>
+<li>再面向指定需要格式化的文件在命令行中输入 <code>MBeautify.formatCurrentEditorPage</code><br /></li>
+</ol></li>
+
+<li><p>加入快捷方式:</p>
+
+<ol>
+<li>输入<code>MBeautify.createShortcut('editorpage')</code><br /></li>
+<li>看到多出来一个<strong>快捷方式</strong>的选项卡:
+<br /></li>
+</ol>
+
+<p><img src="/post/2018-12-02-matlab-matlab_files/WX20181202-213042.png" alt="" /></p></li>
+</ol>
+
 
   <footer>
   
@@ -205,4 +170,3 @@
   
   </body>
 </html>
-

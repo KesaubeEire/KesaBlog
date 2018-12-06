@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>SoftWare|折腾aria2和ddcctl_下载和屏幕亮度 - Kesa</title>
+    <meta property="og:title" content="SoftWare|折腾aria2和ddcctl_下载和屏幕亮度 - Kesa">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    <meta property="description" content="从头开始 从新开始">
+
+    
+    
+    
+    
+
+    
+      
+      <meta property="description" content="感谢V2EX 某帖 以及帖主 Jtsai 的给力链接
+[&amp;hellip;] 下百度东西的东西
+用到了6800端口
+看着吧
+[&amp;hellip;] 简单介绍两位
+[&amp;hellip;] 一个非常牛逼的给Mac控制外接显示器亮度的工具
+[&amp;hellip;] 无安装难度
+[&amp;hellip;] 专用来像苹果原生的操作一样显示那种全局OS提示的东西
+就是改变屏幕亮度或者声音\键盘亮度时会出现的那个UI
+类似于安 &amp;hellip;">
+      <meta property="og:description" content="感谢V2EX 某帖 以及帖主 Jtsai 的给力链接
+[&amp;hellip;] 下百度东西的东西
+用到了6800端口
+看着吧
+[&amp;hellip;] 简单介绍两位
+[&amp;hellip;] 一个非常牛逼的给Mac控制外接显示器亮度的工具
+[&amp;hellip;] 无安装难度
+[&amp;hellip;] 专用来像苹果原生的操作一样显示那种全局OS提示的东西
+就是改变屏幕亮度或者声音\键盘亮度时会出现的那个UI
+类似于安 &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Kesa</a></h1>
+
+<p class="tagline">从头开始 从新开始</p>
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/booklist/">BookList</a></li>
+  
+  <li><a href="/movielist/">MovieList</a></li>
+  
+  <li><a href="/recents/">RecentsList</a></li>
+  
+  <li><a href="/idiomslist/">Chinese_Idiomlist</a></li>
+  
+  <li><a href="/phrases/">English_Phrases</a></li>
+  
+  <li><a href="/vocabulary/">English_Vocabulary</a></li>
+  
+  <li><a href="/categories/">Categories </a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/categories/generalskill">GeneralSkill</a></li>
+  
+  <li><a href="/categories/unityskill">UnitySkill</a></li>
+  
+  <li><a href="/categories/artsdome">Artsdome</a></li>
+  
+  <li><a href="/categories/talkthought">Talk&amp;Thought</a></li>
+  
+  <li><a href="/categories/to-be-continued">To Be Continued</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>SoftWare|折腾aria2和ddcctl_下载和屏幕亮度</h1>
+
+<h3>Kesa
+  /  2018-12-06</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            displayMath: [
+                ['$$', '$$'],
+                ["\\(", "\\)"]
+            ],
+            inlineMath: [
+                ['\\[', '\\]'],
+                ['$', '$'],
+            ],
+        },
+    });
+</script> 
+
+
+
+
+
+<p>感谢V2EX <a href="https://www.v2ex.com/t/398691">某帖</a> 以及帖主 Jtsai 的给力链接</p>
+
+<h2 id="aria2">Aria2</h2>
+
+<p>下百度东西的东西<br />
+用到了6800端口<br />
+看着吧</p>
+
+<h2 id="ddcctl-osddiplay">ddcctl &amp; OSDdiplay</h2>
+
+<p>简单介绍两位</p>
+
+<h3 id="ddcctl-https-github-com-kfix-ddcctl"><a href="https://github.com/kfix/ddcctl">ddcctl</a></h3>
+
+<p>一个非常牛逼的给Mac控制外接显示器亮度的工具</p>
+
+<blockquote>
+<p>无安装难度</p>
+</blockquote>
+
+<h3 id="osdisplay-https-github-com-zulu-entertainment-osdisplay"><a href="https://github.com/zulu-entertainment/OSDisplay">OSDisplay</a></h3>
+
+<p>专用来像苹果原生的操作一样显示那种全局OS提示的东西<br />
+就是改变屏幕亮度或者声音\键盘亮度时会出现的那个UI<br />
+类似于安卓的Toast那样的东西,你懂得</p>
+
+<blockquote>
+<p>需要把工程用XCode编译后<br />
+再在Product文件夹下找到Build好的app再按照README操作</p>
+</blockquote>
+
+<p>本来想结合起来的<br />
+但是Alfred一直不配合<br />
+算了算了<br />
+回头做个Alias就不错了</p>
+
+
+  <footer>
+  
+  
+
+  
+  <hr>
+  <div class="copyright">大把时间迷茫 几个瞬间成长</div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>

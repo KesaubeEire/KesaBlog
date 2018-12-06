@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MatLab on Kesa</title>
+    <link>/tags/matlab/</link>
+    <description>Recent content in MatLab on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MatLab|编程第一步:格式化MatLab代码</title>
+      <link>/post/2018/12/02/matlab-matlab/</link>
+      <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/12/02/matlab-matlab/</guid>
+      <description> 讲一下如何使用MBeautifier格式化Matlab代码  放入下载的release到当前文件夹里面
+ Matlab自带的命令行:
+ 里面输入cd MBeautifier-1.3.2/(就是那个文件夹)
+ 再输入 MBeautify.setup()(也就是执行MBeautify.m中的setup())
+ 再面向指定需要格式化的文件在命令行中输入 MBeautify.formatCurrentEditorPage
+  加入快捷方式:
+ 输入MBeautify.createShortcut(&#39;editorpage&#39;)
+ 看到多出来一个快捷方式的选项卡:     </description>
+    </item>
+    
+  </channel>
+</rss>

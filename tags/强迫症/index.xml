@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>强迫症 on Kesa</title>
+    <link>/tags/%E5%BC%BA%E8%BF%AB%E7%97%87/</link>
+    <description>Recent content in 强迫症 on Kesa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/%E5%BC%BA%E8%BF%AB%E7%97%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SoftWare|折腾aria2和ddcctl_下载和屏幕亮度</title>
+      <link>/post/2018/12/06/software-aria2-ddcctl/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/12/06/software-aria2-ddcctl/</guid>
+      <description>感谢V2EX 某帖 以及帖主 Jtsai 的给力链接
+Aria2 下百度东西的东西
+用到了6800端口
+看着吧
+ddcctl &amp;amp; OSDdiplay 简单介绍两位
+ddcctl 一个非常牛逼的给Mac控制外接显示器亮度的工具
+ 无安装难度
+ OSDisplay 专用来像苹果原生的操作一样显示那种全局OS提示的东西
+就是改变屏幕亮度或者声音\键盘亮度时会出现的那个UI
+类似于安卓的Toast那样的东西,你懂得
+ 需要把工程用XCode编译后
+再在Product文件夹下找到Build好的app再按照README操作
+ 本来想结合起来的
+但是Alfred一直不配合
+算了算了
+回头做个Alias就不错了</description>
+    </item>
+    
+  </channel>
+</rss>

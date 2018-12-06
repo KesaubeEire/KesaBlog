@@ -8,6 +8,21 @@
   </url>
   
   <url>
+    <loc>/post/2018/12/06/software-aria2-ddcctl/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/12/02/matlab-matlab/</loc>
+    <lastmod>2018-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/11/28/c-struct-char-int-int-12-byte/</loc>
+    <lastmod>2018-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018/11/27/bluebump/</loc>
     <lastmod>2018-11-27T00:00:00+00:00</lastmod>
   </url>
@@ -520,6 +535,12 @@
   </url>
   
   <url>
+    <loc>/tags/c/</loc>
+    <lastmod>2018-11-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/csharp/</loc>
     <lastmod>2018-11-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -562,6 +583,12 @@
   </url>
   
   <url>
+    <loc>/tags/format/</loc>
+    <lastmod>2018-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/game/</loc>
     <lastmod>2018-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -569,7 +596,7 @@
   
   <url>
     <loc>/categories/generalskill/</loc>
-    <lastmod>2018-11-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -608,6 +635,12 @@
   </url>
   
   <url>
+    <loc>/tags/matlab/</loc>
+    <lastmod>2018-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/math/</loc>
     <lastmod>2018-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -631,7 +664,7 @@
   
   <url>
     <loc>/categories/note/</loc>
-    <lastmod>2018-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -780,6 +813,12 @@
   </url>
   
   <url>
+    <loc>/tags/%E5%86%85%E5%AD%98/</loc>
+    <lastmod>2018-11-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/%E5%87%A0%E4%BD%95%E6%A6%82%E5%9E%8B/</loc>
     <lastmod>2018-10-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -872,6 +911,12 @@
   <url>
     <loc>/tags/%E5%BC%A0%E8%89%BA%E8%B0%8B/</loc>
     <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E5%BC%BA%E8%BF%AB%E7%97%87/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1088,6 +1133,12 @@
   <url>
     <loc>/tags/%E8%BD%AE%E5%AD%90/</loc>
     <lastmod>2018-09-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

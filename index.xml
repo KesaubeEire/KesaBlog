@@ -21,6 +21,55 @@
     </item>
     
     <item>
+      <title>SoftWare|折腾aria2和ddcctl_下载和屏幕亮度</title>
+      <link>/post/2018/12/06/software-aria2-ddcctl/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/12/06/software-aria2-ddcctl/</guid>
+      <description>感谢V2EX 某帖 以及帖主 Jtsai 的给力链接
+Aria2 下百度东西的东西
+用到了6800端口
+看着吧
+ddcctl &amp;amp; OSDdiplay 简单介绍两位
+ddcctl 一个非常牛逼的给Mac控制外接显示器亮度的工具
+ 无安装难度
+ OSDisplay 专用来像苹果原生的操作一样显示那种全局OS提示的东西
+就是改变屏幕亮度或者声音\键盘亮度时会出现的那个UI
+类似于安卓的Toast那样的东西,你懂得
+ 需要把工程用XCode编译后
+再在Product文件夹下找到Build好的app再按照README操作
+ 本来想结合起来的
+但是Alfred一直不配合
+算了算了
+回头做个Alias就不错了</description>
+    </item>
+    
+    <item>
+      <title>MatLab|编程第一步:格式化MatLab代码</title>
+      <link>/post/2018/12/02/matlab-matlab/</link>
+      <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/12/02/matlab-matlab/</guid>
+      <description> 讲一下如何使用MBeautifier格式化Matlab代码  放入下载的release到当前文件夹里面
+ Matlab自带的命令行:
+ 里面输入cd MBeautifier-1.3.2/(就是那个文件夹)
+ 再输入 MBeautify.setup()(也就是执行MBeautify.m中的setup())
+ 再面向指定需要格式化的文件在命令行中输入 MBeautify.formatCurrentEditorPage
+  加入快捷方式:
+ 输入MBeautify.createShortcut(&#39;editorpage&#39;)
+ 看到多出来一个快捷方式的选项卡:     </description>
+    </item>
+    
+    <item>
+      <title>笔记|一日一记一学_C的struct里char int int 为什么占12个byte?</title>
+      <link>/post/2018/11/28/c-struct-char-int-int-12-byte/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/28/c-struct-char-int-int-12-byte/</guid>
+      <description> 为了方便读取 结论是同样的数据类型放在一起 </description>
+    </item>
+    
+    <item>
       <title>笔记|一日一记一学_为什么发现贴图主要是蓝色的</title>
       <link>/post/2018/11/27/bluebump/</link>
       <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
